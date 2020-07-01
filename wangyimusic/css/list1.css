@@ -1,0 +1,153 @@
+.bag{
+    background: #F5F5F5;
+}
+/* 热门新碟 */
+.newdisc{
+    min-height: 700px;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+}
+.newdisc .newdiscbox{
+    padding: 40px;
+}
+.newdisc .newdiscbox .hotdisc{
+    height: 40px;
+    border-bottom: 2px solid #C20C0C;
+}
+.newdisc .newdiscbox .hotdisc h3 span{
+    float: left;
+    font-size: 24px;
+    font-weight: normal;
+}
+.newdisc .newdiscbox  ul{
+ margin-top: 20px;
+ margin-left: -33px;
+}
+.newdisc .newdiscbox  ul li{
+    float: left;
+    width: 153px;
+    height: 178px;
+    padding: 0px 0px 30px 33px;
+    overflow: hidden;
+}
+.newdisc .newdiscbox  ul li .roll-img1{
+    width: 130px;
+    height: 130px;
+    position: relative;
+}
+.newdisc .newdiscbox  ul li .roll-img1 .msk{
+    width: 153px;
+    height: 130px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url(../img/coverall.png) no-repeat 0 -845px;
+}
+.newdisc .newdiscbox  ul li p.song-title{
+    width: 100%;
+    margin: 8px 0px 3px 0px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.newdisc .newdiscbox  ul li p.song-title a{
+    font-size: 14px;
+}
+.newdisc .newdiscbox  ul li p.song-title a:hover{
+    text-decoration: underline;
+}
+.newdisc .newdiscbox  ul li p.singer a{
+    color: #666;
+}
+.newdisc .newdiscbox  ul li p.singer a:hover{
+    text-decoration: underline;
+}
+/* 热门新碟end */
+
+/* 全部新碟 */
+.newdisc .newdiscbox .allnewdisc{
+    height: 40px;
+    border-bottom: 2px solid #C20C0C;
+}
+.newdisc .newdiscbox .allnewdisc h3 span{
+    float: left;
+    font-size: 24px;
+    font-weight: normal;
+}
+.newdisc .newdiscbox .allnewdisc .allnewdisc-nav{
+   float: left;
+   margin: 12px 0px 0px 20px;
+}
+.newdisc .newdiscbox .allnewdisc .allnewdisc-nav a{
+    color: #666666;
+ }
+ .newdisc .newdiscbox .allnewdisc .allnewdisc-nav a:hover{
+    text-decoration: underline;
+ }
+ .newdisc .newdiscbox .allnewdisc .allnewdisc-nav span{
+    margin: 0px 10px;
+    color: #c7c7c7;
+ }
+ /* 全部新碟 end */
+
+ /* 页码 */
+ .newdisc .newdiscbox .botnumbox{
+     margin: 20px 0px;
+     text-align: center;
+ }
+ .newdisc .newdiscbox .botnumbox a.up{
+     display: inline-block;
+     width: 47px;
+     height: 24px;
+     color: #cacaca;
+     line-height: 24px;
+     padding-left: 22px;
+     text-align: left;
+     margin: 0 1px 0 2px;
+     border: 1px solid #ccc;
+     border-radius: 2px;
+     vertical-align: middle;
+     background: url(../img/button.png) no-repeat 0px -620px;
+}
+.newdisc .newdiscbox .botnumbox a.con{
+    display: inline-block;
+    height: 22px;
+    color: #fff;
+    line-height: 22px;
+    padding: 0px 8px;
+    text-align: left;
+    border: 1px solid #A2161B;
+    border-radius: 2px;
+    vertical-align: middle;
+    background: url(../img/button.png) no-repeat 0px -650px;
+}
+.newdisc .newdiscbox .botnumbox a.nor{
+    display: inline-block;
+    height: 22px;
+    background-color: #fff;
+    line-height: 22px;
+    padding: 0px 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+.newdisc .newdiscbox .botnumbox a.nor:hover{
+border-color: #666666;
+}
+.newdisc .newdiscbox .botnumbox a.down{
+    display: inline-block;
+    width: 57px;
+    height: 24px;
+    color: #333;
+    line-height: 24px;
+    padding-left: 12px;
+    margin: 0 1px 0 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    text-align: left;
+    vertical-align: middle;
+    background: url(../img/button.png) no-repeat -75px -560px;
+}
+/* 页码 end */

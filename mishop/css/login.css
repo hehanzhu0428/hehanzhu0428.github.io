@@ -1,0 +1,193 @@
+.warp{
+    width: 100%;
+}
+/* logo 部分 */
+.toplogo{
+    width: 200px;
+    height: 98px;
+    background: url(../img/mistore_logo.png) no-repeat;
+}
+.toplogo a{
+    display: block;
+    height: 98px;
+}
+.logintext{
+    width: 410px;
+    height: 83px;
+    line-height: 83px;
+    text-align: center;
+}
+.logintext a{
+    font-size: 24px;
+    color: #F56600;
+}
+.logintext a.con{
+    color: #666666;
+}
+.logintext .mid-border{
+    width: 1px;
+    height: 24px;
+    margin: 0 35px 0 42px;
+    border: 1px solid #e0e0e0;
+    font-size: 24px;
+    color: #666;
+}
+/* logo 部分 end */
+/* 右边信息框 */
+.input-message .account-number{
+    width: 336px;
+    height: 48px;
+    line-height: 48px;
+    border: 1px solid #E0E0E0;
+    margin-bottom: 14px;
+    margin-left: 35px;
+}
+.input-message .pas{
+    width: 336px;
+    height: 48px;
+    line-height: 48px;
+    border: 1px solid #E0E0E0;
+    margin-left: 35px;
+    margin-bottom: 14px;
+}
+.input-message .but{
+    width: 336px;
+    height: 48px;
+    line-height: 48px;
+    margin-left: 35px;
+    margin-top: 20px;
+    background-color:#FF6700;
+    color: #fff;
+    text-align: center;
+}
+.input-message .but input{
+    width: 336px;
+    height: 48px;
+    color: #fff;
+    background-color:#FF6700 ;
+}
+.input-message input{
+    width: 306px;
+    height: 22px;
+    line-height: 22px;
+    padding: 13px 16px 13px 14px;
+    display: block;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+.fot-message{
+    width: 336px;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.fot-message a{
+    width: 116px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #FF6700; 
+}
+.fot-message .fr a{
+    color: #9999A6;
+}
+.fot-message .fr span{
+    padding: 0px 5px;
+    color: #9999B3;
+    font-size: 14px;
+}
+/* 其他登录方式 */
+.other{
+    width: 336px;
+    margin-left: 35px;
+    margin-top: 120px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+    position: relative;
+}
+.otherlogin{
+    text-align: center;
+    margin: 0 auto;
+    color: #BBBBBB;
+    font-size: 14px;
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    right: 0px;
+}
+.logo-login{
+    width: 336px;
+    padding-top: 10px;
+    margin-left: 35px;
+    text-align: center;
+}
+.logo-login a{
+    margin: 0 17px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #0288d1;
+    color: #757575;
+    font-size: 14px;
+}
+.logo-login a i{
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: 4px auto 0;
+    background: url(../img/icons_type.png) no-repeat -19px 0px;
+}
+.logo-login a.icon2{
+    background-color: #d32f2f;
+}
+.logo-login a.icon3{
+    background-color: #0ae;
+}
+.logo-login a.icon4{
+    background-color: #00d20d;
+}
+.logo-login a i.i2{
+    background: url(../img/icons_type.png) no-repeat -38px 0px;
+}
+.logo-login a i.i3{
+    width: 24px;
+    background: url(../img/icons_type.png) no-repeat -57px 0px;
+}
+.logo-login a i.i4{
+    width: 24px;
+    background: url(../img/icons_type.png) no-repeat -83px 0px;
+}
+/* 其他登录方式 end */
+/* 右边信息 end */
+
+/* 底部信息 */
+.foot-message{
+position: absolute;
+bottom: 0px;
+left: 0px;
+right: 0px;
+text-align: center;
+height: 80px;
+margin:auto 0;
+}
+.foot-message a{
+    font-size: 14px;
+    color: #757575;
+}
+.foot-message p{
+    font-size: 14px;
+    color: #757575;
+}
+.foot-message span{
+    font-size: 14px;
+    padding: 0px 10px;
+    color: #757575;
+}
+.foot-message p span{
+    width: 20px;
+    height: 20px;
+}
+.foot-bottom{
+    padding: 10px;
+}
+/* 底部信息 end */

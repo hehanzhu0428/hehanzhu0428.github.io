@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="./css/redashReset.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="https://redash.io/assets/images/elements/redash-logo.svg"
+                        alt=""></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Help <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dowmenu">Knowledge Base</a></li>
+                            <li><a href="#" class="dowmenu">Forum</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#" class="btn btn-primary">Get Started</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <section class="section w-topimg">
+        <div class="container">
+            <img src="./redashImg/databricks-redash.png" alt="">
+            <h1>Redash has joined Databricks</h1>
+            <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+    </section>
+    <section class="section w-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h1>Redash helps you make sense of your data</h1>
+                    <p class="lead">Connect and query your data sources, build dashboards to visualize data and share
+                        them with your company.</p>
+                </div>
+                <div class="col-md-7 hidden-xs hidden-sm">
+                    <img src="./redashImg/browser-header.png" alt="">
+                    <video width="100%" height="100%" loop="" id="main-video" controls>
+                        <source src="https://redash.io/assets/images/elements/redash-intro-720.mp4" type="video/mp4">
+                        <source src="https://redash.io/assets/images/elements/redash-intro-720.ogv" type="video/ogg">
+                        <source src="https://redash.io/assets/images/elements/redash-intro-720.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section w-users">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <img src="./redashImg/users-list.png" alt="" class="hidden-xs">
+                    <img src="./redashImg/users-list-center.png" alt="" class="visible-xs">
+                </div>
+                <div class="col-sm-5">
+                    <h3 class="em">
+                        “Redash is as essential as email to my company. We love data but accessing the data is a pain
+                        without Redash. Any company I go to, I get them hooked on Redash. It’s an easy sell :)”
+                    </h3>
+                    <p>
+                        <img src="./redashImg/ben-dehghan.jpg" alt="" class="img-circle">
+                        by Ben Dehghan, Co-Founder of
+                        <a href="">Data Miner</a>
+                    </p>
+                    <a class="btn btn-secondary" href="#">Read what our customers say →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section w-fearture">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="./redashImg/write-queries.png" alt="" class="visible-xs">
+                    <h2 class="reh2">Write queries effectively</h2>
+                    <p class="rep">Enjoy the power and comfort of a SQL client with the collaborative advantages of a
+                        cloud based
+                        service.</p>
+                    <ul class="reul">
+                        <li>Powerful online SQL editor</li>
+                        <li>Browse schema and click-to-insert</li>
+                        <li>Create snippets and reuse them</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <img src="./redashImg/write-queries.png" alt="" class="hidden-xs  movepic">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section w-fearture2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="./redashImg/visualize-data.png" alt="" class="visible-xs">
+                    <img src="./redashImg/visualize-data.png" alt="" class="movepic hidden-xs">
+                </div>
+                <div class="col-sm-6 textRight">
+                    <h2 class="reh2">Visualize your data on dashboards</h2>
+                    <p class="rep">Always see the big, easy to digest picture for deeper understanding and better
+                        decision making.</p>
+                    <ul class="reul">
+                        <li>Drag & Drop and resize any visualization</li>
+                        <li>Schedule refresh from your data sources</li>
+                        <li>Share dashboards with your team or with the public</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section w-more">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-xs-12 p-0">
+                    <div class="moreContainer">
+                        <img src="./redashImg/icon-api.png" alt="">
+                        <h4>API</h4>
+                    </div>
+                    <div class="moreContainer">
+                        <img src="./redashImg/icon-alerts.png" alt="">
+                        <h4>Alerts</h4>
+                    </div>
+                    <div class="moreContainer">
+                        <img src="./redashImg/icon-user-management.png" alt="">
+                        <h4>User Management</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="#" class="btn btn-secondary">All Redash Features</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section w-integrations">
+        <div class="container">
+            <div class="row w-rese">
+                <div class="col-sm-8">
+                    <img src="./redashImg/integrations.png" alt="" class="visible-xs" style="opacity: 1;">
+                    <h2 class="reh2">Query All the Data Sources You Need</h2>
+                    <p class="rep w-inp">Redash supports SQL, NoSQL, Big Data and API data sources - query your data
+                        from
+                        different sources to answer complex questions.</p>
+                    <p><a href="#">Supported data sources and integrations →</a></p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="./redashImg/integrations.png" alt="" class="hidden-xs w-fadeIn">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section w-source">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2 col-sm-5 col-sm-offset-1">
+                    <img src="./redashImg/open-source.png" alt="" class="visible-xs">
+                    <h2 class="reh2">Redash is a popular Open Source project</h2>
+                    <p class="rep">Customize and add features, no lock-in, contribute back to the community</p>
+                    <a href="#" class="btn btn-secondary">Our Community</a>
+                </div>
+                <div class="col-lg-4 col-sm-5">
+                    <img src="./redashImg/open-source.png" alt="" class="hidden-xs downpic">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section w-small">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 p-0">
+                    <h3>Get started with Redash and build a more data-driven future</h3>
+                    <a href="#" class="btn btn-lg btn-primary">Sign Up Free</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 col-md-2 col-sm-3 footer-item">
+                    <h3 class="footer-title">Redash</h3>
+                    <ul class="footer-list">
+                        <li class="footer-list-item">
+                            <a href="#">Product</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="#">Integrations</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="#">Slack Bot</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="#">Customers</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="#">Case Studies</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="#">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-4 col-md-2 col-sm-3 footer-item">
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-list">
+                        <li class="footer-list-item">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="#">Blog</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="#">Newsletter</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="#">Community</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-4 col-md-2 col-sm-3 footer-item">
+                    <h3 class="footer-title">Help</h3>
+                    <ul class="footer-list">
+                        <li class="footer-list-item">
+                            <a href="#">Knowledge Base</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="#">Forum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-3 footer-item-other text-right">
+                    <ul class="footer-list footer-list-social">
+                        <li class="footer-list-item">
+                            <a href="#">
+                                <i class="fa fa-github-square" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="#">
+                                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        <a href="#">Terms</a> ⚬
+                        <a href="#">Privacy Policy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).on("scroll", function () {
+            // console.log($(document).scrollTop());
+            $(".movepic").each(function (index, element) {
+                // element == this
+                if (
+                    $(element).offset().top <=
+                    $(document).scrollTop() + window.innerHeight - $(".navbar").innerHeight()
+                ) {
+                    $(element).addClass("active");
+                } else {
+                    $(element).removeClass("active");
+                }
+            });
+            $(".w-fadeIn").each(function (index, element) {
+                // element == this
+                if (
+                    $(element).offset().top <=
+                    $(document).scrollTop() + window.innerHeight - $(".navbar").innerHeight()
+                ) {
+                    $(element).addClass("opac")
+                } else {
+                    $(element).removeClass("opac")
+                }
+            });
+            $(".downpic").each(function (index, element) {
+                // element == this
+                if (
+                    $(element).offset().top <=
+                    $(document).scrollTop() + window.innerHeight - $(".navbar").innerHeight()
+                ) {
+                    $(element).addClass("movedownpic")
+                } else {
+                    $(element).removeClass("movedownpic")
+                }
+            });
+        });
+        //https://jupyter.org/
+        //http://mrhabit.com/
+        //https://flinkhub.com/
+        //https://teamemo.com/#knowledge-bases
+        //http://www.theskiptapp.com/
+        //https://socialfrontier.com/
+    </script>
+</body>
+
+</html>

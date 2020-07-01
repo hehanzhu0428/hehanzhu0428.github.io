@@ -1,0 +1,204 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-size: 12px;
+    font-family: "微软雅黑","宋体";
+}
+/* 清除浮动 */
+.clearfix:after{
+    content: "";
+    clear:both;
+    display: block;
+    height: 0px;
+    line-height: 0px;
+    visibility: hidden;
+}
+.clearfix{
+    zoom:1; /*为了兼容ie浏览器*/
+}
+a{
+    text-decoration: none;
+    color:#333;
+}
+
+.fl {
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+.container{
+    width: 1226px;
+    margin:0 auto;
+}
+input{
+    border:0;
+    outline: none; /*去除选中状态边框*/
+}
+h1{
+    font-size: 22px;
+    font-weight: normal;
+}
+h2{
+    font-size: 20px;
+    font-weight: normal;
+}
+h3{
+    font-size: 18px;
+    font-weight: normal;
+}
+h4{
+    font-size: 16px;
+    font-weight: normal;
+}
+h5{
+    font-size: 14px;
+    font-weight: normal;
+}
+h6{
+    font-size: 12px;
+    font-weight: normal;
+}
+ul,ol{
+    list-style: none;
+}
+ /* 顶部导航 */
+.headerTop {
+    height: 40px;
+    width: 100%;
+    background: #363636;
+}
+.headerTop a {
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    color: #A4B0A4;
+}
+.headerTop a:hover {
+    color: #fff;
+}
+.headerTop span {
+    color: #424242;
+    display: inline-block;
+    margin: 0px 4px;
+}
+.site-header {
+    position: relative;
+    height: 100px;
+}
+
+        /* 顶部导航 end */
+        /* 底部信息 */
+.foot-dd ul{
+    width: 1240px;
+}
+.foot-dd{
+    border-bottom: 1px solid #E0E0E0;
+    padding: 27px 0px;
+}
+.foot-dd ul li{
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    width: 20%;
+    text-align: center;
+    background: url(../img/底部精灵图.png) no-repeat 54px 0;
+}
+.foot-dd ul li.a2{
+    background-position-y: -28px;
+}
+.foot-dd ul li.a3{
+    background-position-y:-55px;
+}
+.foot-dd ul li.a4{
+    background-position-y:-82px;
+}
+.foot-dd ul li.a5{
+    background-position-y:-109px;
+}
+.foot-dd ul li a{
+    font-size: 16px;
+    color: #616161;
+    display: inline-block;
+    text-indent: 30px;
+    width: 100%;
+}
+.foot-dd ul li a:hover{
+    color: #FF6752;
+}
+.ft-list dl{
+float: left;
+width: 160px;
+margin-top: 18px;
+}
+.ft-list dl dt{
+    font-size: 14px;
+    line-height: 60px;
+    color: #424242;
+}
+.ft-list dl dd{
+    font-size: 12px;
+    line-height: 28px;
+    color: #757575;
+}
+.ft-list .fr{
+    width: 251px;
+    height: 111px;
+    border-left: 1px solid #E0E0E0;
+    margin-top: 40px;
+    text-align: center;
+}
+.ft-list .fr strong{
+font-size: 20px;
+color: #FF6700;
+display: inline-block;
+}
+.ft-list .fr p{
+    color:#616161 ;
+    margin: 5px 0px;
+}
+.ft-list .fr button{
+    width: 118px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color:#FF6700 ;
+    font-size: 12px;
+    border: 1px solid #FF6700;
+    background-color: #fff;
+}
+.ft-info{
+    background: #fafafa;
+}
+.ft-info .mesbox{
+    position: relative;
+    float: left;
+    padding: 30px 0 0 67px;
+}
+.ft-info .logo{
+    width: 56px;
+    height: 56px;
+    background: url(../img/logo.png) no-repeat 0 0 ;
+    position: absolute;
+    left:0px;
+    top:30px;
+}
+.ft-info .box{
+    line-height: 20px;
+    color: #757575;
+}
+.ft-info p{
+    line-height: 18px;
+    color: #B0B0B0;
+}
+
+.ft-info .logolist img{
+    height: 28px;
+    margin-top: 10px;
+}
+.ft-info .mi{
+    height: 80px;
+    background: url(../img/slogan2020.png) no-repeat center center;
+}
+/* 底部信息 end */

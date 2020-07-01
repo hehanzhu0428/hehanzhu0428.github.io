@@ -1,0 +1,147 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-size: 12px;
+    font-family: "微软雅黑","宋体";
+}
+/* 清除浮动 */
+.clearfix:after{
+    content: "";
+    clear:both;
+    display: block;
+    height: 0px;
+    line-height: 0px;
+    visibility: hidden;
+}
+.clearfix{
+    zoom:1; /*为了兼容ie浏览器*/
+}
+a{
+    text-decoration: none;
+    color:#333;
+}
+ul,ol{
+    list-style: none;
+}
+.fl {
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+.wrap{
+    width: 100%;
+}
+.container{
+    width: 1080px;
+    margin: 0 auto;
+}
+/* 左边导航 */
+.carousel .left-list{
+    width: 221px;
+    height: 358px;
+    background-color: #9f8052;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.carousel .left-list ul{
+    margin-top: 15px;
+    height: 358px;
+}
+.carousel .left-list ul li{
+    width: 161px;
+    padding: 0 30px;
+    font-size: 14px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.carousel .left-list ul li span{
+    line-height: 37px;
+    font-size: 14px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.carousel .left-list ul li span:hover{
+    color: #D8AA7A;
+    cursor: default;
+}
+.carousel .left-list ul li:hover{
+    background-color: #876D46;
+}
+/* 左边导航 */
+.right-img{
+    position: relative;
+    width: 859px;
+    height: 358px;
+}
+.right-img ul li{
+    height: 358px;
+}
+.right-img img{
+    height: 358px;
+}
+/* 左右按钮 */
+.right-img .btn{
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    background: url(..//img/yp-icons.2bf57ccf.png) no-repeat 0px -1924px;
+    top: 50%;
+    left: 10px;
+    margin-top: -22px;
+    display:inline-block;
+    cursor: pointer;
+}
+.right-img .btn.Rbtn{
+    left:auto;  /*左边方位没有值*/
+    right:10px;
+    background-position: 0px -1840px;
+}
+.right-img .btn:hover{
+    background-position: 0px -1798px;
+}
+.right-img .btn.Rbtn:hover{
+    background-position: 0px -1882px;
+}
+/* 左右按钮 end */
+/* 轮播图中指示点 */
+.right-img .point{
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+.right-img .point span{
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    font-size: 14px;
+    border: 1px solid #CECECE;
+    background: #fff;
+    margin: 0px 6px;
+    text-indent: 20px;
+    overflow: hidden;
+    border-radius: 500px;  /*正方形变为圆*/
+    text-align: center;
+    cursor: pointer;
+}
+.right-img .point span.con{
+    width: 8px;
+    height: 8px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #CECECE;
+    background: #A7936E;
+    display: inline-block;
+    margin: 0px 6px;
+    text-indent: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 0 4px #ccc;
+    border-radius: 500px;
+    border: none;
+    cursor: pointer;
+}
+/* 轮播图中指示点 end */
+/* 左边导航 end */

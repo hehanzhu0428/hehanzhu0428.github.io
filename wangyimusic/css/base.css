@@ -1,0 +1,335 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 清除浮动 */
+.clearfix:after{
+    content: "";
+    clear:both;
+    display: block;
+    height: 0px;
+    line-height: 0px;
+    visibility: hidden;
+}
+.clearfix{
+    zoom:1; /*为了兼容ie浏览器*/
+}
+a{
+    text-decoration: none;
+    color:#333;
+}
+
+.fl {
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+.container{
+    width: 1226px;
+    margin:0 auto;
+}
+input{
+    border:0;
+    outline: none; /*去除选中状态边框*/
+}
+ul,ol{
+    list-style: none;
+}
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
+em,i,b{
+    font-style: normal;
+    font-weight: normal;
+}
+.wrap{
+    width: 982px;
+    margin:0 auto;
+}
+h3{
+    font-size: 14px;
+}
+.bag{
+    background-color:#F5F5F5 ;
+}
+/* 顶部导航 */
+.music-top{
+    position: relative;
+    height: 70px;
+    background: #242424;
+    border-bottom: 1px solid #000;
+}
+.music-top .logo{
+    float: left;
+    width: 176px;
+    height: 69px;
+    background: url(../img/topbar.png) no-repeat 0px 0px;
+}
+.music-top .logo a{
+    float: left;
+    width: 157px;
+    height: 100%;
+    padding-right: 20px;
+    text-indent: -400px;
+}
+.music-top ul{
+    float: left;
+}
+.music-top ul li{
+    float: left;
+    height: 70px;
+    font-size: 14px;
+    position: relative;
+    background-position: right -300px;
+}
+.music-top ul li.con{
+    background: #000;
+}
+.music-top ul li:hover{
+    background: #000;
+    
+}
+.music-top ul li:hover span a{
+    color: #fff;
+}
+.music-top ul li span{
+    float: left;
+    height: 70px;
+    font-size: 14px;
+    text-align: center;
+}
+.music-top ul li.con span a{
+    float: left;
+    height: 70px;
+    font-size: 14px;
+    color: #fff;
+}
+.music-top ul li span a{
+    padding: 0 19px;
+    float: left;
+    height: 70px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 70px;
+    color: #ccc;
+}
+.music-top ul li span a em{
+    float: left;
+    height: 70px;
+    font-size: 14px;
+    font-style: normal;
+    text-align: left;
+}
+.music-top ul li span a sup.cor{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 64px;
+    width: 12px;
+    height: 7px;
+    margin-left: -6px;
+    overflow: hidden;
+    background:url(../img/topbar.png) no-repeat -226px 0px;
+}
+.music-top ul li sup.hot{
+    display: block;
+    position: absolute;
+    top: 21px;
+    left: 100px;
+    width: 28px;
+    height: 19px;
+    background:url(../img/topbar.png) no-repeat -190px 0px;
+}
+.music-top .login{
+    float: right;
+    height: 45px;
+    margin: 19px 0 0 20px;
+    padding: 0 22px 0 0;
+}
+.music-top .login a{
+    display: block;
+    width: 28px;
+    margin-top: 7px;
+    color: #787878;
+}
+.music-top .login a:hover{
+    text-decoration: underline;
+}
+.music-top a.top-creator{
+    float: right;
+    width: 90px;
+    height: 32px;
+    margin: 19px 0 0 12px;
+    box-sizing: border-box;
+    padding-left: 16px;
+    border: 1px solid #4F4F4F;
+    line-height: 33px;
+    color: #ccc;
+    border-radius: 20px;
+}
+.music-top a.top-creator:hover{
+    border: 1px solid #CCCCCC;
+    color: #fff;
+}
+.music-top .top-search{
+    float: right;
+    width: 158px;
+    height: 32px;
+    margin-top: 19px;
+    border-radius: 32px;
+    background: url(../img/topbar.png) no-repeat 0px -99px #fff;
+}
+.music-top .top-search span{
+    display: block;
+    position: relative;
+    margin: 8px 0 0 30px;
+}
+.music-top .top-search span input{
+    width: 95%;
+    color: #333;
+    line-height: 16px;
+    background-color: transparent;
+}
+.music-top .top-search span label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    color: #9b9b9b;
+    cursor: text;
+}
+.music-top2{
+    height: 35px;
+    background-color: #C20C0C;
+    border-bottom: 1px solid #a40011;
+}
+.music-top2 .music-top2-nav2{
+    height: 34px;
+}
+.music-top2 .music-top2-nav2 ul{
+float: left;
+padding-left: 180px;
+}
+.music-top2 .music-top2-nav2 ul li{
+float: left;
+height: 34px;
+text-align: center;
+}
+.music-top2 .music-top2-nav2 ul li a{
+    color: #fff;
+    float: left;
+    height: 34px;
+    text-align: center;
+}
+.music-top2 .music-top2-nav2 ul li a em:hover{
+    background-color: #9B0909;
+}
+.music-top2 .music-top2-nav2 ul li a em{
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    padding: 0 13px;
+    margin: 7px 17px 0;
+    border-radius: 20px;
+    line-height: 21px;
+}
+.music-top2 .music-top2-nav2 ul li a em span{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 2px;
+    background-size: cover;
+    background-image: url(../img/white-r-icon@3x.png);
+}
+.music-top2 .music-top2-nav2 ul li a em.active{
+    background-color: #9B0909;
+}
+.back-top{
+    display: block;
+    position: fixed;
+    text-indent: -9999px;
+    left: 50%;
+    margin-left: 500px;
+    bottom: 160px;
+    width: 49px;
+    height: 44px;
+    background: url(../img/sprite.png) no-repeat -265px -47px;
+}
+.back-top:hover{
+    background-position: -325px -47px;
+}
+/* 顶部导航 end */
+
+/* 底部信息 */
+.foot{
+    height: 172px;
+    border-top: 1px solid #d3d3d3;
+    background: #f2f2f2;
+}
+.foot .footbox-left{
+    float: left;
+    width: 520px;
+    padding-top: 15px;
+    line-height: 24px;
+}
+.foot .footbox-left p a:hover{
+   text-decoration: underline;
+}
+.foot .footbox-left .footbox-left-nav a{
+    color: #999999;
+}
+.foot .footbox-left .footbox-left-nav span{
+    margin: 0px 8px 0px 10px;
+    color: #c2c2c2;
+}
+.foot .footbox-left p.footbox-left-tit{
+    color: #666666;
+}
+.foot .footbox-left p.footbox-left-tit span{
+    color: #666666;
+}
+.foot .footbox-left p.footbox-left-tit a{
+    color: #666666;
+}
+.foot .footbox-left p.footbox-left-tit span.footbox-left-tit1{
+    margin-right: 14px;
+    color: #666666;
+}
+.foot .footbox ul{
+    width: 330px;
+    float: right;
+    margin-top: 30px;
+}
+.foot .footbox ul li{
+    float: left;
+    width: 60px;
+    height: 70px;
+    text-align: center;
+    color: #666;
+}
+.foot .footbox ul li.distance{
+    margin-left: 30px;
+}
+.foot .footbox ul li a{
+    display: block;
+    width: 50px;
+    height: 45px;
+    margin: 0 auto;
+    background: url(../img/foot_enter_new.png) no-repeat -63px -101px;
+    background-size: 110px 450px;
+}
+.foot .footbox ul li span{
+    display: inline-block;
+    margin: 5px 5px 0px 5px;
+    width: 52px;
+    height: 14px;
+    background: url(../img/foot_enter_tt.png) no-repeat -1px -91px;
+    background-size: 180px 100px;
+}
+/* 底部信息 end */

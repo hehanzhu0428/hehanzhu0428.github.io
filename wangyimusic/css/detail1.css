@@ -1,0 +1,611 @@
+.mid-detail{
+    min-height: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+}
+/* 左边部分 */
+.mid-detail .detailleft{
+    width: 709px;
+    min-height: 700px;
+    border-right: 1px solid #d3d3d3;
+}
+.mid-detail .leftbox{
+    width: 640px;
+    min-height: 700px;
+    padding: 47px 30px 40px 39px;
+}
+/* 左边图片，歌曲信息 */
+.mid-detail .leftbox .leftbox1-info1{
+    width: 177px;
+    height: 177px;
+    float: left;
+    position: relative;
+    margin-right: -220px;
+}
+.mid-detail .leftbox .leftbox1-info1 span{
+    width: 209px;
+    height: 177px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/coverall.png) no-repeat 0px -986px;
+}
+.mid-detail .leftbox .leftbox1-info2{
+    margin-left: 230px;
+}
+.mid-detail .leftbox .leftbox1-info2 .info2-top{
+    margin-bottom: 20px;
+}
+.mid-detail .leftbox .leftbox1-info2 .info2-top .info2-toptit{
+    position: relative;
+    margin-bottom: 12px;
+    line-height: 24px;
+}
+.mid-detail .leftbox .leftbox1-info2 .info2-top .info2-toptit i{
+    float: left;
+    width: 54px;
+    height: 24px;
+    background: url(../img/icon.png) no-repeat 0px -186px;
+    vertical-align: middle;
+}
+.mid-detail .leftbox .leftbox1-info2 .info2-top .info2-toptit .tit{
+   margin-left: 64px;
+   line-height: 24px;
+   font-size: 20px;
+   color: #333;
+}
+.mid-detail .leftbox .leftbox1-info2 .info2-top .info2-toptit .tit h2{
+    font-size: 20px;
+    color: #333;
+    font-weight: normal;
+ }
+ .mid-detail .leftbox .leftbox1-info2 .info2-top p{
+    margin-top: 4px;
+    line-height: 18px;
+    color: #666;
+ }
+ .mid-detail .leftbox .leftbox1-info2 .info2-top p a{
+    color: #0C73C2;
+ }
+ .mid-detail .leftbox .leftbox1-info2 .info2-top p a:hover{
+    text-decoration: underline;
+ }
+ .mid-detail .leftbox .leftbox1-info2 .control{
+     margin-bottom: 25px;
+ }
+ .mid-detail .leftbox .leftbox1-info2 .control a.play{
+     float: left;
+    height: 31px;
+    line-height: 31px;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+    color: #fff;
+    padding-right: 5px;
+    background: url(../img/button2.png) no-repeat right -428px;
+}
+.mid-detail .leftbox .leftbox1-info2 .control a.play i{
+    display: inline-block;
+    height: 31px;
+    line-height: 31px;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+    color: #fff;
+    padding: 0px 7px 0px 8px;
+    background: url(../img/button2.png) no-repeat 0px -387px;
+}
+.mid-detail .leftbox .leftbox1-info2 .control a.play em{
+    float: left;
+    width: 20px;
+    height: 18px;
+    margin: 6px 2px 2px 0px;
+    overflow: hidden;
+    background: url(../img/button2.png) no-repeat 0px -1622px;
+}
+.mid-detail .leftbox .leftbox1-info2 .control a.add{
+    float: left;
+    width: 31px;
+    height: 31px;
+    margin: 0px 5px 0px -5px;
+    background: url(../img/button2.png) no-repeat 0px -1588px;
+}
+.mid-detail .leftbox .leftbox1-info2 .control a.btn{
+    float: left;
+    height: 31px;
+    line-height: 30px;
+    width: 54px;
+    padding-right: 5px;
+    margin-right: 6px;
+    background: url(../img/button2.png) no-repeat right -1020px;
+}
+.mid-detail .leftbox .leftbox1-info2 .control a.btn i{
+    float: left;
+    width: 24px;
+    height: 31px;
+    line-height: 30px;
+    padding: 0px 2px 0px 28px;
+    background: url(../img/button2.png) no-repeat 0px -977px;
+}
+/* 左边图片，歌曲信息end */
+
+/* 专辑介绍 */
+.mid-detail .leftbox .leftbox2{
+    margin-top: 20px;
+}
+.mid-detail .leftbox .leftbox2 h3{
+    font-size: 12px;
+    color: #333;
+}
+.mid-detail .leftbox .leftbox2 .leftbox2-text p{
+    color: #666;
+    text-indent: 2em;
+    line-height: 24px;
+    margin-top: 4px;
+}
+/* 专辑介绍 end */
+
+/* 歌曲列表 */
+.mid-detail .leftbox .leftbox3{
+    margin-top: 27px;
+}
+.mid-detail .leftbox .leftbox3 .leftbox3-nav{
+    height: 33px;
+    border-bottom: 2px solid #C20C0C;
+}
+.mid-detail .leftbox .leftbox3 .leftbox3-nav h3{
+    float: left;
+ }
+.mid-detail .leftbox .leftbox3 .leftbox3-nav h3 span{
+   font-size: 20px;
+   line-height: 28px;
+   font-weight: normal;
+   color: #333333;
+}
+.mid-detail .leftbox .leftbox3 .leftbox3-nav span.leftbox3-num{
+    float: left;
+    margin: 9px 0px 0px 20px;
+    color: #333333;
+ }
+ .mid-detail .leftbox .leftbox3 .leftbox3-nav .outlink{
+    float: right;
+    margin:5px 20px 0px 0px;
+ }
+ .mid-detail .leftbox .leftbox3 .leftbox3-nav .outlink i{
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon.png) no-repeat -34px -863px;
+    vertical-align: middle;
+ }
+ .mid-detail .leftbox .leftbox3 .leftbox3-nav .outlink a{
+    color: #4996D1;
+    text-decoration: underline;
+ }
+ .mid-detail .leftbox .leftbox3 .singtable table{
+     width: 100%;
+     border: 1px solid #D9D9D9;
+ }
+ .mid-detail .leftbox .leftbox3 .singtable table tr th{
+    height: 38px;
+    background-color: #f7f7f7;
+    vertical-align: middle;
+    text-align: left;
+    font-weight: normal;
+    color: #666;
+    background: url(../img/table.png) repeat-x 0 0;
+}
+.mid-detail .leftbox .leftbox3 .singtable table tr th.w1{
+   width: 74px;
+}
+.mid-detail .leftbox .leftbox3 .singtable table tr th.w1 .wa{
+    background: none;
+ }
+.mid-detail .leftbox .leftbox3 .singtable table tr th.w2{
+    width: 91px;
+ }
+ .mid-detail .leftbox .leftbox3 .singtable table tr th.w3{
+    width: 20%;
+ }
+.mid-detail .leftbox .leftbox3 .singtable table tr th div{
+    height: 18px;
+    line-height: 18px;
+    padding: 8px 10px;
+    background: url(../img/table.png) no-repeat 0 -56px;
+}
+.mid-detail .leftbox .leftbox3 .singtable table tr.bot{
+    height: 30px;
+}
+.mid-detail .leftbox .leftbox3 .singtable table tr td{
+    background-color: #f7f7f7;
+    padding: 6px 10px;
+    line-height: 18px;
+    text-align: left;
+    color: #666;
+}
+.mid-detail .leftbox .leftbox3 .singtable table tr td .hd{
+    height: 18px;
+    line-height: 18px;
+    text-align: left;
+}
+.mid-detail .leftbox .leftbox3 .singtable table tr td .hd span.playicon{
+    float: right;
+    width: 17px;
+    height: 17px;
+    background: url(../img/table.png) no-repeat 0px -103px;
+}
+.mid-detail .leftbox .leftbox3 .singtable table tr td .hd span.num{
+    width: 25px;
+    margin-left: 5px;
+    color: #999;
+}
+.mid-detail .leftbox .leftbox3 .singtable table tr td .singname{
+    width: 100%;
+    float: left;
+}
+.mid-detail .leftbox .leftbox3 .singtable table tr td .singname .singname1{
+   height: 18px;
+   line-height: 18px;
+   margin-right: 20px;
+   text-align: left;
+}
+.mid-detail .leftbox .leftbox3 .singtable table tr td .singname .singname1 span.sn{
+    position: relative;
+    display: inline-block;
+    padding-right: 25px;
+    margin-right: -25px;
+    max-width: 99%;
+    height: 20px;
+ }
+ .mid-detail .leftbox .leftbox3 .singtable table tr td .singname .singname1 span.snplay{
+    width: 23px;
+    height: 17px;
+    margin-top: 1px;
+    background: url(../img/table.png) no-repeat 0px -151px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+ }
+ /* 歌曲列表 end */
+
+ /* 评论 */
+ .mid-detail .leftbox .leftbox4{
+     margin-top: 40px;
+ }
+ .mid-detail .leftbox .leftbox4 .commentbox .topnav{
+    height: 33px;
+    border-bottom: 2px solid #C20C0C;
+ }
+ .mid-detail .leftbox .leftbox4 .commentbox .topnav h3{
+    float: left;
+ }
+ .mid-detail .leftbox .leftbox4 .commentbox .topnav h3 span{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: normal;
+    color: #333333;
+ }
+ .mid-detail .leftbox .leftbox4 .commentbox .topnav span.sub{
+     float: left;
+    margin: 9px 0px 0px 20px;
+    color: #666666;
+ }
+ .mid-detail .leftbox .leftbox4 .commentbox .combox{
+     margin-top: 20px;
+ }
+ .mid-detail .leftbox .leftbox4 .commentbox .combox .intext{
+    margin-bottom: 20px;
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext .head{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: -100px;
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext .head img{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: -100px;
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext .textbox{
+    margin-left: 62px;
+    position: relative;
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext .textbox .tbox{
+    padding-right: 14px;
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext textarea{
+   width: 100%;
+   height: 50px;
+   padding: 5px 6px 6px 6px;
+   border: 1px solid #cdcdcd;
+   border-radius: 2px;
+   line-height: 19px;
+   resize: none;
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext .textbox .tbox-icon{
+    padding-top: 10px;
+    position: relative;
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext .textbox .tbox-icon i{
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+    background: url(../img/icon.png) no-repeat -40px -490px;
+    vertical-align: middle;
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext .textbox .tbox-icon a{
+    float: right;
+    width: 46px;
+    height: 25px;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    background: url(../img/button.png) no-repeat -84px -64px;
+    vertical-align: middle;
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext .textbox .tbox-icon span.iconnum{
+    float: right;
+    margin-right: 10px;
+    line-height: 25px;
+    color: #999;
+    margin-top: 0px;
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext .textbox .icon2{
+    width: 13px;
+    height: 14px;
+    overflow: hidden;
+    position: absolute;
+    top: 11px;
+    left: -7px;
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext .textbox em{
+    display: block;
+    font-family: "SimSun";
+    font-size: 15px;
+    height: 10px;
+    color: #cdcdcd
+}
+.mid-detail .leftbox .leftbox4 .commentbox .combox .intext .textbox span{
+    display: block;
+    font-family: "SimSun";
+    font-size: 15px;
+    height: 10px;
+    margin: -10px 0 0 1px;
+    color: #fff;
+}
+.mid-detail .leftbox .leftbox4 .wonderful h3{
+    height: 20px;
+    font-size: 12px;
+    color: #333333;
+    border-bottom: 1px solid #cfcfcf;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1{
+    padding: 15px 0px;
+    border-top: 1px dotted #ccc;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .wdhead{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: -100px;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .wdhead img{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: -100px;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .rtxt{
+    margin-left: 60px;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .rtxt .rtxt1{
+    width: 100%;
+    line-height: 20px;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .rtxt .rtxt1 a{
+    color: #0c73c2;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .rtxt .rtxt1 a:hover{
+    text-decoration: underline;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .rtxt .rtxt1 img{
+    height: 12px;
+    vertical-align: -1px;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .rtxt .rtxt2{
+    margin-top: 15px;
+    text-align: right;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .rtxt .rtxt2 .ltime{
+    float: left;
+    color: #999999;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .rtxt .rtxt2 i{
+    display: inline-block;
+    width: 15px;
+    height: 14px;
+    background: url(../img/icon2.png) no-repeat -150px 0px;
+    margin-right: 5px;
+    vertical-align: -2px;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .rtxt .rtxt2 a:hover{
+   text-decoration: underline;
+}
+.mid-detail .leftbox .leftbox4 .wonderful .wond1 .rtxt .rtxt2 span{
+    margin: 0px 8px;
+    color: #ccc;
+ }
+ .mid-detail .leftbox .leftbox4 .wonderful .wond1 .rtxt .rtxt2 a.reply{
+    color: #666;
+ }
+ /* 1234页码 */
+ .mid-detail .leftbox .leftbox4 .botnumbox{
+    margin: 20px 0px;
+    text-align: center;
+}
+.mid-detail .leftbox .leftbox4 .botnumbox a.up{
+    display: inline-block;
+    width: 47px;
+    height: 24px;
+    color: #cacaca;
+    line-height: 24px;
+    padding-left: 22px;
+    text-align: left;
+    margin: 0 1px 0 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    vertical-align: middle;
+    background: url(../img/button.png) no-repeat 0px -620px;
+}
+.mid-detail .leftbox .leftbox4 .botnumbox a.con{
+   display: inline-block;
+   height: 22px;
+   color: #fff;
+   line-height: 22px;
+   padding: 0px 8px;
+   text-align: left;
+   border: 1px solid #A2161B;
+   border-radius: 2px;
+   vertical-align: middle;
+   background: url(../img/button.png) no-repeat 0px -650px;
+}
+.mid-detail .leftbox .leftbox4 .botnumbox a.nor{
+   display: inline-block;
+   height: 22px;
+   background-color: #fff;
+   line-height: 22px;
+   padding: 0px 8px;
+   text-align: left;
+   border: 1px solid #ccc;
+   border-radius: 2px;
+   vertical-align: middle;
+}
+.mid-detail .leftbox .leftbox4 .botnumbox a.nor:hover{
+border-color: #666666;
+}
+.mid-detail .leftbox .leftbox4 .botnumbox a.down{
+   display: inline-block;
+   width: 57px;
+   height: 24px;
+   color: #333;
+   line-height: 24px;
+   padding-left: 12px;
+   margin: 0 1px 0 2px;
+   border: 1px solid #ccc;
+   border-radius: 2px;
+   text-align: left;
+   vertical-align: middle;
+   background: url(../img/button.png) no-repeat -75px -560px;
+}
+/* 1234页码 end */
+/* 评论 end */
+
+/* 右边部分 */
+.mid-detail .detailright{
+    width: 270px;
+    min-height: 700px;
+}
+.mid-detail .detailright .rightbox{
+    padding: 20px 40px 40px 30px;
+}
+.mid-detail .detailright .rightbox h3{
+    height: 23px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+}
+.mid-detail .detailright .rightbox h3 span{
+    float: left;
+    color: #333;
+    font-size: 12px;
+}
+.mid-detail .detailright .rightbox h3 a{
+    float: right;
+    color: #666;
+    font-weight: normal;
+    font-size: 12px;
+}
+.mid-detail .detailright .rightbox h3 a:hover{
+    text-decoration: underline;
+}
+.mid-detail .detailright .rightbox ul{
+    margin-bottom: 25px;
+}
+.mid-detail .detailright .rightbox li{
+    float: left;
+    width: 200px;
+    height: 50px;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+.mid-detail .detailright .rightbox li .rboximg{
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+.mid-detail .detailright .rightbox li .rboxtext{
+    margin-left: 60px;
+    line-height: 24px;
+}
+.mid-detail .detailright .rightbox li .rboxtext p.rboxname{
+    width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mid-detail .detailright .rightbox li .rboxtext p.rboxname a{
+    font-size: 14px;
+    color: #000;
+}
+.mid-detail .detailright .rightbox li .rboxtext p.rboxname a:hover{
+    text-decoration: underline;
+}
+.mid-detail .detailright .rightbox li .rboxtext p.rboxtime{
+    width: 140px;
+    color: #666;
+}
+/* 下载 */
+.mid-detail .detailright .rightbox .download{
+    margin: 20px 0px;
+    padding-bottom: 20px;
+}
+.mid-detail .detailright .rightbox .download ul{
+    height: 65px;
+    margin-bottom: 10px;
+    background: url(../img/sprite.png) no-repeat 0px -392px;
+}
+.mid-detail .detailright .rightbox .download ul li{
+    float: left;
+    width: 42px;
+    height: 48px;
+    margin-bottom: 0px;
+}
+.mid-detail .detailright .rightbox .download ul li.com{
+    float: left;
+    width: 116px;
+    height: 48px;
+}
+.mid-detail .detailright .rightbox .download ul li a{
+    display:block;
+    width: 42px;
+    height: 48px;
+    text-indent: -9999px;
+}
+.mid-detail .detailright .rightbox .download ul li a.computer{
+    display:block;
+    width: 60px;
+    height: 48px;
+    margin: 0px 26px 0px 30px;
+    text-indent: -9999px;
+}
+.mid-detail .detailright .rightbox .download p{
+    color: #999;
+}
+/* 下载 end */
+/* 右边部分end */

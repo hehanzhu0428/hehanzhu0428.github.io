@@ -1,0 +1,393 @@
+/* 主导航 */
+.main-nav .header-logo{
+    margin-top: 22px;
+    float: left;
+}
+.main-nav .header-nav{
+    height: 100px;
+    width: 850px;
+    float: left;
+}
+.main-nav .header-nav ul li{
+    list-style: none;
+    float: left;
+    font-size: 16px;
+    height: 100px;
+    line-height: 100px;
+    margin-left: 20px;
+}
+.main-nav .header-nav ul{
+    margin-left: 189px;
+}
+.main-nav .header-nav ul li a{
+    text-decoration: none;
+    color: #353D40;
+    font-size: 16px;
+}
+.main-nav .header-nav ul li a:hover{
+    color: #FF6700;
+}
+
+/* 搜索功能 */
+.search-box{
+    margin-top: 24px;
+    width: 296px;
+    position: relative;
+    float: right;
+}
+.search-box input{
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    border:1px solid #E0E0E0;
+    width:243px;
+    text-indent: 1em;
+}
+.search-box input.con,.search-box .btn.con{
+    border-color: rgb(255, 187, 0);
+}
+.search-box .btn{
+    float: left;
+    height: 48px;
+    width: 50px;
+    border: 1px solid #E0E0E0;
+    border-left: none;
+    background: url(img/search-box.jpg)no-repeat center center;
+    
+}
+
+.search-box .text{
+    position: absolute;
+    top:16px;
+    right: 52px;
+}
+
+.search-box .text a{
+    color:#777779;
+    background-color: #EEEEEE;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    padding:0px 5px;
+    margin-right: 9px;
+}
+.search-box .text a:hover{
+    background-color: #FF6700;
+}
+.btn img{
+    width: 20px;
+    height: 20px;
+   position: relative;
+   left: 15px;
+   top: 15px;
+}
+/* 搜索功能 end */
+/* 主导航 end */
+.Detail-industry-nav{
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.07);
+}
+.Detail-industry-nav h3{
+    float: left;
+    height: 63px;
+    line-height: 63px;
+    color: #212121; 
+}
+.Detail-industry-nav h6{
+    float: left;
+    height: 12px;
+    line-height: 12px;
+    border-left: 1px solid #616161;
+    margin-top: 26px;
+    margin-left: 8px;
+    padding-left:8px;
+    color: #616161;
+}
+.Detail-industry-nav .fr a{
+    height: 63px;
+    line-height: 63px;
+    font-size: 14px;
+    color: #616161;
+    display: inline-block; 
+}
+.Detail-industry-nav .fr span{
+    font-size: 12px;
+    color: #E9E0E9;
+    margin:0px 6px;
+    display: inline-block;
+}
+/* 提示 */
+.buy-box .ts-box .notic-box{
+    background: #f7f7f7;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    color: #333;
+}
+.buy-box .notictext{
+    font-size: 14px;
+}
+.buy-box .ts-box .notic-box a{
+    color: #ff6700;
+    margin-left: 25px;
+    font-size: 14px;
+}
+.buy-box .ts-box .notic-box a.con{
+    color: #b5b5b5;
+    font-size: 18px;
+}
+.buy-box .ts-box .left-img{
+    position: relative;
+    float: left;
+    height: 600px;
+    margin-left: 0;
+}
+.buy-box .ts-box .left-img ul li img{
+    width: 560px;
+    height: 560px;
+}
+/* 提示 end */
+/* 左边轮播图 */
+.buydetail-box{
+    padding-top: 5px;
+}
+.buydetail-box .Rotation-chart{
+    width: 559px;
+}
+.buydetail-box .Rotation-chart .Rotation-chart-img{
+    width: 559px;
+    height: 541px;
+    position: relative;
+}
+.buydetail-box .Rotation-chart .Rotation-chart-img li{
+    width: 559px;
+    height: 541px;
+}
+.buydetail-box .Rotation-chart .Rotation-chart-img li img{
+    width: 559px;
+    height: 541px;
+}
+.buydetail-box .Rotation-chart .Rotation-chart-img .btn{
+    width: 41px;
+    height: 69px;
+    position: absolute;
+    top:50%;
+    left:0px;
+    margin-top:-35px;
+    background: url("../img/icon-slides.png") no-repeat -83px 0px;
+}
+.buydetail-box .Rotation-chart .Rotation-chart-img .btn.Rbtn{
+    left:auto;
+    right:0px;
+    background-position: -125px 0px;
+}
+.buydetail-box .Rotation-chart .Rotation-chart-img .btn.Lbtn:hover{
+    background-position: 0 0;
+}
+.buydetail-box .Rotation-chart .Rotation-chart-img .btn.Rbtn:hover{
+    background-position: -41px 0;
+}
+.buydetail-box .Rotation-chart .Rotation-chart-img ol{
+    width: 300px;
+    position: absolute;
+    left:0px;
+    right: 0px;
+    bottom: 0px;
+    margin:0 auto;
+}
+.buydetail-box .Rotation-chart .Rotation-chart-img ol li{
+    width: 50px;
+    height: 2px;
+    float: left;
+    background-color: #CCCCCC;
+    margin: 0px 5px;
+    text-indent: -100px;
+    overflow: hidden;
+}
+.buydetail-box .Rotation-chart .Rotation-chart-img ol li.con{
+    background-color: #A3A3A3;
+}
+.buydetail-box .Right-message{
+    width: 606px;
+    margin-top: 30px;
+}
+
+.buydetail-box .Right-message h1{
+    font-size: 24px;
+    line-height: 36px;
+    color: #212121;
+}
+.buydetail-box .Right-message h5{
+    color: #B0B0B0;
+    line-height: 1.5;
+}
+.buydetail-box .Right-message h5 span{
+    font-size: 14px;
+    color:#FF4C00;
+}
+.buydetail-box .Right-message .shopnotices{
+    font-size: 14px;
+    line-height: 40px;
+    color: #FF6700;
+}
+.buydetail-box .Right-message .money{
+    font-size: 18px;
+    padding-bottom: 20px;
+    color: #FF6700;
+}
+.buydetail-box .Right-message .give{
+    height: 71px;
+    padding-top:11px;
+    border-top:1px solid #E0E0E0;
+    border-bottom:1px solid #E0E0E0;
+}
+.buydetail-box .Right-message .give dl{
+    margin-bottom: 6px;
+}
+.buydetail-box .Right-message .give dl dt{
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    font-size: 14px;
+    background-color: #FF6700;
+    color: #fff;
+    text-align: center; 
+}   
+.buydetail-box .Right-message .give dl dd{
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    float: left;
+    color: #363636;
+    margin-left: 9px;
+}
+.buydetail-box .Right-message .region{
+    height: 72px;
+    margin: 40px 0px;
+    border:1px solid #E0E0E0;
+    padding: 30px 0 0 49px;
+    background: #FAFAFA url(../img/add.png) no-repeat 22px 31px ;
+}
+.buydetail-box .Right-message .region p{
+    font-size: 14px;
+    line-height: 22px;
+    color: #363636;
+}
+.buydetail-box .Right-message .region p a{
+    font-size: 14px;
+    margin-left: 17px;
+    color: #FF6700;
+    display: inline-block;
+}
+.buydetail-box .Right-message .region span{
+    display: inline-block;
+    line-height: 22px;
+    font-size: 14px;
+    color: #FF6700;
+}
+.buydetail-box .Right-message .choice{
+    width: 606px;
+    overflow: hidden;
+}
+.buydetail-box .Right-message .choice dl{
+    width: 670px;
+}
+.buydetail-box .Right-message .choice dt{
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #363636;
+}
+.buydetail-box .Right-message .choice dd{
+    float: left;
+    width: 298px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-right: 6px;
+    border: 1px solid #E0E0E0;
+    color: #363636;
+}
+.buydetail-box .Right-message .choice dd span{
+    font-style: normal;
+    font-size: 14px;
+    margin-left: 12px;
+    color:#B0B0B0;
+    display: inline-block;
+}
+.buydetail-box .Right-message .choice dl dd.con{
+    color: #FF6700;
+}
+.buydetail-box .Right-message .choice dl dd.con span{
+    color:#757575;
+}
+.buydetail-box .Right-message .choice dd img{
+    width: 16px;
+    height: 16px;
+    margin-right: 15px;
+    vertical-align:middle;  /* 能够让图片在固定高度中居中显示 */
+}
+/* 总计信息 */
+.buydetail-box .Right-message .total-price-message {
+    height: 102px;
+    margin: 30px 0px;
+    position: relative;
+    padding: 38px 30px 0px 30px;
+    background: #F9F9FA;
+}
+.buydetail-box .Right-message .total-price-message p{
+    font-size: 14px;
+    color: #616161;
+}
+.buydetail-box .Right-message .total-price-message p span{
+    float: right;
+    font-size :14px;
+}
+.buydetail-box .Right-message .total-price-message .total-price{
+    position: absolute;
+    left:30px;
+    bottom: 34px;
+    font-size:24px;
+    color: #FF6700;
+}
+.buydetail-box .Right-message .buybutton .buycar{
+    width: 300px;
+    height: 54px;
+    line-height: 54px;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    background-color: #FF6700;
+    color: #fff;
+}
+.buydetail-box .Right-message .buybutton .like{
+    float: left;
+    width: 142px;
+    height: 54px;
+    line-height: 54px;
+    background-color: #B0B0B0;
+    font-size: 16px;
+    text-align: center; 
+    margin-left: 14px;
+    color: #fff;
+}
+/* 总计信息 end */
+/* 价格说明 */
+.price-description{
+    padding-bottom: 48px;
+    margin-top: 50px;
+    background-color: #F5F5F5;
+}
+
+.price-description h1{
+    height: 77px;
+    line-height: 77px;
+    font-size: 24px;
+}
+/* 价格说明 end */
