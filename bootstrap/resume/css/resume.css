@@ -1,6 +1,10 @@
 * {
   font-family: microsoft yahei, sans-serif;
 }
+body,
+html {
+  scroll-behavior: smooth;
+}
 .w-navbar {
   padding: 20px 0;
   background-color: transparent;
