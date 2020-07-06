@@ -1,0 +1,307 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 2;
+}
+.fiexRight {
+  position: fixed;
+  right: -30px;
+  bottom: 30%;
+  background-color: #0042f2;
+  color: #fff;
+  transform: rotate(270deg);
+  z-index: 999;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.fiexRight p {
+  display: inline-block;
+  padding: 12px 14px 12px 12px;
+  margin: 0;
+}
+.fiexRight i {
+  transform: rotate(90deg);
+  font-size: 14px;
+}
+.fiexbottom {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 998;
+}
+.fiexbottom a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+}
+.fiexbottom a i {
+  margin-top: 16px;
+  font-size: 18px;
+}
+.navbar {
+  margin-bottom: 0;
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.navbar .w-navbar {
+  padding: 30px 30px;
+}
+.navbar .navbar-header .navbar-brand img {
+  width: 161px;
+  height: 51px;
+}
+.navbar .nav li.dropdown a.dropdown-toggle {
+  background-color: transparent;
+}
+.navbar .nav li.dropdown .dropdown-menu {
+  background-color: #000000;
+  width: 140px;
+  text-align: left;
+}
+.navbar .nav li.dropdown .dropdown-menu li a {
+  color: #999999;
+  transition: all 0.2s;
+  white-space: normal;
+}
+.navbar .nav li.dropdown .dropdown-menu li a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.navbar .nav li a {
+  color: #fff;
+}
+.home {
+  background: url(../flinkHubimg/bg_note_coffee.jpg) no-repeat center;
+  background-size: cover;
+}
+.home .home-body {
+  text-align: center;
+  padding: 195px 0;
+}
+.home .home-body h2 {
+  font-size: 60px;
+  color: #fff;
+  margin: 0 0 20px 0;
+}
+.home p {
+  font-size: 30px;
+  margin: 0 0 20px;
+  color: #fff;
+}
+.home p a.btn {
+  border-radius: 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4aca85;
+  border: 1px solid #4aca85;
+  padding: 18px 36px;
+}
+#bundle p {
+  font-size: 30px;
+  margin: 0 0 20px;
+  color: #fff;
+}
+#bundle p a.btn {
+  border-radius: 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4aca85;
+  border: 1px solid #4aca85;
+  padding: 18px 36px;
+}
+.work-feature {
+  padding: 112px 0;
+}
+.work-feature .bg-img {
+  background: url(../flinkHubimg/fh1.png) no-repeat center center;
+  background-size: cover;
+  height: 600px;
+}
+.work-feature .bg-img2 {
+  background-image: url(../flinkHubimg/fh2.png);
+}
+.work-feature .bg-img3 {
+  background-image: url(../flinkHubimg/fh3.png);
+}
+.work-feature #bundle2 p {
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+.work-feature #bundle2 p a.btn {
+  border-radius: 30px;
+  font-size: 16px;
+  background: transparent;
+  color: #4aca85;
+  border: 1px solid #4aca85;
+  padding: 8px 20px;
+}
+.work-feature .desc {
+  padding: 30px;
+}
+.work-feature .desc p {
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+.work-feature .desc p a.btn {
+  border-radius: 30px;
+  font-size: 16px;
+  background: transparent;
+  color: #4aca85;
+  border: 1px solid #4aca85;
+  padding: 8px 20px;
+}
+.work-feature .desc h2 {
+  font-size: 49px;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 40px;
+  color: #303133;
+  margin-top: 0;
+}
+.work-feature .desc .features {
+  position: relative;
+  margin-bottom: 50px;
+}
+.work-feature .desc .features i {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-size: 50px;
+  color: #499bea;
+}
+.work-feature .desc .features p {
+  font-size: 16px;
+  color: #808080;
+  line-height: 2;
+  font-weight: 300;
+  padding-left: 50px;
+}
+.counterColor {
+  position: relative;
+  padding: 112px;
+  background: url(../flinkHubimg/cover_img_1.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.counterColor .overlay {
+  position: absolute;
+  background-color: #798eea;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.96;
+}
+.counterColor .desct {
+  text-align: center;
+}
+.counterColor .desct span {
+  display: block;
+  font-weight: 300;
+  line-height: 2;
+}
+.counterColor .desct span.num {
+  font-size: 75px;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 0;
+}
+.counterColor .desct span.cont {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.w-footer {
+  padding-top: 96px;
+  background-color: #303133;
+  color: #fff;
+}
+.w-footer p {
+  font-size: 30px;
+  margin: 0 0 20px;
+  color: #fff;
+}
+.w-footer p a.btn {
+  border-radius: 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4aca85;
+  border: 1px solid #4aca85;
+  padding: 18px 36px;
+}
+.w-footer .col-md-3 {
+  margin-bottom: 40px;
+}
+.w-footer .row {
+  padding-bottom: 80px;
+}
+.w-footer .row h4 {
+  margin-bottom: 30px;
+  font-size: 12px;
+  color: #e6e6e6;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-top: 0;
+}
+.w-footer .row p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 20px 0;
+}
+.w-footer .row a {
+  font-size: 13px;
+}
+.w-footer .row ul {
+  list-style: none;
+  padding: 0;
+}
+.w-footer .row ul.left1 li {
+  float: left;
+}
+.w-footer .row ul.left1 li a {
+  font-size: 20px;
+  padding-right: 10px;
+}
+.w-footer .row ul.mid li a {
+  color: rgba(255, 255, 255, 0.9);
+}
+.w-footer .row ul.mid li a i {
+  padding-right: 10px;
+}
+.w-footer .row ul.right1 li a {
+  color: rgba(255, 255, 255, 0.9);
+}
+.w-footer .row ul.right1 li a i {
+  padding-right: 10px;
+}
+.w-footer .row .right2 p a {
+  font-size: 14px;
+}
+.w-footer .fot-bottom {
+  padding: 112px 0;
+  background-color: #202020;
+}
+.w-footer .fot-bottom p {
+  color: #fff;
+}
+.w-footer .fot-bottom p a {
+  color: #4aca85;
+  font-size: 13px;
+}
+.w-footer .fot-bottom p i {
+  font-size: 16px;
+}
+a:focus,
+a:hover,
+a:visited {
+  text-decoration: none;
+  outline: none;
+  outline-offset: 0;
+}
+/*# sourceMappingURL=./flinkHub.css.map */

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
+    <title>hehanzhu0428.github.io</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -40,19 +40,19 @@
                         <a href="#basic-information">基本资料</a>
                     </li>
                     <li>
-                        <a href="#">项目经验</a>
+                        <a href="#project-experience">项目经验</a>
                     </li>
                     <li>
-                        <a href="#">专业技能</a>
+                        <a href="#professional-skills">专业技能</a>
                     </li>
                     <li>
-                        <a href="#">工作经历</a>
+                        <a href="#work-experience">工作经历</a>
                     </li>
                     <li>
-                        <a href="#">自我评价</a>
+                        <a href="#self-evaluation">自我评价</a>
                     </li>
                     <li>
-                        <a href="#"> 联系方式</a>
+                        <a href="#contact-information">联系方式</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -116,50 +116,48 @@
         </div>
 
     </div>
-    <div class="work">
+    <div class="work" id="project-experience">
         <div class="container">
             <h2>项目 <strong>经验</strong></h2>
             <hr>
             <p>主要涉及电商，金融，家装领域，包括PC端，手机端，微信端，移动APP端等等，主要技术是HTML+CSS+JS</p>
             <div class="categories">
-                <ul class="clearfix">
-                    <li><a href="#" class="active">所有</a></li>
-                    <li><a href="#">PC端</a></li>
-                    <li><a href="#">移动端</a></li>
-                    <li><a href="#">响应式</a></li>
+                <ul class="clearfix w-click">
+                    <li class="active">排版</li>
+                    <li>响应式</li>
+                    <li>vue</li>
+                    <li>jQuery&JS</li>
                 </ul>
             </div>
-            <div class="row w-row">
-                <div class="col-xs-6 col-md-3">
-                    <a href="./mishop/miindex.html"><img src="./bootstrap/resume/img/01.jpg" alt=""></a>
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <img src="./bootstrap/resume/img/02.jpg" alt="">
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <img src="./bootstrap/resume/img/03.jpg" alt="">
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <img src="./bootstrap/resume/img/04.jpg" alt="">
-                </div>
-            </div>
-            <div class="row w-row">
-                <div class="col-xs-6 col-md-3">
-                    <img src="./bootstrap/resume/img/05.jpg" alt="">
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <img src="./bootstrap/resume/img/06.jpg" alt="">
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <img src="./bootstrap/resume/img/07.jpg" alt="">
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <img src="./bootstrap/resume/img/08.jpg" alt="">
-                </div>
-            </div>
+            <ul class="w-contentsss">
+                <li class="active">
+                    <div class="row w-row">
+                        <div class="col-xs-6 col-md-3">
+                            <a href="./mishop/miindex.html"><img src="./bootstrap/resume/img/mishopIndex.png"
+                                    alt=""></a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="./wangyimusic/网易云音乐index.html"><img
+                                    src="./bootstrap/resume/img/wangyimusicIndex.png" alt=""></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row w-row">
+                        <div class="col-xs-6 col-md-3">
+                            <a href="./bootstrap/redash/redashReset.html"><img src="./bootstrap/resume/img/redashIndex.png"
+                                    alt=""></a>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <a href="./bootstrap/flinkHub/flinkHub.html"><img
+                                    src="./bootstrap/resume/img/flinkHubIndex.png" alt=""></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="skills">
+    <div class="skills" id="professional-skills">
         <div class="container">
             <h2>专业 <strong>技能</strong></h2>
             <hr>
@@ -228,7 +226,7 @@
         </div>
 
     </div>
-    <div class="team">
+    <div class="team" id="work-experience">
         <div class="container">
             <h2>人生 <strong>经历</strong></h2>
             <hr>
@@ -261,7 +259,7 @@
             </div>
         </div>
     </div>
-    <div class="evaluation">
+    <div class="evaluation" id="self-evaluation">
         <div class="container">
             <h2>自我 <strong>评价</strong></h2>
             <hr>
@@ -299,7 +297,7 @@
             </div>
         </div>
     </div>
-    <div class="contact">
+    <div class="contact" id="contact-information">
         <div class="container">
             <h2>联系 <strong>方式</strong></h2>
             <hr>
@@ -384,13 +382,19 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <script>
-$(document).on('scroll', function () {
-    if($(document).scrollTop()>1){
-        $('.w-navbar').addClass('active')
-    }else{
-        $('.w-navbar').removeClass('active')
-    }
-});
+        $(document).on('scroll', function () {
+            if ($(document).scrollTop() > 1) {
+                $('.w-navbar').addClass('active')
+            } else {
+                $('.w-navbar').removeClass('active')
+            }
+        });
+        $(".w-click").find('li').click(function (e) {
+            $(this).addClass("active").siblings().removeClass("active")
+             var index=$(this).index();
+             console.log(index);
+             $(".w-contentsss li").eq(index).addClass('active').siblings().removeClass('active')
+        });
     </script>
 </body>
 

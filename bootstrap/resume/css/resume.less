@@ -1,8 +1,21 @@
 * {
   font-family: microsoft yahei, sans-serif;
 }
-body,html{
+body,
+html {
   scroll-behavior: smooth;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+.w-contentsss{
+  li{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
 }
 .w-navbar {
   &.active {
@@ -159,18 +172,16 @@ body,html{
       margin-bottom: 0;
       li {
         float: left;
-        &::after {
-          content: "|";
-          margin: 0 20px;
-        }
-        &:last-child::after {
-          content: "";
-        }
-      }
-      a {
-        color: #444444;
-        text-decoration: none;
-        padding: 2px 8px;
+        margin: 0 10px;
+        padding: 0 10px;
+        cursor: pointer;
+        // &::after {
+        //   content: "|";
+        //   margin: 0 20px;
+        // }
+        // &:last-child::after {
+        //   content: "";
+        // }
         &.active {
           border-radius: 4px;
           background-color: #f4d03f;
@@ -187,6 +198,10 @@ body,html{
   .row {
     img {
       width: 100%;
+      transition: all 0.3s;
+      &:hover {
+        -webkit-transform: scale(1.2, 1.2);
+      }
     }
   }
 }
