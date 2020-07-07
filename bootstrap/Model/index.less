@@ -1,4 +1,5 @@
-body,html {
+body,
+html {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
@@ -80,13 +81,22 @@ a:visited {
             background: #333;
             padding: 10px;
             border-radius: 4px;
+            @media (max-width: 767px){
+              background: #fff;
+              text-align: center;
+          }
             li {
               width: 170px;
               margin: 0;
-              &:hover{
-                background-color: #F8F9FA;
-                a{
-                  color: #333;
+              
+              @media (max-width: 767px){
+                width: 100%;
+            }
+              &:hover {
+                
+                a {
+                  color:#fc427b ;
+                 
                 }
               }
               a {
@@ -94,6 +104,9 @@ a:visited {
                 color: #fff;
                 padding: 5px 10px;
                 font-size: 14px;
+                @media (max-width: 767px){
+                  color: #333;
+              }
               }
             }
           }
@@ -109,7 +122,7 @@ a:visited {
           &:hover {
             color: #fc427b;
             @media (max-width: 767px) {
-              color: #686de0;
+              color: #fc427b;
             }
           }
         }
@@ -153,6 +166,11 @@ a:visited {
       background: url(./indexImg/2.jpg) no-repeat center;
       background-size: cover;
       min-height: 733px;
+      @media (max-width: 767px) {
+        background-position: left;
+       background-size: cover;
+       min-height: 300px;
+      }
       &:nth-child(2) {
         background-image: url(./indexImg/1.jpg);
       }
@@ -162,8 +180,15 @@ a:visited {
     }
     .w-container {
       #bundle.w-container();
+      @media (max-width: 767px) {
+        padding: 0;
+      }
     }
     .carousel-caption {
+      @media (max-width: 767px) {
+        bottom: 0;
+        top: 40%;
+      }
       text-align: right;
       left: 50%;
       top: 50%;
@@ -182,7 +207,7 @@ a:visited {
         margin-top: 0;
         line-height: 1.2;
         @media (max-width: 767px) {
-          font-size: 19px;
+          font-size: 16px;
         }
       }
       h3 {
@@ -195,10 +220,14 @@ a:visited {
         padding: 0;
         line-height: 1.2;
         @media (max-width: 767px) {
-          font-size: 40px;
+          font-size: 28px;
         }
       }
       .btn {
+        @media (max-width: 767px) {
+          font-size: 13px;
+          margin-top: 10px;
+        }
         max-width: 150px;
         padding: 12px 25px;
         margin-top: 48px;
@@ -222,9 +251,15 @@ a:visited {
   .w-container {
     #bundle.w-container();
     padding-top: 16px;
+    @media (max-width: 767px) {
+      width: 100%;;
+    }
   }
   .w-welleft {
     padding: 48px 15px;
+    @media (max-width: 767px) {
+      padding: 0px 15px;
+    }
     h3 {
       font-size: 40px;
       letter-spacing: 1px;
@@ -233,7 +268,7 @@ a:visited {
       margin: 0;
       color: #212529;
       @media (max-width: 767px) {
-        font-size: 34px;
+        font-size: 28px;
       }
     }
     h4 {
@@ -246,7 +281,9 @@ a:visited {
       margin: 16px 0 48px 0;
       font-weight: 500;
       @media (max-width: 767px) {
-        font-size: 20px;
+        font-size: 18px;
+        margin: 16px 0 24px 0;
+        letter-spacing: 0;
       }
     }
   }
@@ -295,6 +332,9 @@ a:visited {
     padding-top: 48px;
     padding-bottom: 48px;
     text-align: center;
+    @media (max-width: 767px) {
+     padding-top: 0;
+    }
   }
   .w-headCon {
     i {
@@ -312,6 +352,9 @@ a:visited {
       color: #fff;
       letter-spacing: 1px;
       margin: 48px 0 16px 0;
+      @media (max-width: 767px) {
+        margin: 24px 0 16px 0;
+       }
     }
     p {
       #bundle.p();
@@ -327,6 +370,10 @@ a:visited {
     padding-top: 48px;
     padding-bottom: 48px;
     text-align: center;
+    @media (max-width: 767px){
+    width: 100%;
+    padding-top: 0;
+}
     .w-blog-title {
       margin: 0 0 48px 0;
       h3 {
@@ -417,6 +464,9 @@ a:visited {
     #bundle.w-container();
     padding-top: 48px;
     padding-bottom: 48px;
+    @media (max-width: 767px){
+      width: 100%;
+  }
     span {
       font-size: 26px;
       color: rgba(255, 255, 255, 0.35);
@@ -430,6 +480,9 @@ a:visited {
       font-weight: 800;
       letter-spacing: 1px;
       line-height: 1.4;
+      @media (max-width: 767px){
+        font-size: 25px;
+    }
     }
     p {
       #bundle.p();
@@ -444,6 +497,9 @@ a:visited {
     padding-top: 48px;
     padding-bottom: 48px;
     text-align: center;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
     .w-blog-title {
       margin: 0 0 48px 0;
       h3 {
@@ -464,7 +520,7 @@ a:visited {
       img {
         width: 100%;
         @media (max-width: 767px) {
-          width: 64%;
+          width: 100%;
         }
       }
     }
@@ -539,6 +595,9 @@ a:visited {
     padding-top: 48px;
     padding-bottom: 48px;
     text-align: center;
+    @media (max-width: 767px){
+      width: 100%;
+  }
     .w-message-title {
       margin: 0 0 48px 0;
       h3 {
@@ -661,6 +720,9 @@ a:visited {
     #bundle.w-container();
     padding-top: 48px;
     padding-bottom: 48px;
+    @media (max-width: 767px){
+      width: 100%;
+  }
     h3 {
       font-size: 20px;
       font-weight: 500;
@@ -736,10 +798,10 @@ a:visited {
     }
   }
 }
-.modal-content{
+.modal-content {
   max-width: 430px;
   margin: 0 auto;
-  img{
-  padding: 48px 32px;
+  img {
+    padding: 48px 32px;
   }
 }
