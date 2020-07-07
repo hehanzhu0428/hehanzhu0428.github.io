@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        /* 清除浮动 */
+        .clearfix:after {
+            content: "";
+            clear: both;
+            display: block;
+            height: 0px;
+            line-height: 0px;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            zoom: 1;
+            /*为了兼容ie浏览器*/
+        }
+
+        .box {
+            width: 440px;
+            height: 800px;
+            background-color: #dfdfdf;
+            position: relative;
+
+        }
+
+        .i-img {
+            width: 440px;
+            height: 440px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* background: rgba(0, 0, 0, 0.3); */
+            z-index: 10;
+        }
+
+        .i-list img {
+            width: 100px;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+
+        .i-move {
+            position: absolute;
+            top: 300px;
+            left: 200px;
+            z-index: 1;
+        }
+
+        .i-move img {
+            width: 100px;
+        }
+
+        .i-move img.fx {
+            width: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" style="margin-left: 10px;">
+        <img src="./images/img.jpg" alt="">
+        <div class="i-img">
+            <!-- <div class="i-move">
+                <img src="./images/w1.png" alt="" class="ic">
+                <img src="./images/close-icon2.png" alt="" class="fx">
+            </div> -->
+        </div>
+        <div class="i-list">
+            <img src="./images/w1.png" alt="">
+            <img src="./images/w2.png" alt="">
+            <img src="./images/w3.png" alt="">
+            <img src="./images/w4.png" alt="">
+            <img src="./images/w5.png" alt="">
+            <img src="./images/w6.png" alt="">
+        </div>
+    </div>
+    <script>
+        $(".i-list img").click(function () {
+            // attr() 方法设置或返回被选元素的属性和值。
+            // 当该方法用于返回属性值，则返回第一个匹配元素的值。
+            // 当该方法用于设置属性值，则为匹配元素设置一个或多个属性/值对。
+            console.log($(this).attr("src"))
+            var sticker = ['<div class="i-move">',
+                '<img src="' + $(this).attr("src") + '" alt="" class="ic">',
+                '<img src="./images/close-icon2.png" alt="" class="fx">',
+                "</div>"].join("");
+            console.log(sticker)
+            $(".i-img").append(sticker);//append()在目标里面插入新节点、新内容（生成在末尾）
+        });
+        // $(".fx").click(function () {
+        //     console.log(this)
+        //     //parent() 方法返回被选元素的直接父元素。 
+        //     $(".i-move").remove();
+
+        // });
+        // debugger
+        $(".i-img").on('click', '.fx', function () {
+
+            // console.log(this)
+            console.log("xxx")
+            //parent() 方法返回被选元素的直接父元素。 
+            $(this).parent().remove();
+        });
+        // $('.i-img').delegate('.fx','click',function(){
+        //     console.log("xxx")
+        //     //parent() 方法返回被选元素的直接父元素。 
+        //     $(this).parent().remove();
+        // })
+
+        $(".i-img").on('mousedown', '.i-move', function (event) {
+            x1 = event.pageX - $(this).offset().left
+            y1 = event.pageY - $(this).offset().top
+            $(document).bind('mousemove', start);
+            $(document).bind('mouseup', end);
+            return false;
+        })
+
+        function start(event) {
+            console.log(event.target)
+            x2 = event.pageX - x1
+            y2 = event.pageY - y1
+           
+
+            if (x2 >= 340) {
+                x2 = 340
+            }
+            if (x2 <= 0) {
+                x2 = 0
+            }
+            if (y2 >= 340) {
+                y2 = 340
+            }
+            if (y2 <= 0) {
+                y2 = 0
+            }
+            console.log(x2, y2)
+            $(event.target).parent().css({
+                'left': x2 + 'px',
+                'top': y2 + 'px',
+            })
+            return false;
+        }
+
+        function end(event) {
+            $(this).unbind('mousemove')
+            $(this).unbind('mouseup')
+        }
+    </script>
+</body>
+
+</html>
