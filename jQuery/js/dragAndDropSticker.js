@@ -33,8 +33,8 @@ $(".i-img").on('click', '.fx', function () {
 $(".i-img").on('mousedown', '.i-move', function (event) {
     x1 = event.pageX - $(this).offset().left
     y1 = event.pageY - $(this).offset().top
-    $(document).bind('mousemove', start);
-    $(document).bind('mouseup', end);
+    $('.i-move').find('img').eq(0).bind('mousemove', start);
+    $('.i-move').find('img').eq(0).bind('mouseup', end);
     return false;
 })
 
