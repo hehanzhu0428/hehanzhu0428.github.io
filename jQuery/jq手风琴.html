@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        .wrap {
+            width: 790px;
+            height: 340px;
+            margin: 100px auto;
+            /* border: 1px solid #373737; */
+        }
+
+        .wrap ul {
+            width: 1300px;
+        }
+
+        .wrap ul li {
+            width: 158px;
+            height: 340px;
+            background: url(./images/1.png) no-repeat;
+            float: left;
+        }
+
+        .wrap ul li:nth-of-type(2) {
+            background: url(./images/2.png);
+        }
+
+        .wrap ul li:nth-of-type(3) {
+            background: url(./images/3.png);
+        }
+
+        .wrap ul li:nth-of-type(4) {
+            background: url(./images/4.png);
+        }
+
+        .wrap ul li:nth-of-type(5) {
+            background: url(./images/5.png);
+        }
+
+        .w-level{
+            overflow: hidden;
+        }
+        .w-level li {
+            float: left;
+            width: 190px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .w-level li img{
+            max-width: none;
+            display: block;  
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="stage">
+        <ul class="w-level">
+            <li><img src="./images/w1.jpg" alt=""></li>
+            <li><img src="./images/w2.jpg" alt=""></li>
+            <li><img src="./images/w3.jpg" alt=""></li>
+            <li><img src="./images/w4.jpg" alt=""></li>
+            <li><img src="./images/w5.jpg" alt=""></li>
+            <li><img src="./images/w6.jpg" alt=""></li>
+            <li><img src="./images/w7.jpg" alt=""></li>
+            
+        </ul>
+    </div>
+    <script>
+        // var canClick=true;
+        // $(".wrap ul li").mouseenter(function () { 
+        //     console.log(this)
+        //     $(this).animate({
+        //         "width":"790px"
+        //     },1000).siblings().animate({
+        //         "width":"0px"
+        //     },1000)
+        // }).mouseleave(function () {
+        //     $(".wrap ul li").animate({
+        //         "width":"158px"
+        //     },1000).siblings().animate({
+        //         "width":"158px"
+        //     },1000)
+        // });
+
+        // $(".wrap ul li").hover(function () {
+        //     // over
+        //     var currentIndex = $(this).index();
+        //     $(".wrap ul li").each(function (index, element) {
+        //         // element == this
+        //         if (index == currentIndex) {
+        //             $(element).animate({
+        //                 "width": "790px"
+        //             }, 800).siblings().animate({
+        //                 "width": "0px"
+        //             }, 800)
+        //         } else {
+        //             // $(element).animate({
+        //             //     "width": "158px"
+        //             // }, 1000)
+        //         }
+        //     });
+        // }, function () {
+        //     //out
+        //     $(".wrap ul li").animate({
+        //         "width": "158px"
+        //     }, 800).clearQueue()
+        //     // $(".wrap ul li").stop();
+        // }
+        // );
+
+        var lis = $('.wrap li');
+        lis.mouseenter(function () {
+            $(this).stop().animate({
+                width: 790+"px"
+            }).siblings().stop().animate({
+                width: 0+"px"
+            })
+        }).mouseleave(function () {
+            lis.stop().animate({
+                width: 158+"px"
+            })
+        })
+
+        $(".w-level li").mouseenter(function () { 
+            $(this).stop().animate({
+                width:500+"px"
+            }).siblings().stop().animate({
+                width:146+"px"
+            })
+        });
+        $(".w-level li").mouseleave(function () { 
+            $(".w-level li").stop().animate({
+                width:190+"px"
+            })
+        });
+    </script>
+</body>
+
+</html>
