@@ -1,0 +1,56 @@
+/* 清除浮动 */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0px;
+  line-height: 0px;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+  /*为了兼容ie浏览器*/
+}
+
+.box {
+  width: 440px;
+  height: 800px;
+  background-color: #dfdfdf;
+  position: relative;
+}
+
+.i-img {
+  width: 440px;
+  height: 440px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: rgba(0, 0, 0, 0.3); */
+  z-index: 10;
+}
+
+.i-list img {
+  width: 100px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.i-move {
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  z-index: 1;
+}
+
+.i-move img {
+  width: 100px;
+}
+
+.i-move img.fx {
+  width: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
