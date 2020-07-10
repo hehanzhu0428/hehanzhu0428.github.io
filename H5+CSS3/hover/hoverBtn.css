@@ -1,0 +1,963 @@
+a:focus,
+a:hover,
+a:visited {
+  text-decoration: none;
+  outline: none;
+  outline-offset: 0;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  outline-offset: 0;
+  color: #666;
+  background-color: #e1e1e1;
+  padding: 16px;
+  margin: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+.w-hoverBtn {
+  width: 800px;
+  margin: 0 auto;
+}
+.w-hoverBtn .w-grow {
+  transform: perspective(1px) translateZ(0);
+  transition: transform 0.3s;
+}
+.w-hoverBtn .w-grow:hover {
+  transform: scale(1.1);
+}
+.w-hoverBtn .w-shrink {
+  transform: perspective(1px) translateZ(0);
+  transition: transform 0.3s;
+}
+.w-hoverBtn .w-shrink:hover {
+  transform: scale(0.9);
+}
+.w-hoverBtn .w-rotate {
+  transition: all 0.3s;
+}
+.w-hoverBtn .w-rotate:hover {
+  transform: rotate(5deg);
+}
+.w-hoverBtn .w-growrotate:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+.w-hoverBtn .w-float:hover {
+  transform: translateY(-10px);
+}
+.w-hoverBtn .w-sink:hover {
+  transform: translateY(10px);
+}
+.w-hoverBtn .w-skew:hover {
+  transform: skewX(-10deg);
+}
+.w-hoverBtn .w-skewforward {
+  transform-origin: 0 100% 0;
+}
+.w-hoverBtn .w-skewforward:hover {
+  transform: skewX(-10deg);
+}
+.w-hoverBtn .w-skewbackward {
+  transform-origin: 0 100% 0;
+}
+.w-hoverBtn .w-skewbackward:hover {
+  transform: skewX(10deg);
+}
+.w-hoverBtn .w-forward:hover {
+  transform: translateX(10px);
+}
+.w-hoverBtn .w-backward:hover {
+  transform: translateX(-10px);
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.w-hoverBtn .w-pulse:hover {
+  animation: pulse 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes push {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.w-hoverBtn .w-push:hover {
+  animation: push 0.5s;
+  animation-timing-function: ease-out;
+}
+@keyframes bob {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
+.w-hoverBtn .w-bob:hover {
+  animation: bob 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+.w-hoverBtn .w-bouncein {
+  transition: all 0.8s;
+}
+@keyframes bouncein {
+  0% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.w-hoverBtn .w-bouncein:hover {
+  animation: bouncein 0.8s;
+  transform: scale(1.2);
+  animation-timing-function: linear;
+}
+.w-hoverBtn .w-wobblevertical {
+  transition: all 0.8s;
+}
+@keyframes wobblevertical {
+  0% {
+    transform: translateY(8px);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+  80% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.w-hoverBtn .w-wobblevertical:hover {
+  animation: wobblevertical 0.8s;
+  animation-timing-function: linear;
+}
+.w-hoverBtn .w-wobbletop {
+  transition: all 0.8s;
+  transform-origin: 0 100%;
+}
+@keyframes w-wobbletop {
+  0% {
+    transform: skew(12deg);
+  }
+  40% {
+    transform: skew(-8deg);
+  }
+  60% {
+    transform: skew(6deg);
+  }
+  80% {
+    transform: skew(-4deg);
+  }
+  100% {
+    transform: skew(0);
+  }
+}
+.w-hoverBtn .w-wobbletop:hover {
+  animation: w-wobbletop 0.8s;
+  animation-timing-function: linear;
+}
+.w-hoverBtn .w-buzz {
+  transition: all 0.8s;
+}
+@keyframes w-buzz {
+  0% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  60% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  80% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(3px) rotate(2deg);
+  }
+}
+.w-hoverBtn .w-buzz:hover {
+  animation: w-buzz 0.3s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.w-hoverBtn .w-fade:hover {
+  background-color: #2098d1;
+  color: #fff;
+}
+.w-hoverBtn .w-sweeptoright {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-sweeptoright::before {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  transition: all 0.3s;
+  z-index: -1;
+}
+.w-hoverBtn .w-sweeptoright:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-sweeptoright:hover::before {
+  transform: scaleX(1);
+}
+.w-hoverBtn .w-sweeptoleft {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-sweeptoleft::after {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform-origin: 100% 0;
+  transform: scaleX(0);
+  transition: all 0.3s;
+  z-index: -1;
+}
+.w-hoverBtn .w-sweeptoleft:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-sweeptoleft:hover::after {
+  transform: scaleX(1);
+}
+.w-hoverBtn .w-sweeptobottom {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-sweeptobottom::after {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform-origin: 100% 0;
+  transform: scaleY(0);
+  transition: all 0.3s;
+  z-index: -1;
+}
+.w-hoverBtn .w-sweeptobottom:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-sweeptobottom:hover::after {
+  transform: scaleY(1);
+}
+.w-hoverBtn .w-sweeptotop {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-sweeptotop::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: 0 100%;
+  background-color: #2098d1;
+  z-index: -1;
+  transform: scaleY(0);
+  transition: all 0.3s;
+}
+.w-hoverBtn .w-sweeptotop:hover::before {
+  transform: scaleY(1);
+}
+.w-hoverBtn .w-sweeptotop:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-bouncetoright {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-bouncetoright::before {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+.w-hoverBtn .w-bouncetoright:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-bouncetoright:hover::before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.w-hoverBtn .w-bouncetoleft {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-bouncetoleft::before {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform-origin: 100% 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+.w-hoverBtn .w-bouncetoleft:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-bouncetoleft:hover::before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.w-hoverBtn .w-bouncetoright {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-bouncetoright::before {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+.w-hoverBtn .w-bouncetoright:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-bouncetoright:hover::before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.w-hoverBtn .w-bouncetobottom {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-bouncetobottom::before {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform-origin: 100% 0;
+  transform: scaleY(0);
+  transition: all 0.5s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+.w-hoverBtn .w-bouncetobottom:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-bouncetobottom:hover::before {
+  transform: scaleY(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.w-hoverBtn .w-bouncetotop {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-bouncetotop::before {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform-origin: 0 100%;
+  transform: scaleY(0);
+  transition: all 0.5s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
+.w-hoverBtn .w-bouncetotop:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-bouncetotop:hover::before {
+  transform: scaleY(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.w-hoverBtn .w-radialout {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.w-hoverBtn .w-radialout::before {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100%;
+  z-index: -1;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+.w-hoverBtn .w-radialout:hover::before {
+  transform: scale(2);
+  border-radius: 0;
+}
+.w-hoverBtn .w-radialout:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-radialin {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.w-hoverBtn .w-radialin::before {
+  content: "";
+  background-color: #e1e1e1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0;
+  z-index: -1;
+  transform: scale(2);
+  transition: all 0.5s;
+}
+.w-hoverBtn .w-radialin:hover::before {
+  transform: scale(0);
+  border-radius: 100%;
+}
+.w-hoverBtn .w-radialin:hover {
+  color: #fff;
+  background-color: #2098d1;
+}
+.w-hoverBtn .w-rectanglein {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.w-hoverBtn .w-rectanglein::before {
+  content: "";
+  background-color: #e1e1e1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0;
+  z-index: -1;
+  transform: scale(2);
+  transition: all 0.5s;
+}
+.w-hoverBtn .w-rectanglein:hover::before {
+  transform: scale(0);
+  border-radius: 0;
+}
+.w-hoverBtn .w-rectanglein:hover {
+  color: #fff;
+  background-color: #2098d1;
+}
+.w-hoverBtn .w-rectangleout {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.w-hoverBtn .w-rectangleout::before {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0;
+  z-index: -1;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+.w-hoverBtn .w-rectangleout:hover::before {
+  transform: scale(2);
+  border-radius: 0;
+}
+.w-hoverBtn .w-rectangleout:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-shutterinhorizontal {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-shutterinhorizontal::before,
+.w-hoverBtn .w-shutterinhorizontal::after {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform-origin: 100% 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.5, 0.5, 0.34, 0.9);
+}
+.w-hoverBtn .w-shutterinhorizontal::after {
+  transform-origin: 0 100%;
+}
+.w-hoverBtn .w-shutterinhorizontal:hover::before {
+  transform: scaleX(1);
+}
+.w-hoverBtn .w-shutterinhorizontal:hover::after {
+  transform: scaleX(1);
+}
+.w-hoverBtn .w-shutterinhorizontal:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-shutterouthorizontal {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-shutterouthorizontal::before {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.5, 0.5, 0.34, 0.9);
+}
+.w-hoverBtn .w-shutterouthorizontal:hover::before {
+  transform: scaleX(1);
+}
+.w-hoverBtn .w-shutterouthorizontal:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-shutterinvertical {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-shutterinvertical::after,
+.w-hoverBtn .w-shutterinvertical::before {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform-origin: 100% 0;
+  transform: scaleY(0);
+  transition: all 0.5s;
+  z-index: -1;
+  transition-timing-function: cubic-bezier(0.5, 0.5, 0.34, 0.9);
+}
+.w-hoverBtn .w-shutterinvertical::before {
+  transform-origin: 0 100%;
+}
+.w-hoverBtn .w-shutterinvertical:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-shutterinvertical:hover::after,
+.w-hoverBtn .w-shutterinvertical:hover::before {
+  transform: scaleY(1);
+}
+.w-hoverBtn .w-shutteroutvertical {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-shutteroutvertical::before {
+  content: "";
+  background-color: #2098d1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: scaleY(0);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.5, 0.5, 0.34, 0.9);
+}
+.w-hoverBtn .w-shutteroutvertical:hover::before {
+  transform: scaleY(1);
+}
+.w-hoverBtn .w-shutteroutvertical:hover {
+  color: #fff;
+}
+.w-hoverBtn .w-iconback {
+  transition: transform 0.3s;
+  transition-timing-function: ease-out;
+}
+.w-hoverBtn .w-iconback:hover i {
+  transition: all 0.3s;
+  transition-timing-function: ease-out;
+  transform: translateX(-4px);
+}
+.w-hoverBtn .w-iconforward:hover i {
+  transition: transform 0.3s;
+  transition-timing-function: ease-out;
+  transform: translateX(4px);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.w-hoverBtn .w-iconspin:hover i {
+  animation: spin 1s;
+}
+.w-hoverBtn .w-iconfade:hover i {
+  transition: all 0.3s;
+  transition-timing-function: ease-in-out;
+  color: #0f9e5e;
+}
+.w-hoverBtn .w-icongrow:hover i {
+  transition: all 0.3s;
+  transition-timing-function: ease-out;
+  transform: scale(1.3);
+}
+.w-hoverBtn .w-iconshrink:hover i {
+  transition: all 0.3s;
+  transition-timing-function: ease-out;
+  transform: scale(0.8);
+}
+.w-hoverBtn .w-iconbounce {
+  transition-timing-function: ease-out;
+}
+.w-hoverBtn .w-iconbounce:hover i {
+  transition: all 0.3s;
+  transform: scale(1.5);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.1);
+}
+.w-hoverBtn .w-iconrotate:hover i {
+  transition: all 0.3s;
+  transition-timing-function: ease-out;
+  transform: rotate(18deg);
+}
+.w-hoverBtn .w-icongrowrotate:hover i {
+  transition: all 0.3s;
+  transition-timing-function: ease-out;
+  transform: rotate(18deg) scale(1.5);
+}
+.w-hoverBtn .w-iconfloat:hover i {
+  transition: all 0.3s;
+  transition-timing-function: ease-out;
+  transform: translateY(-5px);
+}
+.w-hoverBtn .w-iconsink:hover i {
+  transition: all 0.3s;
+  transition-timing-function: ease-out;
+  transform: translateY(5px);
+}
+.w-hoverBtn .w-iconfloataway:hover i {
+  transition: all 0.3s;
+  transition-timing-function: ease-out;
+  transform: translateY(-5px);
+  opacity: 0;
+}
+@keyframes iconpulse {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+.w-hoverBtn .w-iconpulse:hover i {
+  animation: iconpulse 0.5s infinite alternate linear;
+}
+@keyframes iconpush {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.w-hoverBtn .w-iconpush:hover i {
+  animation: iconpush 0.3s linear;
+}
+@keyframes iconbuzz {
+  0% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(3px) rotate(2deg);
+  }
+}
+.w-hoverBtn .w-iconbuzz:hover i {
+  animation: iconbuzz 0.08s linear alternate infinite;
+}
+.w-hoverBtn .w-borderfade {
+  border: 4px solid transparent;
+}
+.w-hoverBtn .w-borderfade:hover {
+  border: 4px solid #2098d1;
+}
+.w-hoverBtn .w-borderhollow {
+  border: 4px solid transparent;
+}
+.w-hoverBtn .w-borderhollow:hover {
+  border: 4px solid #e1e1e1;
+  background-color: #fff;
+}
+.w-hoverBtn .w-trim {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-trim::before {
+  content: "";
+  border: 4px solid #fff;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.w-hoverBtn .w-trim:hover::before {
+  opacity: 1;
+}
+.w-hoverBtn .w-roundcorners:hover {
+  border-radius: 15px;
+}
+.w-hoverBtn .w-underlinefromleft {
+  position: relative;
+}
+.w-hoverBtn .w-underlinefromleft::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-bottom: 4px solid #2098d1;
+  transform-origin: 0 100%;
+  transform: scaleX(0);
+  transition: all 0.3s;
+}
+.w-hoverBtn .w-underlinefromleft:hover::before {
+  transform: scaleX(1);
+}
+.w-hoverBtn .w-underlinefromright {
+  position: relative;
+}
+.w-hoverBtn .w-underlinefromright::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-bottom: 4px solid #2098d1;
+  transform-origin: 100% 0;
+  transform: scaleX(0);
+  transition: all 0.3s;
+}
+.w-hoverBtn .w-underlinefromright:hover::before {
+  transform: scaleX(1);
+}
+.w-hoverBtn .w-underlinefromcenter {
+  position: relative;
+}
+.w-hoverBtn .w-underlinefromcenter::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-bottom: 4px solid #2098d1;
+  transform: scaleX(0);
+  transition: all 0.3s;
+}
+.w-hoverBtn .w-underlinefromcenter:hover::before {
+  transform: scaleX(1);
+}
+.w-hoverBtn .w-underlinefromreveal {
+  position: relative;
+}
+.w-hoverBtn .w-underlinefromreveal::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-bottom: 4px solid #2098d1;
+  transform-origin: 0 100%;
+  transform: scaleY(0);
+  transition: all 0.3s;
+}
+.w-hoverBtn .w-underlinefromreveal:hover::before {
+  transform: scaleY(1);
+}
+.w-hoverBtn .w-reveal {
+  position: relative;
+}
+.w-hoverBtn .w-reveal::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border: 4px solid #2098d1;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+.w-hoverBtn .w-reveal:hover::before {
+  transform: scale(1);
+}
+.w-hoverBtn .w-rippleout {
+  position: relative;
+}
+.w-hoverBtn .w-rippleout::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border: 6px solid #e1e1e1;
+  transform: scale(1);
+  transition: all 0.8s;
+}
+@keyframes rippleout {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+.w-hoverBtn .w-rippleout:hover::before {
+  animation: rippleout linear 0.8s;
+}
+.w-hoverBtn .w-shadow:hover {
+  transition: all 0.3s;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+.w-hoverBtn .w-growshadow:hover {
+  transition: all 0.3s;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+.w-hoverBtn .w-floatshadow:hover {
+  transition: all 0.3s;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+.w-hoverBtn .w-glow:hover {
+  transition: all 0.3s;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+.w-hoverBtn .w-bubbletop {
+  position: relative;
+  z-index: 0;
+}
+.w-hoverBtn .w-bubbletop::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  border: solid;
+  border-width: 10px;
+  border-top-width: 0;
+  border-color: #e1e1e1;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transition: all 0.3s;
+  z-index: -1;
+}
+.w-hoverBtn .w-bubbletop:hover::before {
+  transform: translateY(-10px) translateX(-50%);
+}
+.w-hoverBtn .w-curltopleft {
+  position: relative;
+}
+.w-hoverBtn .w-curltopleft::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border: solid;
+  border-width: 10px;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+.w-hoverBtn .w-curltopleft:hover::before {
+  top: 0px;
+  left: 0px;
+  transform: scale(1);
+}
+/*# sourceMappingURL=./hoverBtn.css.map */

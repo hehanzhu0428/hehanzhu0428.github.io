@@ -1,0 +1,1050 @@
+a:focus,
+a:hover,
+a:visited {
+  text-decoration: none;
+  outline: none;
+  outline-offset: 0;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  outline-offset: 0;
+  color: #666;
+  background-color: #e1e1e1;
+  padding: 16px;
+  margin: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+.w-hoverBtn {
+  width: 800px;
+  margin: 0 auto;
+  .w-grow {
+    transform: perspective(1px) translateZ(0);
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.1); //放大
+    }
+  }
+  .w-shrink {
+    transform: perspective(1px) translateZ(0);
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(0.9); //收缩
+    }
+  }
+  .w-rotate {
+    transition: all 0.3s;
+    &:hover {
+      transform: rotate(5deg); //旋转
+    }
+  }
+  .w-growrotate {
+    &:hover {
+      transform: rotate(5deg) scale(1.1); //旋转 + 放大
+    }
+  }
+  .w-float {
+    &:hover {
+      transform: translateY(-10px); //沿Y轴移动  上升
+    }
+  }
+  .w-sink {
+    &:hover {
+      transform: translateY(10px); //沿Y轴移动  下降
+    }
+  }
+  .w-skew {
+    &:hover {
+      transform: skewX(-10deg); //倾斜  从左往右
+    }
+  }
+  .w-skewforward {
+    transform-origin: 0 100% 0;
+    &:hover {
+      transform: skewX(-10deg);
+    }
+  }
+  .w-skewbackward {
+    transform-origin: 0 100% 0;
+    &:hover {
+      transform: skewX(10deg);
+    }
+  }
+  .w-forward {
+    &:hover {
+      transform: translateX(10px);
+    }
+  }
+  .w-backward {
+    &:hover {
+      transform: translateX(-10px);
+    }
+  }
+  .w-pulse{
+    @keyframes pulse {
+      0%{
+        transform: scale(1.1);
+      }
+      50%{
+        transform: scale(0.9);
+      }
+      100%{
+        transform: scale(1);
+      }
+    }
+    &:hover{
+      animation: pulse 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+  }
+  .w-push{
+    @keyframes push {
+      0%{
+        transform: scale(0.8);
+      }
+      100%{
+        transform: scale(1);
+      }
+    }
+    &:hover{
+      animation: push 0.5s;
+      animation-timing-function: ease-out;
+    }
+  }
+  .w-bob{
+    @keyframes bob {
+      0%{
+        transform: translateY(-5px);
+      }
+      
+      100%{
+        transform: translateY(2px);
+      }
+    }
+    &:hover{
+      animation: bob 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+  }
+  .w-bouncein{
+    @keyframes bouncein {
+      0%{
+        transform: scale(1.2);
+      }
+      40%{
+        transform: scale(1.1);
+      }
+      60%{
+        transform: scale(1.2);
+      }
+      80%{
+        transform: scale(1.1);
+      }
+      100%{
+        transform: scale(1.2);
+      }
+    }
+    transition: all 0.8s;
+    &:hover{
+      animation: bouncein 0.8s;
+      transform: scale(1.2);
+      animation-timing-function: linear;
+    }
+  }
+  .w-wobblevertical{
+    @keyframes wobblevertical {
+      0%{
+        transform: translateY(8px);
+      }
+      40%{
+        transform: translateY(-6px);
+      }
+      60%{
+        transform: translateY(4px);
+      }
+      80%{
+        transform: translateY(-2px);
+      }
+      100%{
+        transform: translateY(0);
+      }
+    }
+    transition: all 0.8s;
+    &:hover{
+      animation: wobblevertical 0.8s;
+      animation-timing-function: linear;
+    }
+  }
+  .w-wobbletop{
+    @keyframes w-wobbletop {
+      0%{
+        transform: skew(12deg);
+      }
+      40%{
+        transform: skew(-8deg);
+      }
+      60%{
+        transform: skew(6deg);
+      }
+      80%{
+        transform: skew(-4deg);
+      }
+      100%{
+        transform: skew(0);
+      }
+    }
+    transition: all 0.8s;
+    transform-origin: 0 100%;
+    &:hover{
+      animation: w-wobbletop 0.8s;
+      animation-timing-function: linear;
+    }
+  }
+  .w-buzz{
+    @keyframes w-buzz {
+      0%{
+        transform: translateX(3px) rotate(2deg);
+      }
+      40%{
+        transform: translateX(-3px) rotate(-2deg);
+      }
+      60%{
+        transform:translateX(3px) rotate(2deg);
+      }
+      80%{
+        transform: translateX(-3px) rotate(-2deg);
+      }
+      100%{
+        transform: translateX(3px) rotate(2deg);
+      }
+    }
+    transition: all 0.8s;
+    &:hover{
+      animation: w-buzz 0.3s;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+  }
+  .w-fade {
+    &:hover {
+      background-color: #2098d1;
+      color: #fff;
+    }
+  }
+  .w-sweeptoright {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform-origin: 0 50%;
+      transform: scaleX(0);
+      transition: all 0.3s;
+      z-index: -1;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+  .w-sweeptoleft {
+    position: relative;
+    z-index: 0;
+    &::after {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      transform-origin: 100% 0;
+      transform: scaleX(0);
+      transition: all 0.3s;
+      z-index: -1;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+  .w-sweeptobottom {
+    position: relative;
+    z-index: 0;
+    &::after {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      transform-origin: 100% 0;
+      transform: scaleY(0);
+      transition: all 0.3s;
+      z-index: -1;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover::after {
+      transform: scaleY(1);
+    }
+  }
+  .w-sweeptotop {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform-origin: 0 100%;
+      background-color: #2098d1;
+      z-index: -1;
+      transform: scaleY(0);
+      transition: all 0.3s;
+    }
+    &:hover::before {
+      transform: scaleY(1);
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  .w-bouncetoright {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform-origin: 0 50%;
+      transform: scaleX(0);
+      transition: all 0.5s;
+      transition-timing-function: ease-out;
+      z-index: -1;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+  }
+  .w-bouncetoleft {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform-origin: 100% 0;
+      transform: scaleX(0);
+      transition: all 0.5s;
+      transition-timing-function: ease-out;
+      z-index: -1;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+  }
+  .w-bouncetoright {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform-origin: 0 50%;
+      transform: scaleX(0);
+      transition: all 0.5s;
+      transition-timing-function: ease-out;
+      z-index: -1;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+  }
+  .w-bouncetobottom {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform-origin: 100% 0;
+      transform: scaleY(0);
+      transition: all 0.5s;
+      transition-timing-function: ease-out;
+      z-index: -1;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover::before {
+      transform: scaleY(1);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+  }
+  .w-bouncetotop {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform-origin: 0 100%;
+      transform: scaleY(0);
+      transition: all 0.5s;
+      transition-timing-function: ease-out;
+      z-index: -1;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover::before {
+      transform: scaleY(1);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+  }
+  .w-radialout {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    &::before {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 100%;
+      z-index: -1;
+      transform: scale(0);
+      transition: all 0.5s;
+    }
+    &:hover::before {
+      transform: scale(2);
+      border-radius: 0;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  .w-radialin {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    &::before {
+      content: "";
+      background-color: #e1e1e1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 0;
+      z-index: -1;
+      transform: scale(2);
+      transition: all 0.5s;
+    }
+    &:hover::before {
+      transform: scale(0);
+      border-radius: 100%;
+    }
+    &:hover {
+      color: #fff;
+      background-color: #2098d1;
+    }
+  }
+  .w-rectanglein {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    &::before {
+      content: "";
+      background-color: #e1e1e1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 0;
+      z-index: -1;
+      transform: scale(2);
+      transition: all 0.5s;
+    }
+    &:hover::before {
+      transform: scale(0);
+      border-radius: 0;
+    }
+    &:hover {
+      color: #fff;
+      background-color: #2098d1;
+    }
+  }
+  .w-rectangleout {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    &::before {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 0;
+      z-index: -1;
+      transform: scale(0);
+      transition: all 0.5s;
+    }
+    &:hover::before {
+      transform: scale(2);
+      border-radius: 0;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  .w-shutterinhorizontal {
+    position: relative;
+    z-index: 0;
+    &::before,
+    &::after {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transform-origin: 100% 0;
+      transform: scaleX(0);
+      transition: all 0.5s;
+      transition-timing-function: cubic-bezier(0.5, 0.5, 0.34, 0.9);
+    }
+    &::after {
+      transform-origin: 0 100%;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+    }
+    &:hover::after {
+      transform: scaleX(1);
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  .w-shutterouthorizontal {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transform: scaleX(0);
+      transition: all 0.5s;
+      transition-timing-function: cubic-bezier(0.5, 0.5, 0.34, 0.9);
+    }
+    &:hover::before {
+      transform: scaleX(1);
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  .w-shutterinvertical {
+    position: relative;
+    z-index: 0;
+    &::after,
+    &::before {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      transform-origin: 100% 0;
+      transform: scaleY(0);
+      transition: all 0.5s;
+      z-index: -1;
+      transition-timing-function: cubic-bezier(0.5, 0.5, 0.34, 0.9);
+    }
+    &::before {
+      transform-origin: 0 100%;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover::after,
+    &:hover::before {
+      transform: scaleY(1);
+    }
+  }
+  .w-shutteroutvertical {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      background-color: #2098d1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transform: scaleY(0);
+      transition: all 0.5s;
+      transition-timing-function: cubic-bezier(0.5, 0.5, 0.34, 0.9);
+    }
+    &:hover::before {
+      transform: scaleY(1);
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  .w-iconback {
+    transition: transform 0.3s;
+    transition-timing-function: ease-out;
+    &:hover {
+      i {
+        transition: all 0.3s;
+        transition-timing-function: ease-out;
+        transform: translateX(-4px);
+      }
+    }
+  }
+  .w-iconforward {
+    &:hover {
+      i {
+        transition: transform 0.3s;
+        transition-timing-function: ease-out;
+        transform: translateX(4px);
+      }
+    }
+  }
+  .w-iconspin {
+    @keyframes spin {
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    &:hover {
+      i {
+       animation: spin 1s;
+      }
+    }
+  }
+  .w-iconfade {
+    &:hover {
+      i {
+        transition: all 0.3s;
+        transition-timing-function: ease-in-out;
+        color: #0f9e5e;
+      }
+    }
+  }
+  .w-icongrow {
+    &:hover {
+      i {
+        transition: all 0.3s;
+        transition-timing-function: ease-out;
+        transform: scale(1.3);
+      }
+    }
+  }
+  .w-iconshrink {
+    &:hover {
+      i {
+        transition: all 0.3s;
+        transition-timing-function: ease-out;
+        transform: scale(0.8);
+      }
+    }
+  }
+  .w-iconbounce {
+    transition-timing-function: ease-out;
+    &:hover {
+      i {
+        transition: all 0.3s;
+        transform: scale(1.5);
+        transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.1);
+      }
+    }
+  }
+  .w-iconrotate {
+    &:hover {
+      i {
+        transition: all 0.3s;
+        transition-timing-function: ease-out;
+        transform: rotate(18deg);
+      }
+    }
+  }
+  .w-icongrowrotate {
+    &:hover {
+      i {
+        transition: all 0.3s;
+        transition-timing-function: ease-out;
+        transform: rotate(18deg) scale(1.5);
+      }
+    }
+  }
+  .w-iconfloat {
+    &:hover {
+      i {
+        transition: all 0.3s;
+        transition-timing-function: ease-out;
+        transform: translateY(-5px);
+      }
+    }
+  }
+  .w-iconsink {
+    &:hover {
+      i {
+        transition: all 0.3s;
+        transition-timing-function: ease-out;
+        transform: translateY(5px);
+      }
+    }
+  }
+  .w-iconfloataway{
+    &:hover {
+    i {
+      transition: all 0.3s;
+      transition-timing-function: ease-out;
+      transform: translateY(-5px);
+      opacity: 0;
+    }
+  }
+}
+.w-iconpulse{
+  @keyframes iconpulse {
+    0%{
+      transform: scale(1.1);
+    }
+    100%{
+      transform: scale(0.9);
+    }
+  }
+  &:hover {
+  i {
+   animation: iconpulse 0.5s infinite alternate linear;
+  }
+}
+}
+.w-iconpush{
+  @keyframes iconpush {
+    0%{
+      transform: scale(0.5);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  &:hover {
+  i {
+   animation: iconpush 0.3s linear;
+  }
+}
+}
+.w-iconbuzz{
+  @keyframes iconbuzz {
+    0%{
+      transform: translateX(-3px) rotate(-2deg);
+    }
+    100%{
+      transform: translateX(3px) rotate(2deg);
+    }
+  }
+  &:hover {
+  i {
+   animation: iconbuzz 0.08s linear alternate infinite;
+  }
+}
+}
+  .w-borderfade {
+    border: 4px solid transparent;
+    &:hover {
+      border: 4px solid #2098d1;
+    }
+  }
+  .w-borderhollow {
+    border: 4px solid transparent;
+    &:hover {
+      border: 4px solid #e1e1e1;
+      background-color: #fff;
+    }
+  }
+  .w-trim {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      border: 4px solid #fff;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+  .w-roundcorners {
+    &:hover {
+      border-radius: 15px;
+    }
+  }
+  .w-underlinefromleft {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      border-bottom: 4px solid #2098d1;
+      transform-origin: 0 100%;
+      transform: scaleX(0);
+      transition: all 0.3s;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+  .w-underlinefromright {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      border-bottom: 4px solid #2098d1;
+      transform-origin: 100% 0;
+      transform: scaleX(0);
+      transition: all 0.3s;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+  .w-underlinefromcenter {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      border-bottom: 4px solid #2098d1;
+
+      transform: scaleX(0);
+      transition: all 0.3s;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+  .w-underlinefromreveal {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      border-bottom: 4px solid #2098d1;
+      transform-origin: 0 100%;
+      transform: scaleY(0);
+      transition: all 0.3s;
+    }
+    &:hover::before {
+      transform: scaleY(1);
+    }
+  }
+  .w-reveal {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      border: 4px solid #2098d1;
+      transform: scale(0);
+      transition: all 0.3s;
+    }
+    &:hover::before {
+      transform: scale(1);
+    }
+  }
+  .w-rippleout {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      border: 6px solid #e1e1e1;
+      transform: scale(1);
+      transition: all 0.8s;
+    }
+    @keyframes rippleout {
+      0%{
+        transform: scale(1);
+      }
+      100%{
+        transform: scale(1.3);
+        opacity: 0;
+      }
+    }
+    &:hover::before {
+     animation: rippleout linear 0.8s;
+    }
+  }
+  .w-shadow {
+    &:hover {
+      transition: all 0.3s;
+      box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    }
+  }
+  .w-growshadow {
+    &:hover {
+      transition: all 0.3s;
+      box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+      transform: scale(1.1);
+    }
+  }
+  .w-floatshadow {
+    &:hover {
+      transition: all 0.3s;
+      box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+      transform: translateY(-5px);
+    }
+  }
+  .w-glow{
+    &:hover {
+      transition: all 0.3s;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    }
+  }
+  .w-bubbletop{
+    position: relative;
+    z-index: 0;
+    &::before{
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      border: solid;
+      border-width: 10px;
+      border-top-width: 0;
+      border-color: #e1e1e1;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      transition: all 0.3s;
+      z-index: -1;
+    }
+    &:hover::before{
+      transform: translateY(-10px) translateX(-50%);
+    }
+  }
+  .w-curltopleft{
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      border: solid;
+      border-width: 10px;
+      border-top-color: #fff;
+      border-left-color: #fff;
+      transform: scale(0);
+      transition: all 0.3s;
+    }
+    &:hover::before{
+      top: 0px;
+      left: 0px;
+       transform: scale(1);
+    }
+  }
+}
