@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix:after {
+            content: "";
+            clear: both;
+            display: block;
+            height: 0px;
+            line-height: 0px;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            zoom: 1;
+            /*为了兼容ie浏览器*/
+        }
+
+        .original {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            float: left;
+        }
+
+        .original img {
+            width: 100%;
+        }
+
+        .original .mask {
+            width: 100px;
+            /*放大300%,所以300/3=100px,如果放大200%,则300/2=150px */
+            height: 100px;
+            background: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            cursor: move;
+            display: none;
+        }
+
+        .zoom {
+            width: 300px;
+            height: 300px;
+            float: left;
+            margin-left: 10px;
+            background: url("./images/gx.jpeg") no-repeat;
+            background-size: 300% auto;
+            display: none;
+
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+            margin-top: 5px;
+            width: 306px;
+        }
+
+        ul li {
+            float: left;
+            width: 97px;
+            height: 100px;
+            margin-right: 5px;
+        }
+
+        ul li img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stage clearfix">
+        <div class="original">
+            <img src="./images/0001.png" alt="">
+            <img src="./images/0002.png" alt="">
+            <img src="./images/gx.jpeg" alt="" />
+            <div class="mask"></div>
+        </div>
+        <div class="zoom"></div>
+    </div>
+    <ul class="clearfix">
+        <li><img src="./images/0001.png" alt=""></li>
+        <li><img src="./images/0002.png" alt=""></li>
+        <li><img src="./images/gx.jpeg" alt=""></li>
+    </ul>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <script src="./js/taobaomagnifier.js"></script>
+</body>
+
+</html>

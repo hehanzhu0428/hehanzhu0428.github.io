@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        .left {
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+
+        .left img {
+            width: 100%;
+        }
+
+        .left .zoom {
+            width: 200px;
+            height: 200px;
+            border: 6px solid white;
+            /* background-color: turquoise; */
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-radius: 50%;
+            background: url(./images/a1.png) no-repeat;
+            /* background-size: 800px 800px; */
+            cursor: crosshair;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stage">
+        <div class="left">
+            <img src="./images/a1.png" alt="">
+            <div class="zoom"></div>
+        </div>
+    </div>
+    <script>
+        //获取left的宽高
+        var leftSize = {
+            w: $(".left").width(),
+            h: $(".left").height()
+        }
+        console.log(leftSize.w, leftSize.h)
+
+        //获取zoom的宽高，包括边框等
+        var zoomSize = {
+            w: $(".left").find('.zoom').outerWidth(),
+            h: $(".left").find('.zoom').outerHeight()
+        }
+
+        //鼠标移动事件
+        $(".left").on('mousemove', function (even) {
+            // console.log(even)
+            var x = even.pageX - $(this).offset().left
+            var y = even.pageY - $(this).offset().top
+            console.log(x, y)
+            $(this).find('.zoom').show()
+            if (x > leftSize.w || x < 0 || y > leftSize.h || y < 0) {
+                $(this).find('.zoom').hide()
+                return
+            }
+            $(this).find('.zoom').css({
+                left: x - zoomSize.w / 2 + 'px',//鼠标位于中心点
+                top: y - zoomSize.h / 2 + 'px',
+                backgroundPositionX: -(x * 2 - zoomSize.w / 2) + 'px',
+                backgroundPositionY: -(y * 2 - zoomSize.h / 2) + 'px',
+                backgroundSize: leftSize.w * 2 + 'px ' + leftSize.h * 2 + 'px'//放大倍数
+            });
+        });
+    </script>
+</body>
+
+</html>

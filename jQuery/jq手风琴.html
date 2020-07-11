@@ -9,14 +9,10 @@
     <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
     <style>
         .wrap {
-            width: 790px;
+            width: 1200px;
             height: 340px;
             margin: 100px auto;
             /* border: 1px solid #373737; */
-        }
-
-        .wrap ul {
-            width: 1300px;
         }
 
         .wrap ul li {
@@ -42,23 +38,25 @@
             background: url(./images/5.png);
         }
 
-        .w-level{
+        .w-level {
             overflow: hidden;
         }
+
         .w-level li {
             float: left;
             width: 190px;
             cursor: pointer;
             overflow: hidden;
         }
-        .w-level li img{
+
+        .w-level li img {
             max-width: none;
-            display: block;  
+            display: block;
         }
 
 
-                /* 清除浮动 */
-                .clearfix:after {
+        /* 清除浮动 */
+        .clearfix:after {
             content: "";
             clear: both;
             display: block;
@@ -84,6 +82,7 @@
             padding: 15px 0px;
 
         }
+
         .stage2 ul li {
             width: 202px;
             height: 300px;
@@ -149,7 +148,7 @@
 
 <body>
     <div class="wrap">
-        <ul>
+        <ul class="clearfix">
             <li></li>
             <li></li>
             <li></li>
@@ -166,7 +165,6 @@
             <li><img src="./images/w5.jpg" alt=""></li>
             <li><img src="./images/w6.jpg" alt=""></li>
             <li><img src="./images/w7.jpg" alt=""></li>
-            
         </ul>
     </div>
 
@@ -255,40 +253,40 @@
         // );
 
         var lis = $('.wrap li');
-        document.querySelector('.wrap').onclick=function(){
+        document.querySelector('.wrap').onclick = function () {
             console.log("xxx")
         }
         lis.mouseenter(function () {
             $(this).stop().animate({
-                width: 790+"px"
+                width: 790 + "px"
             }).siblings().stop().animate({
-                width: 0+"px"
+                width: 0 + "px"
             })
         }).mouseleave(function () {
             lis.stop().animate({
-                width: 158+"px"
+                width: 158 + "px"
             })
         })
 
-        $(".w-level li").mouseenter(function () { 
+        $(".w-level li").mouseenter(function () {
             $(this).stop().animate({
-                width:500+"px"
+                width: 500 + "px"
             }).siblings().stop().animate({
-                width:146+"px"
+                width: 146 + "px"
             })
         });
-        $(".w-level li").mouseleave(function () { 
+        $(".w-level li").mouseleave(function () {
             $(".w-level li").stop().animate({
-                width:190+"px"
+                width: 190 + "px"
             })
         });
 
 
-        var current=0;
+        var current = 0;
         $(".stage2 li").on("mouseover", function () {
-            var _this=this;
+            var _this = this;
             $(_this).addClass("on").siblings().removeClass("on")
-           
+
         });
     </script>
 </body>

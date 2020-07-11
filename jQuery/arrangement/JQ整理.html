@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="arrangement.css">
+</head>
+
+<body>
+    <!-- 无缝轮播图 -->
+    <div class="carousel">
+        <div class="contair1">
+            <div class="wrapp1">
+                <div class="demo"><img src="../images/w2.jpg" alt=""></div>
+                <div class="demo"><img src="../images/w3.jpg" alt=""></div>
+                <div class="demo"><img src="../images/w4.jpg" alt=""></div>
+                <div class="demo"><img src="../images/w7.jpg" alt=""></div>
+                <div class="demo"><img src="../images/w8.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="btn prev"></div>
+        <div class="btn next"></div>
+        <ol class="active">
+            <li class="con">2</li>
+            <li>2</li>
+            <li>2</li>
+            <li>2</li>
+            <li>2</li>
+        </ol>
+    </div>
+
+    <!-- 单复选框 -->
+    <form action="">
+        <div class="checkbox contain">
+            <p>复选框</p>
+            <div class="check-item">
+                <label for="tvName">
+                    <input type="checkbox">
+                    <span>全选</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="tvName" value="天龙八部">
+                    <span>天龙八部</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="tvName" value="神雕侠侣">
+                    <span>神雕侠侣</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="tvName" value="笑傲江湖">
+                    <span>笑傲江湖</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="tvName" value="倚天屠龙记">
+                    <span>倚天屠龙记</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="tvName" value="鹿鼎记">
+                    <span>鹿鼎记</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="tvName" value="三国演义">
+                    <span>三国演义</span>
+                </label>
+            </div>
+        </div>
+        <div class="radio contain">
+            <p>单选框</p>
+            <div class="check-item">
+                <label>
+                    <input type="radio" name="tvName" value="天龙八部">
+                    <span>天龙八部</span>
+                </label>
+                <label>
+                    <input type="radio" name="tvName" value="神雕侠侣">
+                    <span>神雕侠侣</span>
+                </label>
+                <label>
+                    <input type="radio" name="tvName" value="笑傲江湖">
+                    <span>笑傲江湖</span>
+                </label>
+                <label>
+                    <input type="radio" name="tvName" value="倚天屠龙记">
+                    <span>倚天屠龙记</span>
+                </label>
+                <label>
+                    <input type="radio" name="tvName" value="鹿鼎记">
+                    <span>鹿鼎记</span>
+                </label>
+                <label>
+                    <input type="radio" name="tvName" value="无上圣帝">
+                    <span>无上圣帝</span>
+                </label>
+            </div>
+        </div>
+    </form>
+
+    <!-- 折叠面板 -->
+    <div class="folding contain">
+        <p>折叠面板</p>
+        <div class="collapse">
+            <div class="collapse-part">
+                <div class="collapse-part-title">
+                    标题一
+                    <i class="collapse-part-arrow">
+                        <svg viewBox="0 0 1024 1024" version="1.1" width="16" height="16">
+                            <path
+                                d="M948.560332 281.179984c-13.765515-13.833053-36.127825-13.833053-49.89334 0L511.991302 668.591431 125.313565 281.179984c-13.763468-13.798261-36.093033-13.798261-49.856501 0-13.799284 13.798261-13.799284 36.161594 0 49.993624l410.857439 411.674037c7.067976 7.085372 16.402575 10.521634 25.675776 10.331299 9.274224 0.191358 18.608823-3.245927 25.677822-10.331299l410.891208-411.708829c6.863315-6.89913 10.331299-15.940041 10.331299-24.979928S955.423647 288.078091 948.560332 281.179984z"
+                                fill="#000">
+                            </path>
+                        </svg>
+                    </i>
+                </div>
+                <!-- <div class="collapse-part-content" style="display: none;"> -->
+                <div class="collapse-part-content">
+                    <div>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse-part">
+                <div class="collapse-part-title">
+                    标题二
+                    <i class="collapse-part-arrow">
+                        <svg viewBox="0 0 1024 1024" version="1.1" width="16" height="16">
+                            <path
+                                d="M948.560332 281.179984c-13.765515-13.833053-36.127825-13.833053-49.89334 0L511.991302 668.591431 125.313565 281.179984c-13.763468-13.798261-36.093033-13.798261-49.856501 0-13.799284 13.798261-13.799284 36.161594 0 49.993624l410.857439 411.674037c7.067976 7.085372 16.402575 10.521634 25.675776 10.331299 9.274224 0.191358 18.608823-3.245927 25.677822-10.331299l410.891208-411.708829c6.863315-6.89913 10.331299-15.940041 10.331299-24.979928S955.423647 288.078091 948.560332 281.179984z"
+                                fill="#000">
+                            </path>
+                        </svg>
+                    </i>
+                </div>
+                <!-- <div class="collapse-part-content" style="display: none;"> -->
+                <div class="collapse-part-content">
+                    <div>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse-part">
+                <div class="collapse-part-title">
+                    标题三
+                    <i class="collapse-part-arrow">
+                        <svg viewBox="0 0 1024 1024" version="1.1" width="16" height="16">
+                            <path
+                                d="M948.560332 281.179984c-13.765515-13.833053-36.127825-13.833053-49.89334 0L511.991302 668.591431 125.313565 281.179984c-13.763468-13.798261-36.093033-13.798261-49.856501 0-13.799284 13.798261-13.799284 36.161594 0 49.993624l410.857439 411.674037c7.067976 7.085372 16.402575 10.521634 25.675776 10.331299 9.274224 0.191358 18.608823-3.245927 25.677822-10.331299l410.891208-411.708829c6.863315-6.89913 10.331299-15.940041 10.331299-24.979928S955.423647 288.078091 948.560332 281.179984z"
+                                fill="#000">
+                            </path>
+                        </svg>
+                    </i>
+                </div>
+                <!-- <div class="collapse-part-content" style="display: none;"> -->
+                <div class="collapse-part-content">
+                    <div>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse-part">
+                <div class="collapse-part-title">
+                    标题四
+                    <i class="collapse-part-arrow">
+                        <svg viewBox="0 0 1024 1024" version="1.1" width="16" height="16">
+                            <path
+                                d="M948.560332 281.179984c-13.765515-13.833053-36.127825-13.833053-49.89334 0L511.991302 668.591431 125.313565 281.179984c-13.763468-13.798261-36.093033-13.798261-49.856501 0-13.799284 13.798261-13.799284 36.161594 0 49.993624l410.857439 411.674037c7.067976 7.085372 16.402575 10.521634 25.675776 10.331299 9.274224 0.191358 18.608823-3.245927 25.677822-10.331299l410.891208-411.708829c6.863315-6.89913 10.331299-15.940041 10.331299-24.979928S955.423647 288.078091 948.560332 281.179984z"
+                                fill="#000">
+                            </path>
+                        </svg>
+                    </i>
+                </div>
+                <!-- <div class="collapse-part-content" style="display: none;"> -->
+                <div class="collapse-part-content">
+                    <div>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse-part" style="border-bottom: 1px solid #e8e8e8;">
+                <div class="collapse-part-title">
+                    标题五
+                    <i class="collapse-part-arrow">
+                        <svg viewBox="0 0 1024 1024" version="1.1" width="16" height="16">
+                            <path
+                                d="M948.560332 281.179984c-13.765515-13.833053-36.127825-13.833053-49.89334 0L511.991302 668.591431 125.313565 281.179984c-13.763468-13.798261-36.093033-13.798261-49.856501 0-13.799284 13.798261-13.799284 36.161594 0 49.993624l410.857439 411.674037c7.067976 7.085372 16.402575 10.521634 25.675776 10.331299 9.274224 0.191358 18.608823-3.245927 25.677822-10.331299l410.891208-411.708829c6.863315-6.89913 10.331299-15.940041 10.331299-24.979928S955.423647 288.078091 948.560332 281.179984z"
+                                fill="#000">
+                            </path>
+                        </svg>
+                    </i>
+                </div>
+                <!-- <div class="collapse-part-content" style="display: none;"> -->
+                <div class="collapse-part-content">
+                    <div>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                        内容一<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 对话框 -->
+    <div class="dialogBox contain">
+        <p>对话框</p>
+        <div style="text-align: center;" class="btnn">
+            <button type="button" id="info" info="">
+                <i style="display: none;">
+                    d="M513.46384 60.225663c-248.292969 0-449.584462 201.299679-449.584462 449.625394 0 248.296039
+                    201.291492 449.594695 449.584462 449.594695 248.28069 0 449.63665-201.299679
+                    449.63665-449.594695C963.099467 261.525342 761.744529 60.225663 513.46384 60.225663zM554.626331
+                    714.465225c0 22.720468-18.416442 41.139979-41.136909
+                    41.139979s-41.136909-18.419512-41.136909-41.139979L472.352513 453.586612c0-22.716374
+                    18.416442-41.135886 41.136909-41.135886s41.136909 18.419512 41.136909 41.135886L554.626331
+                    714.465225zM513.489422 372.423081c-25.719778 0-46.561455-20.845771-46.561455-46.557362 0-25.719778
+                    20.841677-46.560432 46.561455-46.560432s46.561455 20.841677 46.561455 46.560432C560.050878
+                    351.577311 539.2092 372.423081 513.489422 372.423081z" fill="#19b6f8"
+                </i>
+                <em>Info 对话框</em></button>
+            <button type="button" id="success" success="">
+                <i style="display: none;">d="M513.559007 60.225663c-248.299109 0-449.587532 201.299679-449.587532
+                    449.625394 0 248.296039 201.288422 449.594695 449.587532 449.594695 248.27762 0 449.63358-201.299679
+                    449.63358-449.594695C963.192587 261.525342 761.836627 60.225663 513.559007 60.225663zM766.338151
+                    407.245168 485.919507 692.261527c-0.044002 0.045025-0.084934 0.092098-0.127913 0.137123s-0.090051
+                    0.085958-0.134053 0.12996l-0.751107 0.763386c-6.256494 6.359848-14.548344 9.5454-22.967084
+                    9.597589-0.061398 0.001023-0.121773 0.001023-0.183172 0.002047-0.161682 0-0.322341 0.004093-0.485047
+                    0.002047-8.398274 0.068562-16.715707-2.979868-23.057135-9.217942L282.51591
+                    540.491914c-12.999059-12.791327-12.775978-34.097586 0.49835-47.590901 13.281491-13.494339
+                    34.58468-14.06739 47.576575-1.276063l130.36921 128.264269 256.507048-260.722046c12.797467-12.999059
+                    34.100656-12.771885 47.591925 0.502443C778.555403 372.942921 779.129478 394.243039 766.338151
+                    407.245168z" fill="#08ba61"
+                </i>
+                <em>Success 对话框</em></button>
+            <button type="button" id="warn" warn="">
+                <i style="display: none;">
+                    d="M513.46384 60.225663c-248.291946 0-449.584462 201.299679-449.584462 449.624371 0 248.296039
+                    201.292516 449.594695 449.584462 449.594695 248.28069 0 449.63665-201.299679
+                    449.63665-449.594695C963.099467 261.525342 761.744529 60.225663 513.46384 60.225663zM473.683834
+                    304.175721c2.690272-35.478026 40.597627-32.423457 40.597627-32.423457s34.488489-2.288113 39.011502
+                    32.225959c0 0 8.162914 181.774997-15.904225 294.366308 0 0-3.746324 14.944364-23.107277 16.22145l0
+                    0.275269c-20.751626-0.539282-24.692379-16.296151-24.692379-16.296151C465.521944 485.947647
+                    473.683834 304.175721 473.683834 304.175721zM513.489422 747.984642c-25.719778
+                    0-46.560432-20.840654-46.560432-46.560432 0-25.710568 20.840654-46.556339
+                    46.560432-46.556339s46.561455 20.845771 46.561455 46.556339C560.050878 727.143988 539.2092
+                    747.984642 513.489422 747.984642z" fill="#f39509"
+                </i>
+                <em>Warn 对话框</em></button>
+            <button type="button" id="error" error="">
+                <i style="display: none;">
+                    d="M513.559007 60.225663c-248.291946 0-449.587532 201.299679-449.587532 449.625394 0 248.291946
+                    201.295586 449.594695 449.587532 449.594695 248.284783 0 449.632557-201.303772
+                    449.632557-449.594695C963.191564 261.525342 761.84379 60.225663 513.559007 60.225663zM678.729837
+                    644.059712c12.798491 13.003152 12.217253 34.302247-1.272993 47.575552-13.490246 13.275351-34.800597
+                    13.502525-47.590901 0.503467l-116.284423-118.191866-116.278283 118.187773c-12.798491
+                    13.003152-34.093493
+                    12.774955-47.590901-0.499373-13.497409-13.277398-14.063297-34.576493-1.279133-47.575552l117.065206-118.984928L348.433202
+                    406.088832c-12.783141-12.999059-12.218276-34.298154 1.279133-47.576575 13.497409-13.274328
+                    34.792411-13.501502 47.590901-0.49835l116.279307 118.187773 116.2834-118.190843c12.790304-12.999059
+                    34.100656-12.771885 47.590901 0.502443 13.491269 13.274328 14.071484 34.573423 1.272993
+                    47.576575L561.666678 525.07376 678.729837 644.059712z" fill="#d81e06"
+                </i>
+                <em>Error 对话框</em></button>
+        </div>
+    </div>
+    <!-- <div class="dialog-container" style="display: none;">
+        <div class="dialog-mask"></div>
+        <div class="dialog-wrapper">
+            <div class="dialog-main">
+                <div>
+                    <div class="dialog-shortcuts">
+                        <i>
+                            <svg viewBox="0 0 1024 1024" version="1.1" width="30" height="30">
+                                <path
+                                    d="M513.46384 60.225663c-248.292969 0-449.584462 201.299679-449.584462 449.625394 0 248.296039 201.291492 449.594695 449.584462 449.594695 248.28069 0 449.63665-201.299679 449.63665-449.594695C963.099467 261.525342 761.744529 60.225663 513.46384 60.225663zM554.626331 714.465225c0 22.720468-18.416442 41.139979-41.136909 41.139979s-41.136909-18.419512-41.136909-41.139979L472.352513 453.586612c0-22.716374 18.416442-41.135886 41.136909-41.135886s41.136909 18.419512 41.136909 41.135886L554.626331 714.465225zM513.489422 372.423081c-25.719778 0-46.561455-20.845771-46.561455-46.557362 0-25.719778 20.841677-46.560432 46.561455-46.560432s46.561455 20.841677 46.561455 46.560432C560.050878 351.577311 539.2092 372.423081 513.489422 372.423081z"
+                                    fill="#19b6f8">
+                                </path>
+                            </svg>
+                        </i>
+                        <div>
+                            <p>Info 对话框</p>
+                            <div>内容区域</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-footer noselect" style="border-top: none;">
+                <div class="dialog-ok"><span>确定</span></div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- 数字输入框 -->
+    <div class="contain">
+        <p>数字输入框</p>
+        <style>
+            #inputNumber>* {
+                margin: 0 auto;
+            }
+        </style>
+        <div id="inputNumber">
+            <div class="inputnumber-container">
+                <div class="inputnumber-decrease">
+                    <svg viewBox="0 0 1024 1024" version="1.1" width="17" height="17">
+                        <path
+                            d="M768.440022 485.814618c0 14.475689-11.743462 26.185382-26.200732 26.185382l-460.467323 0c-14.458293 0-26.167986-11.70867-26.167986-26.185382l0 0c0-14.458293 11.70867-26.183336 26.167986-26.183336l460.467323 0C756.697583 459.631282 768.440022 471.356324 768.440022 485.814618L768.440022 485.814618z"
+                            fill="#666">
+                        </path>
+                    </svg>
+                </div>
+                <input type="text" value="1">
+                <div class="inputnumber-increase">
+                    <svg viewBox="0 0 1024 1024" version="1.1" width="17" height="17">
+                        <path
+                            d="M740.828151 485.179145 538.820344 485.179145 538.820344 283.185664c0-14.81645-11.989055-26.820855-26.820855-26.820855-14.769378 0-26.790156 12.004405-26.790156 26.820855l-0.013303 201.99348L283.200502 485.179145c-14.801101 0-26.820855 12.019755-26.820855 26.820855 0 14.81645 12.019755 26.819832 26.820855 26.819832l201.991434 0-0.013303 201.994504c0 14.800078 12.051477 26.821879 26.820855 26.821879 14.8318 0 26.820855-12.021801 26.820855-26.821879L538.820344 538.819832l201.979154 0c14.8318 0 26.820855-12.003382 26.820855-26.819832S755.631298 485.179145 740.828151 485.179145z"
+                            fill="#666">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载中 -->
+    <div class="contain">
+        <p>加载中</p>
+        <div class="loading">
+            <div class="loading-container">
+                <div class="loading-wrapper">
+                    <div class="loading-box">
+                        <div class="loading-ring"></div>
+                    </div>
+                    <div class="loading-text">Loading</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 下拉框 -->
+    <div class="contain">
+        <p>下拉框</p>
+        <div id="select" style="width: 300px; margin: 0px auto; height: 34px;">
+            <div class="select-container">
+                <div class="select-input">
+                    <input type="text" placeholder="请选择" readonly="">
+                    <i>
+                        <svg viewBox="0 0 1024 1024" version="1.1" width="12" height="12">
+                            <path
+                                d="M523.955 832.173l323.744-512c6.24-9.856 6.624-22.336 0.992-32.512-5.632-10.24-16.384-16.576-28.033-16.576h-647.328c-11.647 0-22.4 6.336-28.033 16.576-2.656 4.8-3.968 10.112-3.968 15.424 0 5.952 1.664 11.904 4.929 17.088l323.616 512c5.856 9.28 16.064 14.911 27.040 14.912s21.184-5.632 27.040-14.912z"
+                                fill="#000">
+                            </path>
+                        </svg>
+                    </i>
+                </div>
+                <div class="select-wrapper" style="display: none;">
+                    <ul>
+                        <li data-text="飞狐外传" data-value="0" class="select">
+                            <i></i>
+                            <span>飞狐外传</span>
+                        </li>
+                        <li data-text="雪山飞狐" data-value="1" class="select">
+                            <i></i>
+                            <span>雪山飞狐</span>
+                        </li>
+                        <li data-text="连城诀" data-value="2" class="select">
+                            <i></i>
+                            <span>连城诀</span>
+                        </li>
+                        <li data-text="天龙八部" data-value="3" class="select">
+                            <i></i>
+                            <span>天龙八部</span>
+                        </li>
+                        <li data-text="射雕英雄传" data-value="4" class="select">
+                            <i></i>
+                            <span>射雕英雄传</span>
+                        </li>
+                        <li data-text="白马啸西风" data-value="5" class="select">
+                            <i></i>
+                            <span>白马啸西风</span>
+                        </li>
+                        <li data-text="鹿鼎记" data-value="6" class="select">
+                            <i></i>
+                            <span>鹿鼎记</span>
+                        </li>
+                        <li data-text="笑傲江湖" data-value="7" class="select">
+                            <i></i>
+                            <span>笑傲江湖</span>
+                        </li>
+                        <li data-text="书剑恩仇录" data-value="8" class="select">
+                            <i></i>
+                            <span>书剑恩仇录</span>
+                        </li>
+                        <li data-text="神雕侠侣" data-value="9" class="select">
+                            <i></i>
+                            <span>神雕侠侣</span>
+                        </li>
+                        <li data-text="侠客行" data-value="10" class="select">
+                            <i></i>
+                            <span>侠客行</span>
+                        </li>
+                        <li data-text="倚天屠龙记" data-value="11" class="select">
+                            <i></i>
+                            <span>倚天屠龙记</span>
+                        </li>
+                        <li data-text="碧血剑" data-value="12" class="select">
+                            <i></i>
+                            <span>碧血剑</span>
+                        </li>
+                        <li data-text="鸳鸯刀" data-value="13" class="select">
+                            <i></i>
+                            <span>鸳鸯刀</span>
+                        </li>
+                        <li data-text="越女剑" data-value="14" class="select">
+                            <i></i>
+                            <span>越女剑</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 标签页 -->
+    <div class="contain">
+        <p>标签页</p>
+        <div id="tab">
+            <div class="tabs-header tabs-card">
+                <div class="tabs-active">标签一</div>
+                <div class="">标签二</div>
+                <div class="">标签三</div>
+                <div class="">标签四</div>
+                <div class="">标签五</div>
+            </div>
+            <div class="tabs-content">
+                <div class="active">
+                    内容一<br>内容一<br>内容一<br>内容一<br>内容一<br>内容一
+                </div>
+                <div>
+                    内容二<br>内容二<br>内容二<br>内容二<br>内容二<br>内容二
+                </div>
+                <div>
+                    内容三<br>内容三<br>内容三<br>内容三<br>内容三<br>内容三
+                </div>
+                <div>
+                    内容四<br>内容四<br>内容四<br>内容四<br>内容四<br>内容四
+                </div>
+                <div>
+                    内容五<br>内容五<br>内容五<br>内容五<br>内容五<br>内容五
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 表格 -->
+    <div class="contain">
+        <p>表格</p>
+        <div id="table">
+            <div class="table-container table-align-left">
+                <div class="table-thead">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <span>姓名</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>年龄</span>
+                                        <span class="table-arrow">
+                                            <i class="table-sort-up"></i>
+                                            <i class="table-sort-down"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>工作</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <span>日期</span>
+                                        <span class="table-arrow">
+                                            <i class="table-sort-up active"></i>
+                                            <i class="table-sort-down"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-tbody">
+                    <table>
+                        <tbody>
+                            <tr data-index="3">
+                                <td data-label="name" data-text="赵六">
+                                    <div>
+                                        赵六
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="age" data-text="40">
+                                    <div>
+                                        40
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="job" data-text="警察">
+                                    <div>
+                                        警察
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="date" data-text="1959-02-05">
+                                    <div>
+                                        1959-02-05
+                                        <div></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-index="0">
+                                <td data-label="name" data-text="张三">
+                                    <div>
+                                        张三
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="age" data-text="60">
+                                    <div>
+                                        60
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="job" data-text="教师">
+                                    <div>
+                                        教师
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="date" data-text="1962-05-05">
+                                    <div>
+                                        1962-05-05
+                                        <div></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-index="4">
+                                <td data-label="name" data-text="孙七">
+                                    <div>
+                                        孙七
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="age" data-text="30">
+                                    <div>
+                                        30
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="job" data-text="法官">
+                                    <div>
+                                        法官
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="date" data-text="1968-09-05">
+                                    <div>
+                                        1968-09-05
+                                        <div></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-index="1">
+                                <td data-label="name" data-text="李四">
+                                    <div>
+                                        李四
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="age" data-text="50">
+                                    <div>
+                                        50
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="job" data-text="医生">
+                                    <div>
+                                        医生
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="date" data-text="1970-07-05">
+                                    <div>
+                                        1970-07-05
+                                        <div></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-index="2">
+                                <td data-label="name" data-text="王五">
+                                    <div>
+                                        王五
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="age" data-text="20">
+                                    <div>
+                                        20
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="job" data-text="作家">
+                                    <div>
+                                        作家
+                                        <div></div>
+                                    </div>
+                                </td>
+                                <td data-label="date" data-text="1982-03-05">
+                                    <div>
+                                        1982-03-05
+                                        <div></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./arrangement.js"></script>
+</body>
+
+</html>
