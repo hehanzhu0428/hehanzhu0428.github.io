@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+.luckymess{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    text-align: center;
+}
+.stage{
+    width: 574px;
+    height: 584px;
+    margin: 20px auto 0;
+    background: url(./luckdrawimg/bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 43px 43px 55px 47px;
+    position: relative;
+    ul{
+       height: 100%;
+        width: 100%;
+        position: relative;
+        li{
+            width: 122px;
+            height: 121px;
+            position: absolute;
+            &.active{
+                background-color:hsla(red,80%,80%);
+                
+            }
+           
+            &:nth-of-type(2){
+                left: 121px;
+            }
+            &:nth-of-type(3){
+                left: 242px;
+            }
+            &:nth-of-type(4){
+                left: 363px;
+            }
+            &:nth-of-type(5){
+                left: 363px;
+                top: 121px;
+            }
+            &:nth-of-type(6){
+                left: 363px;
+                top: 242px;
+            }
+            &:nth-of-type(7){
+                left: 363px;
+                top: 363px;
+            }
+            &:nth-of-type(8){
+                top: 363px;
+                right: 121px;
+            }
+            &:nth-of-type(9){
+                top: 363px;
+                right: 242px;
+            }
+            &:nth-of-type(10){
+                top: 363px;
+                right: 363px;
+            }
+            &:nth-of-type(11){
+                top: 242px;
+            }
+            &:nth-of-type(12){
+                top: 121px;
+            }
+        }
+    }
+    .btn{
+        display: inline-block;
+        width: 237px;
+        height: 227px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+    }
+}

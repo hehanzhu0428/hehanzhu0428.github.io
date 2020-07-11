@@ -87,6 +87,18 @@ ul {
 .intro .intro-body a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+.intro .intro-body a:hover i {
+  transition: all 0.3s linear;
+  animation: move 0.3s infinite alternate linear;
+}
+@keyframes move {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
 .sercices {
   padding: 80px 0;
   background-color: #52565a;

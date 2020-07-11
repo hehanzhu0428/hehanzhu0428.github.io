@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css" />
+    <link rel="stylesheet" href="./luckdraw.css">
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="stage">
+        <div class="box">
+            <span>
+                <i>京东卡<br>10元</i><img src="./luckdrawimg/lottery_01.png" alt="">
+            </span>
+            <span>
+                <i>京东卡<br>20元</i><img src="./luckdrawimg/lottery_02.png" alt="">
+            </span>
+            <span>
+                <i>京东卡<br>50元</i><img src="./luckdrawimg/lottery_03.png" alt="">
+            </span>
+            <span>
+                <i>京东卡<br>100元</i><img src="./luckdrawimg/lottery_04.png" alt="">
+            </span>
+            <span>
+                <i>谢谢参与</i><img src="./luckdrawimg/lottery_05.png" alt="">
+            </span>
+            <span>
+                <i>京东卡<br>200元</i><img src="./luckdrawimg/lottery_06.png" alt="">
+            </span>
+            <span>
+                <i>京东卡<br>500元</i><img src="./luckdrawimg/lottery_07.png" alt="">
+            </span>
+            <span>
+                <i>IQOO PRO<br>手机</i><img src="./luckdrawimg/lottery_08.png" alt="">
+            </span>
+        </div>
+        <div class="btn"><i></i>立即抽奖</div>
+    </div>
+
+    <script>
+        var btn = document.querySelector('.btn');
+        var box = document.querySelector('.box');
+        var spans = document.querySelectorAll('span')
+        var canclick = true;
+        btn.onclick = function () {
+            console.log("xxx")
+            // event.preventDefault();
+            if (canclick) {
+                var deg = Math.floor(Math.random() * 360);
+                console.log(deg)
+                var num = Math.ceil(Math.random() * 8 + 10);
+                console.log(num)
+                var rotateDeg = num * 360 + deg;
+                console.log(rotateDeg)
+                box.style.transform = "rotate(" + rotateDeg + "deg)";
+                box.style.transition = "5s";
+                var luckdraw = setInterval(function () {
+
+                })
+                setTimeout("res(" + deg + ")", 5000)
+            }
+            canclick = false
+        }
+
+        function res(deg) {
+            if (deg >= 0 && deg <= 45) {
+                alert("IQOO PRO手机");
+            } else if (deg > 45 && deg <= 90) {
+                alert("京东卡500元")
+            } else if (deg > 90 && deg <= 135) {
+                alert("京东卡200元")
+            } else if (deg > 135 && deg <= 180) {
+                alert("谢谢参与")
+            } else if (deg > 180 && deg <= 225) {
+                alert("京东卡100元")
+            } else if (deg > 225 && deg <= 270) {
+                alert("京东卡50元")
+            }else if (deg > 270 && deg <= 315) {
+                alert("京东卡20元")
+            } else {
+                alert("京东卡10元")
+            }
+            box.dataset.rotate = deg;
+            box.style.transform = "rotate(" + deg + "deg)";
+            box.style.transition = "";
+            canclick = true
+        }
+    </script>
+</body>
+
+</html>

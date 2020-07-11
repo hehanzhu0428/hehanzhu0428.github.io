@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./luckysquares.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css" />
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="stage">
+        <ul class="box">
+            <li><img src="./luckdrawimg/1.png" alt="" title="耳机"></li>
+            <li><img src="./luckdrawimg/2.png" alt="" title="IPAD"></li>
+            <li><img src="./luckdrawimg/4.png" alt="" title="篮球鞋"></li>
+            <li><img src="./luckdrawimg/3.png" alt="" title="感谢参与"></li>
+            <li><img src="./luckdrawimg/5.png" alt="" title="黑球鞋"></li>
+            <li><img src="./luckdrawimg/6.png" alt="" title="公主娃娃"></li>
+            <li><img src="./luckdrawimg/7.png" alt="" title="IPhone"></li>
+            <li><img src="./luckdrawimg/8.png" alt="" title="PS4"></li>
+            <li><img src="./luckdrawimg/6.png" alt="" title="公主娃娃"></li>
+            <li><img src="./luckdrawimg/3.png" alt="" title="感谢参与"></li>
+            <li><img src="./luckdrawimg/1.png" alt="" title="耳机"></li>
+            <li><img src="./luckdrawimg/7.png" alt="" title="IPhone"></li>
+        </ul>
+        <button class="btn">btn</button>
+        <div class="luckymess"></div>
+    </div>
+   
+    <script>
+        var lis = document.getElementsByTagName("li");
+        var btn = document.getElementsByTagName("button")[0];
+
+        // 生成随机数 把随机数当成中将的格子
+        // function generateNum() {
+        //     return Math.floor(Math.random() * lis.length)
+        // }
+
+        var current = 0;
+        var canClick = true;
+        // 可以点击
+        btn.onclick = function () {
+            // 判断是否抽奖已经结束
+            if (canClick) {
+                current %= 12;
+                console.log("点击了");
+
+                // 确定中将信息
+                var x = Math.floor(Math.random() * lis.length);
+                console.log("中奖信息", x);
+
+                
+                var id = setInterval(function () {
+                    // current = current >= lis.length - 1 ? 0 : ++current;
+
+                    current++;
+
+                    console.log(current, current % 8);
+
+                    // 取消掉其他的active
+                    for (var i = 0; i < lis.length; i++) {
+                        if (i == current % 12) {
+                            lis[i].classList.add("active");
+                        } else {
+                            lis[i].classList.remove("active");
+                        }
+                    }
+
+                    // 当前高亮的 就是中奖信息 停止定时器
+                    // 本次抽奖结束
+                    if (current == x + 12 * 10) {
+                       
+                        // 取消本次抽奖的定时器
+                        clearInterval(id);
+
+                        // 设置可以进行下一次抽奖
+                       
+                        canClick = true;
+                        $('.luckymess').html("恭喜你"+$('li').eq(x).find('img').attr('title')+"<img src="+$('li').eq(x).find('img').attr('src')+">")
+                        
+                    }
+                   
+                }, 50);
+                
+            }
+           
+            canClick = false;
+        };
+    </script>
+</body>
+</html>

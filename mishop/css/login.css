@@ -1,5 +1,9 @@
 .warp{
     width: 100%;
+    overflow: hidden;
+    background: url(../img/loginimg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 /* logo 部分 */
 .toplogo{

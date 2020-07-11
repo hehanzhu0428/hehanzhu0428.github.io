@@ -255,6 +255,9 @@
         // );
 
         var lis = $('.wrap li');
+        document.querySelector('.wrap').onclick=function(){
+            console.log("xxx")
+        }
         lis.mouseenter(function () {
             $(this).stop().animate({
                 width: 790+"px"
