@@ -181,12 +181,13 @@
             dot.style.top = event.offsetY - 50 + "px";
         };
 
-         $(".clkbtn").click(function () { 
-             $('.progress-button').toggleClass('loading')
-             var rotate=setInterval(function(){
-                $('.progress-circle').find('path').prop('stroke-dashoffset')
-             },150)
-         });
+        $(".clkbtn").click(function () {
+            $('.progress-button').toggleClass('loading')
+            var rotate = setInterval(function () {
+                $('.progress-circle').find('path').css({
+                    'stroke-dashoffset': '204.244' - '204.244' + 'px'
+                },150)
+            });
 
     </script>
 </body>
