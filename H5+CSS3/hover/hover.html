@@ -30,7 +30,7 @@
         <a href="#" class="w-wobblevertical">Wobble Vertical</a>
         <a href="#" class="w-wobbletop">Wobble Top</a>
         <a href="#" class="w-buzz">Buzz</a>
-        
+
 
         <h2>Background Transitions</h2>
         <a href="#" class="w-fade">Fade</a>
@@ -112,8 +112,8 @@
             Icon Buzz
             <i class="fa fa-clock-o" aria-hidden="true"></i>
         </a>
-        
-       
+
+
 
         <h2>Border Transitions</h2>
         <a href="" class="w-borderfade">Border Fade</a>
@@ -126,7 +126,7 @@
         <a href="" class="w-underlinefromreveal">Underline Reveal</a>
         <a href="" class="w-reveal">Reveal</a>
         <a href="" class="w-rippleout">Ripple Out</a>
-        
+
 
         <h2>Shadow and Glow Transitions</h2>
         <a href="" class="w-shadow">Shadow</a>
@@ -139,7 +139,56 @@
 
         <h2>Curls</h2>
         <a href="" class="w-curltopleft">Curl Top Left</a>
+
+        <h2>Ghost button</h2>
+        <a href="" class="w-ghostbtn1">Click me!</a>
+        <!-- <a href="" class="w-ghostbtn2">SUBMIT</a> -->
+        <a class="w-ghostbtn3">
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+            Mission
+        </a>
+        <a class="w-ghostbtn4">more<i></i></a>
+        <div class="progress-button">
+            <button class="clkbtn"><span>Submit</span></button>
+            <svg class="progress-circle" width="70" height="70">
+                <path
+                    d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"
+                    style="stroke-dasharray: 204.244; stroke-dashoffset: 204.244;"></path>
+            </svg>
+            <svg class="checkmark" width="70" height="70">
+                <path d="m31.5,46.5l15.3,-23.2" style="stroke-dasharray: 27.7908; stroke-dashoffset: 27.7908;"></path>
+                <path d="m31.5,46.5l-8.5,-7.1" style="stroke-dasharray: 11.0752; stroke-dashoffset: 11.0752;"></path>
+            </svg>
+            <svg class="cross" width="70" height="70">
+                <path d="m35,35l-9.3,-9.3" style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;"></path>
+                <path d="m35,35l9.3,9.3" style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;"></path>
+                <path d="m35,35l-9.3,9.3" style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;"></path>
+                <path d="m35,35l9.3,-9.3" style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;"></path>
+            </svg>
+        </div>
     </div>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        var btn = document.querySelector(".w-ghostbtn4");
+        var dot = btn.querySelector("i");
+
+        btn.onmousemove = function (event) {
+            console.log(event.offsetX, event.offsetY);
+            dot.style.left = event.offsetX - 50 + "px";
+            dot.style.top = event.offsetY - 50 + "px";
+        };
+
+         $(".clkbtn").click(function () { 
+             $('.progress-button').toggleClass('loading')
+             var rotate=setInterval(function(){
+                $('.progress-circle').find('path').prop('stroke-dashoffset')
+             },150)
+         });
+
+    </script>
 </body>
 
 </html>

@@ -960,4 +960,200 @@ a {
   left: 0px;
   transform: scale(1);
 }
+.w-hoverBtn .w-ghostbtn1 {
+  background: #222 url(img/overlay-button.png) repeat-x 0 0;
+  display: inline-block;
+  background-color: #2daebf;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+  border-radius: 5px;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  animation: bluepulse 2.5s infinite;
+  padding: 8px 19px 9px;
+}
+@keyframes bluepulse {
+  0% {
+    background-color: #007d9a;
+  }
+  50% {
+    background-color: #2daebf;
+  }
+  100% {
+    background-color: #007d9a;
+  }
+}
+.w-hoverBtn .w-ghostbtn3 {
+  display: inline-block;
+  width: 180px;
+  height: 50px;
+  border: 2px solid #2098d1;
+  line-height: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #2098d1;
+  background: url(img/allow.png) no-repeat 130px center;
+  transition: all 0.4s ease;
+  position: relative;
+  padding: 0 0 0 20px;
+  cursor: pointer;
+}
+.w-hoverBtn .w-ghostbtn3:hover {
+  border: 2px solid #2098d1;
+  background-position: 140px center;
+}
+.w-hoverBtn .w-ghostbtn3:hover .line {
+  background-color: #2098d1;
+}
+.w-hoverBtn .w-ghostbtn3:hover .line-top {
+  width: 100%;
+  left: -2px;
+}
+.w-hoverBtn .w-ghostbtn3:hover .line-right {
+  height: 100%;
+  top: -2px;
+}
+.w-hoverBtn .w-ghostbtn3:hover .line-bottom {
+  height: 100%;
+  bottom: -2px;
+}
+.w-hoverBtn .w-ghostbtn3:hover .line-left {
+  width: 100%;
+  right: -2px;
+}
+.w-hoverBtn .w-ghostbtn3 .line {
+  position: absolute;
+  background: 0 0;
+  transition: all 0.4s ease;
+  background-color: #fff;
+}
+.w-hoverBtn .w-ghostbtn3 .line-top {
+  width: 0;
+  height: 2px;
+  left: -110%;
+  top: -2px;
+}
+.w-hoverBtn .w-ghostbtn3 .line-right {
+  width: 2px;
+  height: 0;
+  right: -2px;
+  top: -110%;
+}
+.w-hoverBtn .w-ghostbtn3 .line-bottom {
+  width: 2px;
+  height: 0;
+  left: -2px;
+  bottom: -110%;
+}
+.w-hoverBtn .w-ghostbtn3 .line-left {
+  width: 0;
+  height: 2px;
+  right: -110%;
+  bottom: -2px;
+}
+.w-hoverBtn .w-ghostbtn4 {
+  display: inline-block;
+  background: #f8b627;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  padding: 22px;
+  width: 132px;
+  color: #fff;
+  text-align: center;
+}
+.w-hoverBtn .w-ghostbtn4 i {
+  width: 100px;
+  height: 100px;
+  background: #42b44e;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  transform: scale(0);
+  transition: transform 0.8s, opacity 0.8s;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: -1;
+}
+.w-hoverBtn .w-ghostbtn4:hover i {
+  transform: scale(5);
+  opacity: 1;
+}
+.w-hoverBtn .progress-button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 266px;
+  height: 70px;
+  cursor: pointer;
+}
+.w-hoverBtn button {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 250px;
+  height: 70px;
+  border: 2px solid #1ecd97;
+  border-radius: 40px;
+  background: transparent;
+  color: #1ecd97;
+  letter-spacing: 1px;
+  font-size: 18px;
+  transition: all 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+.w-hoverBtn button:hover {
+  background-color: #1ECD97;
+  color: #fff;
+}
+.w-hoverBtn svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.w-hoverBtn svg path {
+  opacity: 0;
+  fill: none;
+}
+.w-hoverBtn svg.progress-circle path {
+  stroke: #1ecd97;
+  stroke-width: 5;
+}
+.w-hoverBtn svg.checkmark path,
+.w-hoverBtn svg.cross path {
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-width: 4;
+  transition: opacity 0.1s;
+}
+.w-hoverBtn .loading.progress-button button {
+  width: 70px;
+  /* make a circle */
+  border-width: 5px;
+  border-color: #ddd;
+  background-color: transparent;
+  color: #fff;
+}
+.w-hoverBtn .loading.progress-button span {
+  transition: opacity 0.15s;
+}
+.w-hoverBtn .loading.progress-button span,
+.w-hoverBtn .success.progress-button span {
+  opacity: 0;
+}
+.w-hoverBtn .success.progress-button button {
+  transition: all 0.3s;
+}
+.w-hoverBtn .success.progress-button button {
+  border-color: #1ECD97;
+  background-color: #1ECD97;
+}
 /*# sourceMappingURL=./hoverBtn.css.map */

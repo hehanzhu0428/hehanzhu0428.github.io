@@ -82,150 +82,150 @@ a {
       transform: translateX(-10px);
     }
   }
-  .w-pulse{
+  .w-pulse {
     @keyframes pulse {
-      0%{
+      0% {
         transform: scale(1.1);
       }
-      50%{
+      50% {
         transform: scale(0.9);
       }
-      100%{
+      100% {
         transform: scale(1);
       }
     }
-    &:hover{
+    &:hover {
       animation: pulse 1s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
       animation-timing-function: linear;
     }
   }
-  .w-push{
+  .w-push {
     @keyframes push {
-      0%{
+      0% {
         transform: scale(0.8);
       }
-      100%{
+      100% {
         transform: scale(1);
       }
     }
-    &:hover{
+    &:hover {
       animation: push 0.5s;
       animation-timing-function: ease-out;
     }
   }
-  .w-bob{
+  .w-bob {
     @keyframes bob {
-      0%{
+      0% {
         transform: translateY(-5px);
       }
-      
-      100%{
+
+      100% {
         transform: translateY(2px);
       }
     }
-    &:hover{
+    &:hover {
       animation: bob 1s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
       animation-timing-function: linear;
     }
   }
-  .w-bouncein{
+  .w-bouncein {
     @keyframes bouncein {
-      0%{
+      0% {
         transform: scale(1.2);
       }
-      40%{
+      40% {
         transform: scale(1.1);
       }
-      60%{
+      60% {
         transform: scale(1.2);
       }
-      80%{
+      80% {
         transform: scale(1.1);
       }
-      100%{
+      100% {
         transform: scale(1.2);
       }
     }
     transition: all 0.8s;
-    &:hover{
+    &:hover {
       animation: bouncein 0.8s;
       transform: scale(1.2);
       animation-timing-function: linear;
     }
   }
-  .w-wobblevertical{
+  .w-wobblevertical {
     @keyframes wobblevertical {
-      0%{
+      0% {
         transform: translateY(8px);
       }
-      40%{
+      40% {
         transform: translateY(-6px);
       }
-      60%{
+      60% {
         transform: translateY(4px);
       }
-      80%{
+      80% {
         transform: translateY(-2px);
       }
-      100%{
+      100% {
         transform: translateY(0);
       }
     }
     transition: all 0.8s;
-    &:hover{
+    &:hover {
       animation: wobblevertical 0.8s;
       animation-timing-function: linear;
     }
   }
-  .w-wobbletop{
+  .w-wobbletop {
     @keyframes w-wobbletop {
-      0%{
+      0% {
         transform: skew(12deg);
       }
-      40%{
+      40% {
         transform: skew(-8deg);
       }
-      60%{
+      60% {
         transform: skew(6deg);
       }
-      80%{
+      80% {
         transform: skew(-4deg);
       }
-      100%{
+      100% {
         transform: skew(0);
       }
     }
     transition: all 0.8s;
     transform-origin: 0 100%;
-    &:hover{
+    &:hover {
       animation: w-wobbletop 0.8s;
       animation-timing-function: linear;
     }
   }
-  .w-buzz{
+  .w-buzz {
     @keyframes w-buzz {
-      0%{
+      0% {
         transform: translateX(3px) rotate(2deg);
       }
-      40%{
+      40% {
         transform: translateX(-3px) rotate(-2deg);
       }
-      60%{
-        transform:translateX(3px) rotate(2deg);
+      60% {
+        transform: translateX(3px) rotate(2deg);
       }
-      80%{
+      80% {
         transform: translateX(-3px) rotate(-2deg);
       }
-      100%{
+      100% {
         transform: translateX(3px) rotate(2deg);
       }
     }
     transition: all 0.8s;
-    &:hover{
+    &:hover {
       animation: w-buzz 0.3s;
       animation-timing-function: linear;
       animation-direction: alternate;
@@ -685,16 +685,16 @@ a {
   }
   .w-iconspin {
     @keyframes spin {
-      0%{
+      0% {
         transform: rotate(0deg);
       }
-      100%{
+      100% {
         transform: rotate(360deg);
       }
     }
     &:hover {
       i {
-       animation: spin 1s;
+        animation: spin 1s;
       }
     }
   }
@@ -771,61 +771,61 @@ a {
       }
     }
   }
-  .w-iconfloataway{
+  .w-iconfloataway {
     &:hover {
-    i {
-      transition: all 0.3s;
-      transition-timing-function: ease-out;
-      transform: translateY(-5px);
-      opacity: 0;
+      i {
+        transition: all 0.3s;
+        transition-timing-function: ease-out;
+        transform: translateY(-5px);
+        opacity: 0;
+      }
     }
   }
-}
-.w-iconpulse{
-  @keyframes iconpulse {
-    0%{
-      transform: scale(1.1);
+  .w-iconpulse {
+    @keyframes iconpulse {
+      0% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(0.9);
+      }
     }
-    100%{
-      transform: scale(0.9);
-    }
-  }
-  &:hover {
-  i {
-   animation: iconpulse 0.5s infinite alternate linear;
-  }
-}
-}
-.w-iconpush{
-  @keyframes iconpush {
-    0%{
-      transform: scale(0.5);
-    }
-    100%{
-      transform: scale(1);
+    &:hover {
+      i {
+        animation: iconpulse 0.5s infinite alternate linear;
+      }
     }
   }
-  &:hover {
-  i {
-   animation: iconpush 0.3s linear;
-  }
-}
-}
-.w-iconbuzz{
-  @keyframes iconbuzz {
-    0%{
-      transform: translateX(-3px) rotate(-2deg);
+  .w-iconpush {
+    @keyframes iconpush {
+      0% {
+        transform: scale(0.5);
+      }
+      100% {
+        transform: scale(1);
+      }
     }
-    100%{
-      transform: translateX(3px) rotate(2deg);
+    &:hover {
+      i {
+        animation: iconpush 0.3s linear;
+      }
     }
   }
-  &:hover {
-  i {
-   animation: iconbuzz 0.08s linear alternate infinite;
+  .w-iconbuzz {
+    @keyframes iconbuzz {
+      0% {
+        transform: translateX(-3px) rotate(-2deg);
+      }
+      100% {
+        transform: translateX(3px) rotate(2deg);
+      }
+    }
+    &:hover {
+      i {
+        animation: iconbuzz 0.08s linear alternate infinite;
+      }
+    }
   }
-}
-}
   .w-borderfade {
     border: 4px solid transparent;
     &:hover {
@@ -966,16 +966,16 @@ a {
       transition: all 0.8s;
     }
     @keyframes rippleout {
-      0%{
+      0% {
         transform: scale(1);
       }
-      100%{
+      100% {
         transform: scale(1.3);
         opacity: 0;
       }
     }
     &:hover::before {
-     animation: rippleout linear 0.8s;
+      animation: rippleout linear 0.8s;
     }
   }
   .w-shadow {
@@ -998,16 +998,16 @@ a {
       transform: translateY(-5px);
     }
   }
-  .w-glow{
+  .w-glow {
     &:hover {
       transition: all 0.3s;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
     }
   }
-  .w-bubbletop{
+  .w-bubbletop {
     position: relative;
     z-index: 0;
-    &::before{
+    &::before {
       content: "";
       position: absolute;
       left: 50%;
@@ -1023,13 +1023,13 @@ a {
       transition: all 0.3s;
       z-index: -1;
     }
-    &:hover::before{
+    &:hover::before {
       transform: translateY(-10px) translateX(-50%);
     }
   }
-  .w-curltopleft{
+  .w-curltopleft {
     position: relative;
-    &::before{
+    &::before {
       content: "";
       position: absolute;
       top: -10px;
@@ -1041,10 +1041,224 @@ a {
       transform: scale(0);
       transition: all 0.3s;
     }
-    &:hover::before{
+    &:hover::before {
       top: 0px;
       left: 0px;
-       transform: scale(1);
+      transform: scale(1);
     }
   }
-}
+  .w-ghostbtn1 {
+    background: #222 url(./img/overlay-button.png) repeat-x 0 0;
+    display: inline-block;
+    background-color: #2daebf;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+    border-radius: 5px;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+    animation: bluepulse 2.5s infinite;
+    padding: 8px 19px 9px;
+  }
+  @keyframes bluepulse {
+    0% {
+      background-color: #007d9a;
+    }
+
+    50% {
+      background-color: #2daebf;
+    }
+    100% {
+      background-color: #007d9a;
+    }
+  }
+  // .w-ghostbtn2{
+  //   position: relative;
+  //   display: inline-block;
+  //   padding: 0 60px;
+  //   outline: none;
+  //   border: none;
+  //   background: #1d9650;
+  //   color: #fff;
+  //   text-transform: uppercase;
+  //   letter-spacing: 1px;
+  //   font-size: 14px;
+  //   line-height: 4;
+  // }
+  .w-ghostbtn3 {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    border: 2px solid #2098d1;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2098d1;
+    background: url(./img/allow.png) no-repeat 130px center;
+    transition: all 0.4s ease;
+    position: relative;
+    padding: 0 0 0 20px;
+    cursor: pointer;
+    &:hover {
+      border: 2px solid #2098d1;
+      background-position: 140px center;
+      .line {
+        background-color: #2098d1;
+      }
+      .line-top {
+        width: 100%;
+        left: -2px;
+      }
+      .line-right {
+        height: 100%;
+        top: -2px;
+      }
+      .line-bottom {
+        height: 100%;
+        bottom: -2px;
+      }
+      .line-left {
+        width: 100%;
+        right: -2px;
+      }
+    }
+    .line {
+      position: absolute;
+      background: 0 0;
+      transition: all 0.4s ease;
+      background-color: #fff;
+    }
+    .line-top {
+      width: 0;
+      height: 2px;
+      left: -110%;
+      top: -2px;
+    }
+    .line-right {
+      width: 2px;
+      height: 0;
+      right: -2px;
+      top: -110%;
+    }
+    .line-bottom {
+      width: 2px;
+      height: 0;
+      left: -2px;
+      bottom: -110%;
+    }
+    .line-left {
+      width: 0;
+      height: 2px;
+      right: -110%;
+      bottom: -2px;
+    }
+  }
+  .w-ghostbtn4 {
+    display: inline-block;
+    background: #f8b627;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    padding: 22px;
+    width: 132px;
+    color: #fff;
+    text-align: center;
+    i {
+      width: 100px;
+      height: 100px;
+      background: #42b44e;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      pointer-events: none;
+      transform: scale(0);
+      transition: transform 0.8s, opacity 0.8s;
+      border-radius: 50%;
+      opacity: 0;
+      z-index: -1;
+    }
+    &:hover i {
+      transform: scale(5);
+      opacity: 1;
+    }
+  }
+  .progress-button {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 266px;
+    height: 70px;
+    cursor: pointer;
+    }
+    button {
+      &:hover{
+        background-color: #1ECD97;
+        color: #fff;
+      }
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+      width: 250px;
+      height: 70px;
+      border: 2px solid #1ecd97;
+      border-radius: 40px;
+      background: transparent;
+      color: #1ecd97;
+      letter-spacing: 1px;
+      font-size: 18px;
+      transition: all 0.3s;
+      cursor: pointer;
+      outline: none;
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      pointer-events: none;
+      path {
+        opacity: 0;
+        fill: none;
+      }
+      &.progress-circle path {
+        stroke: #1ecd97;
+        stroke-width: 5;
+      }
+      &.checkmark path,
+      &.cross path {
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-width: 4;
+        transition: opacity 0.1s;
+      }
+    }
+    .loading.progress-button button {
+      width: 70px; /* make a circle */
+      border-width: 5px;
+      border-color: #ddd;
+      background-color: transparent;
+      color: #fff;
+    }
+    
+    .loading.progress-button span {
+      transition: opacity 0.15s;
+    }
+    
+    .loading.progress-button span,
+    .success.progress-button span{
+      opacity: 0; 
+    }
+    
+    .success.progress-button button{
+      transition: all 0.3s;
+    }
+    
+    .success.progress-button button {
+      border-color: #1ECD97;
+      background-color: #1ECD97;
+    }
+    
+  }
