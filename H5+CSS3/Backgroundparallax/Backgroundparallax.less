@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+.page {
+  width: 920px;
+  margin: 0 auto;
+  .content {
+    width: 33.33%;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    height: 100vh;
+    max-width: 300px;
+    .circle {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 35%;
+      width: 200px;
+      transform: translateY(-50%);
+      transition: all 0.5s;
+      cursor: pointer;
+      &:hover {
+        .circle_title {
+          h2,
+          h3 {
+            opacity: 1;
+            top: -36px;
+          }
+        }
+        .content_shadow {
+          top: -22px;
+          transform: scale(1.1);
+        }
+      }
+      .circle_title {
+        text-align: center;
+        h2 {
+          font-weight: 700;
+        }
+        h2,
+        h3 {
+          opacity: 0;
+          color: #4a7479;
+          margin: 0;
+          transition: all 0.2s;
+          position: relative;
+          top: -10px;
+        }
+        h3 {
+          transition: all 0.2s;
+          color: #b0d5d6;
+          font-size: 15px;
+        }
+      }
+      .circle_inner {
+        border-radius: 200px;
+        background: #b0d5d6;
+        overflow: hidden;
+        margin: auto;
+        width: 200px;
+        z-index: 1;
+        transition: all 0.3s;
+        height: 200px;
+        position: relative;
+        &:hover {
+          transform: scale(1.1);
+          .circle_inner__layer {
+            transition: all 4s linear;
+            &:nth-of-type(1) {
+              top: 0px;
+              left: -80px;
+            }
+            &:nth-of-type(2) {
+              top: 0px;
+              left: -400px;
+            }
+            &:nth-of-type(3) {
+              top: 0px;
+              left: -140px;
+            }
+          }
+        }
+        .circle_inner__layer {
+          width: 600px;
+          height: 200px;
+          transition: all 0.4s;
+          position: absolute;
+          top: 0;
+          left: -200px;
+          &:nth-of-type(1) {
+            top: 0px;
+            left: 0px;
+          }
+          &:nth-of-type(2) {
+            top: 0px;
+            left: -210px;
+          }
+          &:nth-of-type(3) {
+            top: 0px;
+            left: -440px;
+          }
+          img {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+          }
+        }
+      }
+      .content_shadow {
+        width: 200px;
+        box-shadow: 0px 31px 19px -2px #e0e8f9;
+        height: 20px;
+        border-radius: 70%;
+        position: relative;
+        top: -44px;
+        transition: all 0.3s;
+        z-index: 0;
+      }
+    }
+  }
+}
