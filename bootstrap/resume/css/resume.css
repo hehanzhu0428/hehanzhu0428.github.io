@@ -50,6 +50,7 @@ ul {
 }
 .intro .intro-body {
   background: url(../img/intro-bg.jpg) no-repeat;
+  background-size: cover;
   padding: 210px 0;
 }
 .intro .intro-body h1 {
@@ -132,7 +133,7 @@ ul {
   transition: all 0.5s;
 }
 .sercices i:hover {
-  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
   color: #f4d03f;
 }
 .sercices h4 {
@@ -193,7 +194,7 @@ ul {
   transition: all 0.3s;
 }
 .work .row img:hover {
-  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
 }
 .skills {
   padding: 80px 0;
