@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+    <link rel="stylesheet" href="./drawingboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tablet-btns">
+            画笔颜色 <input type="color" name="color" id="color">
+            <button class="clear-canvas">清屏</button>
+            <span>
+                画笔粗细
+                <select class="select">
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </span>
+        </div>
+        <div class="w-canvas">
+            <canvas class="canvas" width="1500" height="510"></canvas>
+        </div>
+    </div>
+
+    <script>
+        /** @type {HTMLCanvasElement} */
+        // 获取元素
+        var canvas = document.querySelector('.canvas')
+        var context = canvas.getContext('2d');
+        var color = 'black';
+        var fontsize=8
+
+        function line(event) {
+            context.lineTo(event.offsetX, event.offsetY);
+            context.lineWidth = fontsize;
+            context.lineJoin = 'round';//lineJoin 属性设置或返回所创建边角的类型，当两条线交汇时。
+            context.lineCap = 'round';//lineCap 属性设置或返回线条末端线帽的样式。
+            context.miterLimit = 4;//miterLimit 属性设置或返回最大斜接长度。斜接长度指的是在两条线交汇处内角和外角之间的距离
+            context.strokeStyle = color
+            context.stroke();
+
+        };
+
+        //鼠标按下
+        canvas.addEventListener('mousedown', function (e) {
+            context.beginPath();
+            context.moveTo(e.offsetX, e.offsetY);
+            canvas.addEventListener('mousemove', line)//鼠标拖动
+        });
+
+        //鼠标松开
+        canvas.addEventListener('mouseup', function (e) {
+            canvas.removeEventListener('mousemove', line);
+            context.closePath();
+        });
+
+        //点击清屏，清理屏幕
+        document.querySelector('.clear-canvas').onclick = function () {
+            context.clearRect(0, 0, 1500, 510);//clearRect() 方法清空给定矩形内的指定像素。
+
+        };
+
+        //更换颜色
+        document.querySelector('#color').onchange=function(){
+            color = this.value;
+        };
+
+        //更换字体大小
+        document.querySelector('.select').onchange=function(){
+            fontsize=this.value
+        }
+    </script>
+</body>
+
+</html>

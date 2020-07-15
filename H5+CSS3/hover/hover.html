@@ -169,6 +169,53 @@
                 <path d="m35,35l9.3,-9.3" style="stroke-dasharray: 13.1522; stroke-dashoffset: 13.1522;"></path>
             </svg>
         </div>
+
+        <h2>Loading Animation</h2>
+
+        <section class="demoItem">
+            <section class="container">
+                <section class="shape shape-1"></section>
+                <section class="shape shape-2"></section>
+                <section class="shape shape-3"></section>
+                <section class="shape shape-4"></section>
+            </section>
+        </section>
+
+        <section class="demoItem">
+            <section class="containers">
+                <section class="shapes">
+                    <section class="shapes-4 shapes-4-top"></section>
+                    <section class="shapes-4 shapes-4-bottom"></section>
+                    <section class="shapes-4 shapes-4-eye"></section>
+                    <img src="./img/christmasHat2.png" alt="christmasHat">
+                </section>
+                <section class="shapess shapes-1"></section>
+                <section class="shapess shapes-2"></section>
+                <section class="shapess shapes-3"></section>
+            </section>
+        </section>
+
+        <section class="demoItem">
+            <section class="container3">
+                <section class="shape shape-1"></section>
+                <section class="shape shape-2"></section>
+                <section class="shape shape-3"></section>
+                <section class="shape shape-4"></section>
+            </section>
+        </section>
+       
+        <div class="loader">
+            <div class="loader-inner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
     <script>
@@ -186,7 +233,7 @@
             var rotate = setInterval(function () {
                 $('.progress-circle').find('path').css({
                     'stroke-dashoffset': '204.244' - '204.244' + 'px'
-                },150)
+                }, 150)
             });
         })
     </script>

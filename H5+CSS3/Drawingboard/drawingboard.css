@@ -1,0 +1,35 @@
+.container {
+  height: 600px;
+  background-color: #f5f5f5;
+}
+.container .canvas {
+  border: 2px dashed #ccc;
+  margin-left: 10px;
+  cursor: crosshair;
+}
+.container .tablet-btns {
+  padding: 8px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+.container .tablet-btns input {
+  display: inline-block;
+  margin: 0 20px;
+}
+.container .tablet-btns .clear-canvas {
+  display: inline-block;
+  margin: 0 20px;
+  vertical-align: middle;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #049ee8;
+  outline: none;
+  border: none;
+}
+.container .tablet-btns span {
+  display: inline-block;
+  margin: 0 20px;
+}
+/*# sourceMappingURL=./drawingboard.css.map */
