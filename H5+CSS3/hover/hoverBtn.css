@@ -1520,7 +1520,7 @@ a {
 .w-hoverBtn .loader {
   width: 187px;
   height: 168px;
-  background-color: #ED5565;
+  background-color: #ed5565;
   margin: 0 5px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   display: flex;
@@ -1587,6 +1587,40 @@ a {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+.w-hoverBtn .loader .loader-inner2 {
+  position: relative;
+}
+.w-hoverBtn .loader .loader-inner2 div {
+  position: absolute;
+  top: -26px;
+  left: -26px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.w-hoverBtn .loader .loader-inner2 div:nth-of-type(1) {
+  animation: scale1 1.25s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
+}
+.w-hoverBtn .loader .loader-inner2 div:nth-of-type(2) {
+  animation: scale1 1.25s 0.2s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
+}
+.w-hoverBtn .loader .loader-inner2 div:nth-of-type(3) {
+  animation: scale1 1.25s 0.4s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
+}
+@keyframes scale1 {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=./hoverBtn.css.map */
