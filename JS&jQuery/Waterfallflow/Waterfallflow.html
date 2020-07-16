@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+    <link rel="stylesheet" href="./Waterfallflow.css">
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><img data-src="./images/1.jpg" alt=""></li>
+            <li><img data-src="./images/2.jpg" alt=""></li>
+            <li><img data-src="./images/3.jpg" alt=""></li>
+            <li><img data-src="./images/4.jpg" alt=""></li>
+            <li><img data-src="./images/5.jpg" alt=""></li>
+            <li><img data-src="./images/6.jpg" alt=""></li>
+            <li><img data-src="./images/7.jpg" alt=""></li>
+            <li><img data-src="./images/8.jpg" alt=""></li>
+        </ul>
+    </div>
+
+    <script>
+        //https://picsum . photos/360/4607?random=1"
+        window.onload = imgload()
+        function imgload() {
+            var imgs = document.querySelectorAll('img')
+            for (var i = 0; i < imgs.length; i++) {
+
+                //    console.log(imgs[i].dataset.src)
+                console.log(imgs[i].getBoundingClientRect().top)
+                if (imgs[i].getBoundingClientRect().top < window.innerHeight / 2) {
+                    imgs[i].src = imgs[i].dataset.src
+                }
+            }
+        }
+
+
+        function scollimg(fn) {
+            var timer = null
+            var context = this
+            var args = arguments
+            return function () {
+                clearInterval(timer)
+                var timer = setTimeout(() => {
+                    fn.apply(context, args)
+                }, 2000);
+            }
+        }
+
+        window.onscroll = scollimg(imgload)
+
+
+       
+    </script>
+</body>
+
+</html>

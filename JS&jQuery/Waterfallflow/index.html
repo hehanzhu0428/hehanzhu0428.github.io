@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+    <style>
+        .box {
+            height: 2423px;
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+        }
+
+        .box-img {
+            float: left;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: #f7f7f7;
+            box-shadow: 0 0 8px #ccc;
+        }
+
+        img {
+            width: 240px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box-img"><img src="images/01.jpg" alt=""></div>
+            <div class="box-img"><img src="images/02.jpg" alt=""></div>
+            <div class="box-img"><img src="images/04.jpg" alt=""></div>
+            <div class="box-img"><img src="images/03.jpg" alt=""></div>
+            <div class="box-img"><img src="images/02.jpg" alt=""></div>
+            <div class="box-img"><img src="images/01.jpg" alt=""></div>
+            <div class="box-img"><img src="images/04.jpg" alt=""></div>
+            <div class="box-img"><img src="images/03.jpg" alt=""></div>
+            <div class="box-img"><img src="images/02.jpg" alt=""></div>
+            <div class="box-img"><img src="images/07.jpg" alt=""></div>
+            <div class="box-img"><img src="images/01.jpg" alt=""></div>
+            <div class="box-img"><img src="images/02.jpg" alt=""></div>
+            <div class="box-img"><img src="images/04.jpg" alt=""></div>
+            <div class="box-img"><img src="images/03.jpg" alt=""></div>
+            <div class="box-img"><img src="images/02.jpg" alt=""></div>
+            <div class="box-img"><img src="images/01.jpg" alt=""></div>
+        </div>
+    </div>
+
+
+    <script>
+        //瀑布流懒加载
+        var oParent = document.querySelector('.container')
+        var oBox = document.querySelector('.box')
+
+        window.addEventListener('load', () => {
+            imgLoaction('box-img')
+            const imgData = [{ 'src': 'images/01.jpg' }, { 'src': 'images/02.jpg' }, { 'src': 'images/03.jpg' }, { 'src': 'images/04.jpg' }, { 'src': 'images/05.jpg' }, { 'src': 'images/06.jpg' }, { 'src': 'images/07.jpg' }, { 'src': 'images/08.jpg' }]
+            this.addEventListener('scroll', () => {
+                if (checkLoading('box-img')) {
+                    // console.log('1')
+                    imgData.map((current) => {
+                        const oDiv = document.createElement('div');
+                        oDiv.className = 'box-img';
+                        oBox.appendChild(oDiv);
+                        const img = new Image();
+                        img.src=current.src
+                        oDiv.appendChild(img);
+
+                    })
+                    imgLoaction('box-img')
+                }
+
+            })
+
+
+        });
+
+        const checkLoading = (child) => {
+            const aContent = getChilds(child);
+            var lastTop = aContent[aContent.length - 1].offsetTop;
+            // console.log(aContent[aContent.length-1])
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const pageHeight = document.documentElement.clientHeight || document.body.clientHeight;
+            if (scrollTop + pageHeight > lastTop) {
+                return true;
+            }
+        }
+
+        const imgLoaction = (child) => {
+            const aContent = getChilds(child);
+            // console.log(aContent);
+            const imgWidth = aContent[0].offsetWidth;
+            const num = ~ ~(document.documentElement.clientWidth / imgWidth)
+            oParent.style.cssText = 'width:' + imgWidth * num + 'px;margin:10px auto;';
+            //console.log(num);
+
+            //计算图片的高度
+            const heightArr = [];
+            [].map.call(aContent, (current, index) => {
+                if (index < 5) {
+                    heightArr.push(current.offsetHeight)
+                } else {
+                    //获取最小高度的图片的高度
+                    const minHeight = getmin(heightArr);//Math.min.apply(Math,heightArr)
+                    //console.log(minHeight)
+                    //获取下标
+                    const minIndex = getMinIndex(minHeight, heightArr);//getMinIndex(heightArr).index;
+                    //console.log(minIndex)
+                    current.style.position = 'absolute';
+                    current.style.top = minHeight + 'px';
+                    current.style.left = aContent[minIndex].offsetLeft + 'px';
+
+                    heightArr[minIndex] = heightArr[minIndex] + current.offsetHeight;
+                }
+            })
+            //console.log(heightArr)
+        }
+
+        const getChilds = (child) => {
+            const childArr = [];
+            const tagsAll = oParent.getElementsByTagName('*');
+            [].map.call(tagsAll, (current) => {
+                if (current.className == child) {
+                    childArr.push(current)
+                }
+            });
+            return childArr;
+        }
+        function getMinIndex(minHeight, heightArr) {
+            for (var i in heightArr) {
+                if (heightArr[i] == minHeight) {
+                    return i;
+                }
+            }
+        }
+
+        // function getMinIndex(arr) {
+        //     return arr.reduce((a, b, index, arr) => {
+        //         if (b <= a.val) {
+        //             a.val = b;
+        //             a.index = index;
+        //         };
+        //         return a;
+        //     }, { val: arr[0], index: 0 });
+        // };
+
+
+        function getmin(arr) {
+            var arrLength = arr.length;
+            for (var i = 0, ret = arr[0]; i < arrLength; i++) {
+                ret = Math.min(ret, arr[i]);
+            }
+            return ret;
+        }
+
+
+    </script>
+</body>
+
+</html>

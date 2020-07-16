@@ -1,0 +1,10 @@
+.box ul li {
+  height: 800px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.box ul li img {
+  display: block;
+  margin: 100px auto;
+}
+/*# sourceMappingURL=./Waterfallflow.css.map */
