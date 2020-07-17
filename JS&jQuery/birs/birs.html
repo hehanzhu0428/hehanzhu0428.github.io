@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+    <style>
+        .game {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            background: url(./images/sky.png);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bird {
+            width: 34px;
+            height: 25px;
+            background: url(./images/bird.png) -8px -10px no-repeat;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        .score {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            font-size: 24px;
+            z-index: 666;
+        }
+
+        .sss {
+            position: absolute;
+            top: 0;
+            left: 40px;
+            font-size: 24px;
+            z-index: 666;
+        }
+
+        .text {
+            width: 200px;
+            height: 120px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: #e1e1e1;
+            z-index: 999;
+        }
+
+        .status {
+            width: 200px;
+            height: 120px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: #e1e1e1;
+            z-index: 999;
+            display: none;
+        }
+
+        /* button {
+            padding: 5px;
+            outline: none;
+            border: none;
+            background-color: bisque;
+            border-radius: 5px;
+        } */
+
+        .pasue {
+            display: none;
+        }
+
+        .hide {
+            display: block;
+        }
+
+        button {
+            background: #222 url(./images/overlay-button.png) repeat-x 0 0;
+            display: inline-block;
+            background-color: #2daebf;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            color: #ffffff;
+            border-radius: 5px;
+            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+            animation: bluepulse 2.5s infinite;
+            padding: 8px 19px 9px;
+            border: none;
+        }
+
+        @keyframes bluepulse {
+            0% {
+                background-color: #007d9a;
+            }
+
+            50% {
+                background-color: #2daebf;
+            }
+
+            100% {
+                background-color: #007d9a;
+            }
+        }
+    </style>
+</head>
+
+<body onkeydown="keydownEvent()">
+    <div class="game">
+        <div class="bird">
+
+        </div>
+        <div class="score">
+            0
+        </div>
+        <div class="sss">按S键暂停</div>
+        <div class="text">
+            <p>胜负乃兵家常事</p>
+            <p>您的分数为：</p>
+            <p class="numble">0</p>
+            <button>重新开始</button>
+        </div>
+        <div class="status">
+            <p>暂停中</p><br><br>
+            <button class="cancel">取消暂停</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        var game = document.querySelector('.game')
+        var bird = document.querySelector('.bird')
+        var score = document.querySelector('.score')
+        var numble = document.querySelector('.numble')
+        var text = document.querySelector('.text')
+        var cancel = document.querySelector('.cancel')
+        var stat = document.querySelector('.status')
+
+        text.classList.add('pasue')
+
+
+
+        var sky = {
+            x: 0
+        }
+        var birdmove = {
+            speedX: 5,
+            speedY: 0,
+            x: bird.offsetLeft,
+            y: bird.offsetTop
+        }
+        //游戏状态
+        var running = true;
+        setInterval(function () {
+            if (running) {
+                //移动背景小鸟实现水平运动
+                sky.x -= 5;
+                game.style.backgroundPositionX = sky.x + 'px';
+                birdmove.speedY += 1;
+                birdmove.y += birdmove.speedY;
+                if (birdmove.y < 0) {
+
+                    birdmove.y = 0;
+                    text.classList.remove('pasue')
+                    running = false;
+                }
+                if (birdmove.y + bird.offsetHeight > 600) {
+
+                    birdmove.y = 600 - bird.offsetHeight;
+                    text.classList.remove('pasue')
+                    running = false;
+                }
+
+                bird.style.top = birdmove.y + 'px'
+
+            }
+
+
+        }, 30)
+
+        //点击 小鸟向上运动
+
+        document.onclick = function () {
+            birdmove.speedY = -10
+        }
+
+        //创建管道
+        function createPipe(position) {
+            var pipe = {};
+            pipe.x = position;
+            //规定上管道高度200-300之间
+            pipe.uHeight = 200 + parseInt(Math.random() * 100)
+            console.log(pipe.uHeight)
+
+            pipe.dHeight = 600 - pipe.uHeight - 200
+
+            pipe.dTop = pipe.uHeight + 200
+            //上管道
+            var uPipe = document.createElement('div')
+            uPipe.style.width = 52 + 'px';
+            uPipe.style.height = pipe.uHeight + 'px'
+            uPipe.style.background = 'url(./images/pipeDown.png) no-repeat center bottom'
+            uPipe.style.position = 'absolute'
+            uPipe.style.top = 0
+            uPipe.style.left = pipe.x + 'px'
+
+            game.appendChild(uPipe)
+
+
+            //下管道
+            var dPipe = document.createElement('div')
+            dPipe.style.width = 52 + 'px';
+            dPipe.style.height = pipe.dHeight + 'px'
+            dPipe.style.background = 'url(./images/pipeUp.png) no-repeat center top'
+            dPipe.style.position = 'absolute'
+            dPipe.style.top = pipe.dTop + 'px'
+            dPipe.style.left = pipe.x + 'px'
+
+            game.appendChild(dPipe)
+
+
+            //管道运动
+
+            setInterval(function () {
+                if (running) {
+                    pipe.x -= 2
+                    uPipe.style.left = pipe.x + 'px'
+                    dPipe.style.left = pipe.x + 'px'
+
+                    if (pipe.x < -52) {
+                        pipe.x = 800
+                    }
+                    var uCheck = birdmove.x + 34 > pipe.x && birdmove.x < pipe.x + 52 && birdmove.y < pipe.uHeight;
+                    var dCheck = birdmove.x + 34 > pipe.x && birdmove.x < pipe.x + 52 && birdmove.y > pipe.uHeight + 200 - 25;
+                    if (uCheck || dCheck) {
+                        running = false;
+                        text.classList.remove('pasue')
+                    }
+
+                    if (birdmove.x == pipe.x + 52) {
+                        var currentScore = score.innerHTML - 0;
+                        currentScore += 1
+                        score.innerHTML = currentScore
+                        numble.innerHTML = currentScore
+                        console.log('xxx')
+                    }
+
+                }
+
+
+            }, 30)
+
+
+        }
+        createPipe(400)
+        createPipe(600)
+        createPipe(800)
+        createPipe(1000)
+
+        document.querySelector('button').onclick = function () {
+            console.log('xxx')
+            // 刷新页面
+            window.location.reload();
+        }
+        cancel.onclick = function () {
+            running = true
+            stat.classList.remove('hide')
+        }
+
+        if (running) {
+            function keydownEvent(e) {
+                var ev = e || event;
+                // console.log(ev)
+                var keyCode = ev.keyCode;
+                // console.log(keyCode);
+
+                if (keyCode == 83) {
+                    running = false
+                    stat.classList.add('hide')
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>
