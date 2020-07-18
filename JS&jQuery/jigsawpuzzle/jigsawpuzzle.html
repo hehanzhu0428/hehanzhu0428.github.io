@@ -133,6 +133,38 @@
         .re {
             left: 35%;
         }
+
+        .panel {
+            width: 200px;
+            height: 120px;
+            margin: 0 auto;
+            background-color: lightskyblue;
+            text-align: center;
+            line-height: 1.5;
+            z-index: 999;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: none;
+        }
+        .open{
+            display: block;
+        }
+        .determine{
+            display: inline-block;
+            background-color: #2daebf;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            color: #ffffff;
+            border-radius: 5px;
+            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+            animation: bluepulse 2.5s infinite;
+            padding: 8px 19px 9px;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -147,11 +179,17 @@
     <div class="step">交换次数：<span class="num">0</span></div>
     <div class="time">00:00</div>
     <button class="re">重新开始</button>
+    <div class="panel">
+        <p>恭喜你拼图成功！</p>
+        <p>本次所用交换次数：<span class="panel-sc">0</span></p>
+        <p>本次所用时间为：<span class="panel-ti">00:00</span></p>
+        <div class="determine">确定</div>
+    </div>
     <script>
         var stage = document.querySelector('.stage')
         var size = 3
         var selec = document.querySelector('.secifications')
-
+        var timer = null;
 
         //动态创建拼图小块
         function createList() {
@@ -235,6 +273,7 @@
                 var currentScore = document.querySelector('.num').innerHTML - 0;
                 currentScore += 1
                 document.querySelector('.num').innerHTML = currentScore
+                document.querySelector('.panel-sc').innerHTML = currentScore
 
                 //判断拼图成功
                 var check = Array.prototype.every.call(cards, function (
@@ -254,20 +293,23 @@
                 console.log(check);
 
                 if (check) {
-                    alert("拼图成功");
+                    clearInterval(timer)
+                    document.querySelector('.panel').classList.add('open')
                 }
             };
         });
         document.querySelector('.start').onclick = function () {
+            //计时
             cards = document.querySelectorAll('li')
             var n = 0;
-            var timer = null;
+           
             clearInterval(timer);
             timer = setInterval(function () {
                 n++;
                 var m = parseInt(n / 60);
                 var s = n % 60;
                 document.querySelector('.time').innerHTML = toDub(m) + ':' + toDub(s);
+                document.querySelector('.panel-ti').innerHTML = toDub(m) + ':' + toDub(s);
             }, 100);
 
             //补零
@@ -289,7 +331,10 @@
             }
             createList();
         })
-
+        document.querySelector('.determine').onclick = function () {
+            window.location.reload();
+        }
+        
     </script>
 </body>
 
