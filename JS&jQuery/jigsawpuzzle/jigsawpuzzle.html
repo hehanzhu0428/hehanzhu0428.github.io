@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #2E2E2E;
+        }
+
+        .stage {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 400px;
+            height: 400px;
+            background: lightblue;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .stage li {
+            background: lightcoral;
+            border-radius: 5px;
+            box-shadow: 0 0 0 1px white inset;
+            background-image: url("./images/jq22.jpg");
+            /* background-size: 400% auto; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.3s;
+        }
+
+        button {
+            background: #222 url(./images/overlay-button.png) repeat-x 0 0;
+            display: inline-block;
+            background-color: #2daebf;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            color: #ffffff;
+            border-radius: 5px;
+            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+            animation: bluepulse 2.5s infinite;
+            padding: 8px 19px 9px;
+            border: none;
+            position: absolute;
+            left: 50%;
+            top: 420px;
+            margin-left: -47px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        @keyframes bluepulse {
+            0% {
+                background-color: #007d9a;
+            }
+
+            50% {
+                background-color: #2daebf;
+            }
+
+            100% {
+                background-color: #007d9a;
+            }
+        }
+
+        .secifications {
+            display: inline-block;
+            background-color: #2daebf;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            color: #ffffff;
+            border-radius: 5px;
+            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+            animation: bluepulse 2.5s infinite;
+            padding: 7px 19px 6px;
+            border: none;
+            position: absolute;
+            left: 40%;
+            top: 420px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .step {
+            display: inline-block;
+            background-color: #2daebf;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            color: #ffffff;
+            border-radius: 5px;
+            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+            animation: bluepulse 2.5s infinite;
+            padding: 8px 19px 9px;
+            border: none;
+            position: absolute;
+            left: 54%;
+            top: 420px;
+            cursor: pointer;
+        }
+
+        .time {
+            display: inline-block;
+            background-color: #2daebf;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            color: #ffffff;
+            border-radius: 5px;
+            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+            animation: bluepulse 2.5s infinite;
+            padding: 8px 19px 9px;
+            border: none;
+            position: absolute;
+            left: 63%;
+            top: 420px;
+            cursor: pointer;
+        }
+
+        .re {
+            left: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="stage"></ul>
+    <button class="start">开始游戏</button>
+    <select class="secifications">
+        <option value="3">3X3</option>
+        <option value="4">4X4</option>
+        <option value="6">6X6</option>
+    </select>
+    <div class="step">交换次数：<span class="num">0</span></div>
+    <div class="time">00:00</div>
+    <button class="re">重新开始</button>
+    <script>
+        var stage = document.querySelector('.stage')
+        var size = 3
+        var selec = document.querySelector('.secifications')
+
+
+        //动态创建拼图小块
+        function createList() {
+            for (var i = 0; i < size * size; i++) {
+
+                var nodeli = document.createElement('li')
+
+                nodeli.style.width = 100 / size + '%'
+                nodeli.style.height = 100 / size + '%'
+                nodeli.style.backgroundSize = size * 100 + '% auto'
+                nodeli.style.backgroundPosition = (i % size) * (-100) + '% ' + Math.floor(i / size) * (-100) + '%'
+                nodeli.style.left = (i % size) * (100 / size) + '%'
+                nodeli.style.top = Math.floor(i / size) * (100 / size) + '%'
+                nodeli.id = 'card' + i
+
+                nodeli.draggable = true
+                stage.appendChild(nodeli)
+
+            }
+        }
+        createList();
+
+        var cards = document.querySelectorAll('li')
+
+        //随机拼图小块的位置
+        function randomBlock() {
+            var arr = []
+            for (var i = 0; i < size * size; i++) {
+                arr.push(i)
+            }
+            console.log(arr)
+            var tmp = []
+            for (var i = 0; i < size * size; i++) {
+                tmp.push(arr.splice(Math.floor(Math.random() * arr.length), 1)[0]
+                );
+            }
+            console.log(tmp);
+
+            cards.forEach(function (element, index) {
+                element.style.left = (tmp[index] % size) * (100 / size) + '%'
+                element.style.top = Math.floor(tmp[index] / size) * (100 / size) + '%'
+            })
+        }
+
+        //拖拽事件
+        //ondragstart 属性调用了一个函数，drag(event)，它规定了被拖动的数据。
+        //dataTransfer.setData() 方法设置被拖数据的数据类型和值：
+
+        cards.forEach(function (element, index) {
+            element.ondragstart = function (event) {
+                event.dataTransfer.setData('text', event.target.id);
+            };
+
+            //ondragover 事件规定在何处放置被拖动的数据。
+            //默认地，无法将数据/元素放置到其他元素中。如果需要设置允许放置，我们必须阻止对元素的默认处理方式。
+            //这要通过调用 ondragover 事件的 event.preventDefault() 方法：
+
+            element.ondragover = function (event) {
+                event.preventDefault();
+            }
+
+            //当放置被拖数据时，会发生 drop 事件。
+            //ondrop 属性调用了一个函数，drop(event)：
+
+            element.ondrop = function (event) {
+                //console.log("drop", event.target, event.dataTransfer.getData('text'));
+
+                var e1 = event.target;
+                var e2 = document.getElementById(event.dataTransfer.getData('text'));
+                var tmp = {
+                    'top': e1.style.top,
+                    'left': e1.style.left
+                };
+                //交换position
+                e1.style.top = e2.style.top
+                e1.style.left = e2.style.left
+
+                e2.style.left = tmp.left
+                e2.style.top = tmp.top
+
+                var currentScore = document.querySelector('.num').innerHTML - 0;
+                currentScore += 1
+                document.querySelector('.num').innerHTML = currentScore
+
+                //判断拼图成功
+                var check = Array.prototype.every.call(cards, function (
+                    element,
+                    index
+                ) {
+                    return (
+                        parseInt(element.style.top) ==
+                        parseInt(
+                            Math.floor(index / size) * (100 / size) +
+                            "%"
+                        ) &&
+                        parseInt(element.style.left) ==
+                        parseInt((index % size) * (100 / size) + "%")
+                    );
+                });
+                console.log(check);
+
+                if (check) {
+                    alert("拼图成功");
+                }
+            };
+        });
+        document.querySelector('.start').onclick = function () {
+            cards = document.querySelectorAll('li')
+            var n = 0;
+            var timer = null;
+            clearInterval(timer);
+            timer = setInterval(function () {
+                n++;
+                var m = parseInt(n / 60);
+                var s = n % 60;
+                document.querySelector('.time').innerHTML = toDub(m) + ':' + toDub(s);
+            }, 100);
+
+            //补零
+            function toDub(n) {
+                return n < 10 ? '0' + n : '' + n;
+            }
+            randomBlock()
+            console.log(size)
+        }
+        document.querySelector('.re').onclick = function () {
+            window.location.reload();
+        }
+
+        selec.addEventListener('change', function () {
+            size = Number(this.value);
+            console.log(size)
+            for (i = 0; i < cards.length; i++) {
+                stage.removeChild(cards[i]);
+            }
+            createList();
+        })
+
+    </script>
+</body>
+
+</html>
