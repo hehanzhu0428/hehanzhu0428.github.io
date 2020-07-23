@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            margin: 100px auto;
+
+
+        }
+
+        .verify-code {
+            font-size: 30px;
+            background-color: rgb(240, 255, 255);
+            color: rgb(255, 153, 0);
+            text-align: center;
+        }
+
+        input {
+            display: inline-block;
+            height: 25px;
+        }
+
+        .verify-change-code {
+            color: #337ab7;
+            cursor: pointer;
+        }
+
+        .verify-btn {
+            width: 200px;
+            height: 30px;
+            background-color: #337ab7;
+            color: #fff;
+            border: none;
+            margin-top: 10px;
+        }
+
+        .verify-change-area,
+        .verify-input-area {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .verify-input-area {
+            margin-left: 0px;
+        }
+
+        .verify-code-area {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="cerify-code-panel">
+            <div class="verify-code">
+                <!-- <font>n</font>
+                <font>v</font>
+                <font>a</font>
+                <font>3</font> -->
+            </div>
+            <div class="verify-code-area">
+                <div class="verify-input-area"><input type="text" class="varify-input-code"></div>
+                <div class="verify-change-area"><a class="verify-change-code">换一张</a></div>
+            </div>
+        </div>
+        <button type="button" id="check-btn" class="verify-btn">确定</button>
+    </div>
+
+    <script>
+        /* 随机生成验证码
+ 需求说明:
+     使用对象封装一个随机生成验证码方法
+     随机生成n位验证码，验证码需要排除相似的字符 i, I, l, 1, 0, o, O
+ let codes = [
+     'a', 'b', 'c', 'd', 'e', 'f', 'g',
+     'h', 'i', 'j', 'k', 'l', 'm', 'n',
+     'o', 'p', 'q', 'r', 's', 't',
+     'u', 'v', 'w', 'x', 'y', 'z',
+     1, 2, 3, 4, 5, 6, 7, 8, 9, 0,
+     'A', 'B', 'C', 'D', 'E', 'F', 'G',
+     'H', 'I', 'J', 'K', 'L', 'M', 'N',
+     'O', 'P', 'Q', 'R', 'S', 'T',
+     'U', 'V', 'W', 'X', 'Y', 'Z'
+ ] */
+
+        let Verification = {
+            codes: [
+                'a', 'b', 'c', 'd', 'e', 'f', 'g',
+                'h', 'i', 'j', 'k', 'l', 'm', 'n',
+                'o', 'p', 'q', 'r', 's', 't',
+                'u', 'v', 'w', 'x', 'y', 'z',
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 0,
+                'A', 'B', 'C', 'D', 'E', 'F', 'G',
+                'H', 'I', 'J', 'K', 'L', 'M', 'N',
+                'O', 'P', 'Q', 'R', 'S', 'T',
+                'U', 'V', 'W', 'X', 'Y', 'Z'
+            ],
+            getcode(n, excludes) {
+                let exclude = [];
+                for (let i = 0; i < n; i++) {
+                    codesIndex = Math.floor(Math.random() * this.codes.length);
+                    let code = this.codes[codesIndex];
+                    //console.log(code)
+
+                    //需要排除的字符判断
+                    if (excludes.indexOf(code) > -1) {
+                        i--;
+                    } else {
+                        exclude.push(code);
+                    }
+                }
+                return exclude;
+            }
+        }
+        let rod = Verification.getcode(4, ['i', 'I', 'l', '1', '0', 'o'])
+        console.log(rod)
+        let verifyCode = document.querySelector('.verify-code')
+        function Rodamver() {
+            verifyCode.innerHTML = '';
+            for (var i = 0; i < rod.length; i++) {
+                console.log(rod[i])
+                let html = `<font>${rod[i]}</font>`;
+                verifyCode.insertAdjacentHTML('beforeEnd', html)
+            }
+        }
+        Rodamver()
+        let verifyChange = document.querySelector('.verify-change-code')
+        verifyChange.onclick = function () {
+            let rod = Verification.getcode(4, ['i', 'I', 'l', '1', '0', 'o'])
+            verifyCode.innerHTML = '';
+            for (var i = 0; i < rod.length; i++) {
+                console.log(rod[i])
+                let html = `<font>${rod[i]}</font>`;
+                verifyCode.insertAdjacentHTML('beforeEnd', html)
+            }
+        }
+    </script>
+</body>
+
+</html>
