@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+    <style>
+        .stage {
+            width: 400px;
+
+            margin: 0 auto;
+        }
+
+        .img {
+            width: 100%;
+            position: relative;
+        }
+
+        img {
+            display: block;
+        }
+
+        input {
+            width: 400px;
+        }
+
+        .left {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            /* background-color: blue; */
+            background: url(./images/l.jpg) no-repeat;
+            z-index: 3;
+        }
+
+        .right {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 100px;
+
+            background-color: white;
+            z-index: 2;
+        }
+
+        .slide {
+            width: 400px;
+            height: 10px;
+            background-color: red;
+            margin-top: 10px;
+            position: relative;
+            z-index: 0;
+        }
+
+        .slider {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: -50%;
+            left: 0;
+            margin-top: -5px;
+            background-color: sandybrown;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stage">
+        <div class="img">
+            <img src="./images/l.jpg" alt="">
+            <div class="left"></div>
+            <div class="right" style="left: 300px;"></div>
+        </div>
+
+        <div class="slide">
+            <div class="slider"></div>
+        </div>
+    </div>
+
+    <script>
+        var stage = document.querySelector('.stage')
+        var img = document.querySelector('.img')
+        var slide = document.querySelector('.slide')
+        var slider = document.querySelector('.slider')
+        var left = document.querySelector('.left')
+        var right = document.querySelector('.right')
+        var max = slide.offsetWidth - slider.offsetWidth;
+        var startX = 0;
+        var resX = 0;
+        
+        let Verification = {
+            init() {
+                ///初始化位置
+                left.style.left = Math.ceil(Math.random() * (img.offsetWidth / 2 - left.offsetWidth+1)) + 'px';
+                left.style.top = Math.ceil(Math.random() * (img.offsetWidth - left.offsetWidth+1)) + 'px';
+
+                var leX = left.style.left
+                var leY = left.style.top
+                slider.style.left = leX;
+
+                right.style.left = Math.ceil(Math.random() * (img.offsetWidth / 2 - left.offsetWidth+1) + (img.offsetWidth / 2)) + 'px';
+                right.style.top = leY
+
+                left.style.backgroundPositionY = '-' + leY;
+                left.style.backgroundPositionX = "-" + right.style.left;
+            },
+            getDrag() {
+
+                slider.onmousedown = (e) => {
+                    // console.log(e)
+                    startX = e.pageX;
+                    // console.log(startX)
+                    var curX =left.style.left;//记录滑块当前位置
+                    curX=curX.replace('px','')
+                    curX=curX-0
+                    console.log(curX)
+                    slider.onmousemove = function (e) {
+                        resX = e.pageX - startX + curX;//滑块移动
+                        
+                        console.log(resX)
+                        if (resX <= 0) {
+                            resX = 0
+                        }
+                        if (resX >= max) {
+                            resX = max;
+                        }
+                        slider.style.left = resX + "px";
+                        left.style.left = resX + "px";
+
+                        // console.log(resX, max)
+                    }
+                    stage.onmouseup = function () {
+                        var isTr = right.offsetLeft - left.offsetLeft;//判断差值
+                        if (isTr < 5 && isTr > -5) {
+                            // console.log('xxx')
+                            alert('验证成功')
+                        }
+                        else {
+                            alert('验证失败')
+                           slider.style.left=0+'px'
+                           left.style.left=0+'px'
+                        }
+                        slider.onmousemove = null;
+                    }
+                }
+            }
+        }
+        Verification.init();
+        Verification.getDrag();
+    </script>
+</body>
+
+</html>

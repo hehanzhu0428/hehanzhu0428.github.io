@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css">
     <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="arrangement.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -39,8 +41,8 @@
             <p>复选框</p>
             <div class="check-item">
                 <label for="tvName">
-                    <input type="checkbox">
-                    <span>全选</span>
+
+                    <span style="cursor: pointer;">全选</span>
                 </label>
                 <label>
                     <input type="checkbox" name="tvName" value="天龙八部">
@@ -441,31 +443,32 @@
     </div>
 
     <!-- 标签页 -->
-    <div class="contain">
-        <p>标签页</p>
+    <div class="contain1">
+
         <div id="tab">
             <div class="tabs-header tabs-card">
-                <div class="tabs-active">标签一</div>
-                <div class="">标签二</div>
-                <div class="">标签三</div>
-                <div class="">标签四</div>
-                <div class="">标签五</div>
+                <div class="tabs-active"><span>标签一</span><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+                <div class=""><span>标签二</span><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+                <div class=""><span>标签三</span><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+                <div class=""><span>标签四</span><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+                <div class=""><span>标签五</span><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+                <i style="float: right;" class="addTab">+</i>
             </div>
             <div class="tabs-content">
                 <div class="active">
-                    内容一<br>内容一<br>内容一<br>内容一<br>内容一<br>内容一
+                    <span>增加 删除 修改</span>
                 </div>
                 <div>
-                    内容二<br>内容二<br>内容二<br>内容二<br>内容二<br>内容二
+                    <span>内容二内容二内容二内容二内容二内容二</span>
                 </div>
                 <div>
-                    内容三<br>内容三<br>内容三<br>内容三<br>内容三<br>内容三
+                    <span>内容三内容三内容三内容三内容三内容三</span>
                 </div>
                 <div>
-                    内容四<br>内容四<br>内容四<br>内容四<br>内容四<br>内容四
+                    <span>内容四内容四内容四内容四内容四内容四</span>
                 </div>
                 <div>
-                    内容五<br>内容五<br>内容五<br>内容五<br>内容五<br>内容五
+                    <span>内容五内容五内容五内容五内容五内容五</span>
                 </div>
             </div>
         </div>

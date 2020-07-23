@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+    <style>
+        body,
+        html {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        .all {
+            position: absolute;
+            width: 400%;
+            height: 100%;
+            left: 0;
+            transition: 1s;
+        }
+
+        .main {
+            position: relative;
+            float: left;
+            width: 25%;
+            height: 100%;
+            perspective: 645px;
+            background-color: #232323;
+        }
+
+        .list ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120px;
+            height: 160px;
+            margin-top: -80px;
+            margin-left: -60px;
+            transform-style: preserve-3d;
+            /* transform: translateZ(-2000px) rotateX(0deg) rotateY(0deg); */
+            /* transform-origin: center; */
+        }
+
+        .list li {
+            width: 100%;
+            left: 100%;
+            background-color: rgba(0, 127, 127, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid rgba(127, 255, 255, 0.25);
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+            text-align: center;
+            color: #fff;
+            transition: all 3s cubic-bezier(0.94, 0.02, 0.49, 0.98);
+        }
+
+        .list ul li .liCover {
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            z-index: 9;
+            width: 122px;
+            height: 136px;
+        }
+
+        .list ul li .liTitle {
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 10px;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .list ul li .liAuthor {
+            font-size: 14px;
+            color: rgba(127, 255, 255, 0.75);
+            margin-top: 10px;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+
+        .list ul li .liTime {
+            font-size: 14px;
+            color: rgba(127, 255, 255, 0.75);
+            margin-top: 10px;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+
+        }
+
+        .btn {
+            position: absolute;
+            width: 300px;
+            height: 32px;
+            left: 20px;
+            bottom: 20px;
+        }
+
+        .btn ul li {
+            float: left;
+            height: 30px;
+            margin: 0 5px;
+            line-height: 30px;
+            border: 1px solid rgba(0, 127, 127, 1);
+            color: rgba(0, 127, 127, 1);
+            font-size: 12px;
+            padding: 0 10px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .btn ul li:hover {
+            background-color: rgba(0, 127, 127, 0.5);
+        }
+    </style>
+</head>
+<div class="all">
+    <div class="main">
+        <div class="list">
+            <ul style="transform: translateZ(-2000px) rotateX(0deg) rotateY(0deg);"></ul>
+        </div>
+        <div class="btn">
+            <ul>
+                <li>grid</li>
+                <li>helix</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<body>
+
+
+    <script>
+        var lists = document.querySelectorAll('li')
+        var flyData = [{
+            type: "Css3",
+            author: "啦啦啦",
+            time: "2020-07-19",
+        }];
+        function Magic() {
+            this.oUl = document.querySelector('.list').children[0];
+            this.listNum = 5 * 5 * 5;
+            this.aLi = this.oUl.children;
+            this.abtn = document.querySelector('.btn').querySelectorAll('li');
+
+        }
+        Magic.prototype = {
+            //动态创建125个DOM元素 方法
+            init: function () {
+                for (var i = 0; i < this.listNum; i++) {
+                    var oLi = document.createElement('li');
+                    var d = flyData[0];
+                    oLi.innerHTML = "<b class='liCover'></b>" + "<p class='liTitle'>" + d.type + "</p>" + "<p class='liAuthor'>" + d.author + "</p>" + "<p class='liTime'>" + d.time + "</p>";
+
+                    //一开始的时候卡片位置随机
+                    var liRandomX = Math.random() * 6000 - 3000;
+                    var liRandomY = Math.random() * 6000 - 3000;
+                    var liRandomZ = Math.random() * 6000 - 3000;
+                    oLi.style.transform = 'translate3D(' + liRandomX + 'px, ' + liRandomY + 'px,' + liRandomZ + 'px)';
+
+                    this.oUl.appendChild(oLi);
+
+                }
+                setTimeout(function () {
+                    this.grid()
+                    // this.helix()
+                }.bind(this), 200);//不绑定this会指向window
+
+                this.clickEvent();
+            },
+            //点击改变形状
+            clickEvent: function () {
+                /* 
+                需要判断当前处于哪个形状，点击要变换到哪个形状
+ 
+                 */
+                //数组映射,把所需要的点击的事件放入数组里面，通过下标去找，去判断
+                var arr = [this.grid, this.helix]
+
+                for (var i = 0; i < this.abtn.length; i++) {
+
+                    this.abtn[i].onclick = arr[i].bind(this);//不绑定会出错
+                }
+            },
+            //创建网格变换 5*5*5
+            grid: function () {
+
+                /* 序列号(下标) 排序找规律 找出每个li的x轴，y轴坐标与i的关系
+                   0,0  1,0  2,0  3,0  4,0
+                   0,1  1,1  2,1  3,1  4,1
+                   0,2  1,2  2,2  3,2  4,2
+                   .....
+                
+
+                125  0-124
+                5 0   一行取到5时，i为0,一行5个，i%=5
+                10 0
+                15 0
+                。。。
+                x:5行   0 1 2 3 4
+                        0 1 2 3 4 
+                        0 1 2 3 4
+                        。。。。
+                y:5行   每一行y轴 一开始 0 (5个0)
+                                        0
+                                        0
+                                        0
+                                        。。。
+                                    第二行的时候，也是同样的y轴距离，比如(5个1)
+                                        1
+                                        1
+                                        1
+                                        。。同理算下去
+                                        一开始排列出来的时候==>25 25 25 25 25  25*25=125个
+                                        每一个li的背后都有25个，由于定位问题被遮住了
+                                        所以y轴的序列号 Math.floor(i % 25) / 5  要分成5列
+
+                z:5行   z轴  距离我们眼睛最近的是最大的序列号 所以z轴的序列号排序 4 3 2 1 0 
+                                                                    面对我们的每一面的有25个
+                                                                         4 - Math.floor(i / 25)
+                              
+                          
+
+                */
+                for (var i = 0; i < this.listNum; i++) {
+                    var disX = 250;//每一个li X方向固定间距
+                    var disY = 250;//每一个li Y方向固定间距
+                    var disZ = 800;//每一个li Z方向固定间距
+
+                    this.aLi.x = i % 5;//x轴序列号
+                    this.aLi.y = Math.floor(i % 25 / 5);//y轴序列号
+                    this.aLi.z = 4 - Math.floor(i / 25);//z轴序列号
+
+                    // console.log(this.aLi.y)
+                    console.log(this.aLi.z)
+                    var x = (this.aLi.x - 2) * disX;//序列号-2 使每个卡片偏移两个卡片，这样就居中
+                    var y = (this.aLi.y - 2) * disY;//序列号-2 使每个卡片偏移两个卡片，这样就居中
+                    var z = (this.aLi.z - 2) * disZ;//序列号-2 使每个卡片偏移两个卡片，这样就居中
+
+                    this.aLi[i].style.transform = 'translate3D(' + x + 'px, ' + y + 'px,' + z + 'px)';
+
+
+                }
+            },
+            //创建环形式
+            helix: function () {
+                //console.log(this)
+                /* 
+                先想象成是一条直线的布局
+                还有确立它环形状 是围成了几个环形
+                确立每一环的个数，有多少个li
+                每一个li Y轴旋转的相差值
+
+                for循环呈现出环形之后 让每一个重合li上下有一个位移差值也就是translateY
+
+                之后会呈现出效果，但是没有居中，找出中间点位移居中
+                 */
+
+                var h = 3.7;//环数
+                var num = this.listNum / h //每环的个数
+                var deg = 360 / num //每一个li Y轴旋转的相差值
+                // console.log(deg)
+                var tranY = 7 //每一个重合li上下位移差值也就是translateY
+                var mid = this.listNum / 2 - 0.5;//位移居中,自己定义
+
+                for (var i = 0; i < this.listNum; i++) {
+
+                    this.aLi[i].style.transform = 'rotateY(' + i * deg + 'deg) translateY(' + (i - mid) * tranY + 'px) translateZ(800px)';
+                }
+            }
+        }
+
+        // Magic.prototype.init = function () {
+
+        // }
+
+        // Magic.prototype.grid = function () {
+
+        // }
+        var magic = new Magic()
+        magic.init()
+        var body = document.querySelector('body')
+        var listUl = document.querySelector('.list').querySelector('ul')
+        // body.onmousedown = function (event) {
+        //     var currentX = event.clientX;
+        //     var currentY = event.clientY;
+        //     body.onmousemove = function (event) {
+        //         var moveX = event.clientX;
+        //         var moveY = event.clientY;
+
+        //         var roX = (moveX - currentX)/5
+        //         var roY = (moveY - currentY)/5
+
+        //         console.log(roX, roY)
+        //         listUl.style.transform = 'rotateX(' + roX+ 'deg) rotateY('+roY+'deg) translateZ(-2000px)';
+        //     }
+        // }
+        // body.onmouseup = function () {
+        //     body.onmousemove = null;
+        // }
+
+    </script>
+</body>
+
+</html>

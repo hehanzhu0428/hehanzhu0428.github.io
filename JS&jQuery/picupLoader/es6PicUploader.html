@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .upload {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            margin: 0 8px 8px 0;
+            background-color: #f7f8fa;
+        }
+
+        .upload i {
+            color: #dcdee0;
+            font-size: 24px;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .upload input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0;
+        }
+
+        .uploader-pre {
+            position: relative;
+            margin: 0 8px 8px 0;
+            cursor: pointer;
+        }
+
+        .upload-image {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+        }
+
+        .upload-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .dele-icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 14px;
+            height: 14px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 0 0 0 12px;
+        }
+
+        .dele-icon i {
+            position: absolute;
+            top: -2px;
+            right: -1px;
+            color: #fff;
+            font-size: 16px;
+            transform: scale(0.5);
+
+        }
+
+        .mask {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+
+        .mask.active {
+            display: block;
+        }
+
+        .mask img {
+            display: block;
+            margin: 0 auto;
+            background-color: #fff;
+
+
+        }
+
+        .imgbox {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .upload_btn {
+            background-color: #00b7ee;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+            padding: 0 18px;
+            text-align: center;
+            line-height: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="imgbox"></div>
+        <div class="upload">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <input type="file" name="file" id="upload" multiple=""><!-- multiple多个文件 -->
+        </div>
+        <div class="mask">
+            <img src="./images/a.jpg" alt="">
+        </div>
+    </div>
+    <!-- <div class="upload_btn">开始上传</div> -->
+
+    <script>
+        var box = document.querySelector('.box')
+        var inputBox = document.querySelector('#upload');
+        var imgbox = document.querySelector('.imgbox')
+
+        var mask = document.querySelector('.mask')
+        var imgSrc2 = mask.querySelector('img')
+
+
+        inputBox.addEventListener("change", function () {
+            console.log(this.files);
+            for (var i = 0; i < this.files.length; i++) {
+
+                var reader = new FileReader();//每一个读取的文件都需要重新new一个
+                reader.readAsDataURL(this.files[i]);//读取文件内容，读取的内容是加密以后的本地文件路径
+                 
+                //限制上传图片
+                var imgSize = this.files[i].size;
+                if (imgSize > 1024 * 500 * 1) {
+                    return alert("上传图片不能超过500KB");
+                };
+                if (this.files[i].type != 'image/png' && this.files[i].type != 'image/jpeg' && this.files[i].type != 'image/gif') {
+                    return alert("图片上传格式不正确");
+                }
+                reader.onload = function () {
+                    //读取完成后，数据保存在对象的result属性中
+                    //console.log(this.result)
+                    let html = `<div class="uploader-pre">
+            <div class="upload-image">
+                <img src="${this.result}">
+            </div>
+            <div class="dele-icon">
+                <i class="fa fa-close" aria-hidden="true"></i>
+            </div>
+        </div>`
+                    imgbox.insertAdjacentHTML("afterbegin", html)//在标签开始的前面添加
+                }
+            }
+
+
+        })
+        //遮罩层显示对于图片
+        $('.imgbox').on('click', '.uploader-pre', function () {
+            //console.log('xxx')
+            mask.classList.add('active')
+
+            var a = $(this).find('img')[0].src
+            imgSrc2.src = a
+        })
+
+        //删除
+        $('.imgbox').on('click', '.dele-icon', function (e) {
+            e.stopPropagation();
+            console.log('xxx')
+            $(this).parent().remove();
+        })
+
+        //遮罩层隐藏
+        mask.addEventListener('click', function () {
+            mask.classList.remove('active')
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+
+    <style>
+        body {
+            background-color: lightskyblue;
+        }
+
+        .box {
+            margin: 100px auto;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .box select {
+            display: inline-block;
+            width: 200px;
+            padding: 9px 15px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: right;
+        }
+
+        input {
+            display: block;
+            height: 300px;
+        }
+
+        textarea {
+            display: block;
+            width: 608px;
+            height: 200px;
+            margin: 10px auto;
+        }
+
+        button {
+            display: block;
+            background-color: rgba(64, 64, 231, 0.788);
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            color: #ffffff;
+            border-radius: 5px;
+            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+            padding: 8px 19px 9px;
+            border: none;
+            margin: 0 auto;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <select name="" id="" class="province">
+            <option>请选择省份</option>
+        </select>
+        <select name="" id="" class="city">
+            <option>请选择城市</option>
+        </select>
+        <select name="" id="" class="region">
+            <option>请选择地区</option>
+        </select>
+        <textarea name="" id="" placeholder="详细地址"></textarea>
+        <button>提交</button>
+    </div>
+
+
+    <script src="./area.js"></script>
+    <script>
+
+        /*
+        44 ==>广东省
+        4408 ==>湛江市
+        440881==>廉江市
+        */
+
+        var province = document.querySelector('.province')
+        var city = document.querySelector('.city')
+        var region = document.querySelector('.region')
+
+        let Address = {
+            getAdress() {
+                //获取省份
+                for (const key in area.province_list) {
+                    //console.log(key, area.province_list[key])
+                    var opt1 = document.createElement('option')
+                    opt1.value = key
+                    opt1.innerHTML = area.province_list[key]
+                    province.appendChild(opt1)
+                }
+                //获取城市
+                province.onchange = function () {
+                    city.innerHTML = '<option>请选择城市</option>'
+                    region.innerHTML = '<option>请选择地区</option>'
+                    let currentValue = this.value.slice(0, 2)//截取当前value的前两位
+                    console.log(currentValue)
+                    let citys = {}//建立一个空对象来保存相匹配的数据
+                    for (let key in area.city_list) {
+                        if (key.startsWith(currentValue)) {//startsWith 从开头查找匹配
+                            citys[key] = area.city_list[key]
+                        }
+                    }
+                    console.log(citys)
+                    //生成城市选项
+                    for (const key in citys) {
+                        //console.log(key, area.province_list[key])
+                        var opt2 = document.createElement('option')
+                        opt2.value = key
+                        opt2.innerHTML = citys[key]
+                        city.appendChild(opt2)
+                    }
+
+                }
+                //获取地区
+                city.onchange = function () {
+                    region.innerHTML = '<option>请选择地区</option>'
+                    let currentValue = this.value.slice(0, 4)//截取当前value的前四位
+                    console.log(currentValue)
+                    let regions = {}
+                    for (let key in area.county_list) {
+                        if (key.startsWith(currentValue)) {
+                            regions[key] = area.county_list[key]
+                        }
+                    }
+                    console.log(regions)
+                    for (const key in regions) {
+                        //console.log(key, area.province_list[key])
+                        var opt3 = document.createElement('option')
+                        opt3.value = key
+                        opt3.innerHTML = regions[key]
+                        region.appendChild(opt3)
+                    }
+
+                }
+            }
+        }
+
+
+        Address.getAdress();
+    </script>
+
+</body>
+
+</html>

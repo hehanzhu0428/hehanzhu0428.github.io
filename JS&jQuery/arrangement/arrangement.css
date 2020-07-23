@@ -533,37 +533,36 @@ em {
 }
 
 /* 标签页 */
+/* 标签页 */
 .tabs-header {
   height: 36px;
   border-bottom: #e5e5e5 solid 1px;
   position: relative;
 }
 
-.tabs-card > * {
-  border-top: #e5e5e5 solid 1px;
-  border-left: #e5e5e5 solid 1px;
+.tabs-card>* {
   border-right: #e5e5e5 solid 1px;
-  border-radius: 4px 4px 0 0;
+  border-bottom: #e5e5e5 solid 1px;
   background: #f8f8f8;
   color: #777;
   height: 35px;
 }
 
-.tabs-header > * {
+.tabs-header>* {
   float: left;
   height: 36px;
   line-height: 36px;
   padding: 0 20px;
-  cursor: pointer;
+
   font-size: 14px;
-  margin-right: 5px;
+
 }
 
 .tabs-active {
   color: #19b6f8;
   background: #fff;
   height: 36px;
-  border-color: #19b6f8;
+  border-bottom: none;
 }
 
 .tabs-content {
@@ -574,10 +573,34 @@ em {
 
 .tabs-content div {
   display: none;
+  height: 100%;
 }
 
 .tabs-content div.active {
   display: block;
+}
+
+.contain1 {
+  width: 900px;
+  height: 400px;
+  margin: 100px auto;
+  border: 1px solid #e5e5e5;
+}
+
+.tabs-header div {
+  position: relative;
+}
+
+.tabs-header i {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+tabs-content span {
+  display: block;
+  height: 300px;
 }
 
 /* 表格 */
