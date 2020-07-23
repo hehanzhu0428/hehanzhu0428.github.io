@@ -1,26 +1,7 @@
-body {
+body,html {
   font-family: "Poppins", Arial, sans-serif;
   line-height: 2;
-}
-.fiexRight {
-  position: fixed;
-  right: -30px;
-  bottom: 30%;
-  background-color: #0042f2;
-  color: #fff;
-  transform: rotate(270deg);
-  z-index: 999;
-  cursor: pointer;
-  border-radius: 5px;
-  p {
-    display: inline-block;
-    padding: 12px 14px 12px 12px;
-    margin: 0;
-  }
-  i {
-    transform: rotate(90deg);
-    font-size: 14px;
-  }
+  scroll-behavior: smooth;
 }
 .fiexbottom {
   position: fixed;
@@ -50,14 +31,30 @@ body {
   z-index: 999;
   .w-navbar {
     padding: 30px 30px;
+    @media (max-width: 768px) {
+     padding: 28px 0px;
+    }
   }
   .navbar-header {
+    .navbar-toggle{
+      background-color: #eaeaea;
+    }
     .navbar-brand {
+      @media (max-width: 768px) {
+         padding: 0 10px;
+      }
       img {
         width: 161px;
         height: 51px;
+       
       }
     }
+  }
+  #bs-example-navbar-collapse-1{
+    @media (max-width: 768px) {
+      background-color: #1a1a1a;
+   }
+   
   }
   .nav {
     li {
@@ -101,6 +98,9 @@ body {
       font-size: 60px;
       color: #fff;
       margin: 0 0 20px 0;
+      @media (max-width: 768px) {
+       font-size: 34px;
+       }
     }
   }
   #bundle();
@@ -126,6 +126,9 @@ body {
     background: url(../flinkHubimg/fh1.png) no-repeat center center;
     background-size: cover;
     height: 600px;
+    @media (max-width: 768px) {
+      height: 400px;
+     }
   }
   .bg-img2 {
     background-image: url(../flinkHubimg/fh2.png);
@@ -157,6 +160,9 @@ body {
       margin-bottom: 40px;
       color: #303133;
       margin-top: 0;
+      @media (max-width: 768px) {
+        font-size: 34px;
+       }
     }
     .features {
       position: relative;
@@ -184,6 +190,9 @@ body {
   background: url(../flinkHubimg/cover_img_1.jpg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
+  @media (max-width: 768px) {
+    padding: 50px 0;
+   }
   .overlay {
     position: absolute;
     background-color: #798eea;
@@ -284,6 +293,9 @@ body {
   .fot-bottom {
     padding: 112px 0;
     background-color: #202020;
+    @media (max-width: 768px) {
+      padding: 50px 0px;
+     }
     p {
       color: #fff;
       a {
