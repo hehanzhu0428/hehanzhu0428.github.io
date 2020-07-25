@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>Bootstrap 101 Template</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+  <link rel="stylesheet" href="./pingup.css">
+  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <section class="home">
+    <div class="container top_bar">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12 col-xl-12">
+          <nav>
+            <ul class="nav nav-pills float-right">
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="row row-logo">
+        <div class="col-md-8 col-md-offset-2 col-sm-10 offset-sm-1">
+          <img style="max-width:100%" src="./images/logo-white.png" alt="logo" class="logo_home">
+        </div>
+      </div>
+    </div>
+    <div class="container" id="main_content">
+      <div class="content_container row">
+        <div class="col-xs-12 col-md-12 col-lg-10 col-md-offset-1 home_content">
+          <h2 class="font-handwrite">serious business!</h2>
+          <h2 class="slogan">Ping pong is <span class="strike">fun</span></h2>
+
+
+          <div class="available_area">
+            <h6>&nbsp;The ping pong scoreboard for awesome offices.</h6>
+          </div>
+          <div class="cta_button_area">
+            <div>
+              <a href="#more_info">
+                <button class="btn btn-outline-secondary">Learn More</button>
+              </a>
+              <a href="">
+                <button class="btn">🏓 Get Started</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="more_info" class="subsection">
+    <div class="container">
+
+      <div class="row feature_box" id="feature1">
+        <div class="col-xs-12 col-md-12 col-lg-6">
+          <div class="feature_content">
+            <h3>Track your ping pong scores</h3>
+            <p class="description">Every point counts! Record (and broadcast 😉) your match scores with PongUp. Put an
+              end to your colleague's smack talks.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-12 col-lg-6 align-center more_info_anim3">
+          <div class="feature_image">
+            <img style="border-radius:5px;"
+              src="./images/pongup-preview.gif"
+              alt="" class="img_responsive">
+          </div>
+        </div>
+      </div>
+
+      <div class="row feature_box" id="feature2">
+        <!-- Image -->
+        <div class="col-xs-12 col-md-12 col-lg-6 hidden-xs">
+          <div class="feature_image">
+            <img
+              src="./images/table-tennis-leaderboard-chrome.jpg"
+              alt="" class="img_responsive"">
+          </div>
+        </div>
+        <div class=" col-xs-12 col-md-12 col-lg-6">
+            <div class="feature_content">
+              <h3>Be the office champion</h3>
+              <p class="description">PongUp calculates an Elo score for each player and ranks them on the leaderboard.
+                Visualise each player's ping pong stats for glory &amp; shame. PongUp supports both singles and doubles
+                matches.</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-12 col-lg-6 visible-xs">
+            <div class="feature_image">
+              <img
+                src="./images/table-tennis-leaderboard-chrome.jpg"
+                alt="" class="img_responsive"">
+            </div>
+          </div>
+        </div>
+
+        <div class="row feature_box feature_box_final" id="feature1">
+          <div class="col-xs-12 col-md-12 col-lg-6">
+            <div class="feature_content">
+              <h3>Slack Integration</h3>
+              <p class="description">PongUp works with Slack too. Get notified when a new match is played or when the
+                leaderboard rankings have changed, or even create a new match right from the Slack interface.</p>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#slackModal">
+                Slack Integration Guide
+              </button>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-12 col-lg-6">
+            <div class="feature_image">
+              <img
+                src="./images/ping-pong-leaderboard-slack.jpg"
+                alt="" class="img_responsive">
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+  <section id="cta_download" class="subsection bgcolor3">
+    <div class="container">
+      <!-- INTRO -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div class="intro">
+            <h3>PongUp's Story</h3>
+            <p>
+              Table tennis has always been pretty competitive at
+              <a href="">
+                4mation Technologies
+              </a>
+              . Back in 2016, we hacked up
+              <a href="">
+                this sophisticated spreadsheet
+              </a>
+              to track our scores.
+              We quickly outgrew it and 722 matches later, decided to build a proper app instead to enable some new
+              features that we've always wanted, something that can
+              be put out into the world, hence PongUp!
+            </p>
+            <p>
+              Here's a sneak peek of PongUp deployed in our workplace:</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+          <img
+            src="./images/pongup-4mation.jpg"
+            class="img-fluid img-thumbnail" alt="Pongup in 4mation">
+        </div>
+      </div>
+      <br>
+      <div class="row text-center">
+        <div class="col-xs-12 text-center">
+          <a href="" class="text-center">
+            <button class="text-center btn">Get PongUp!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="subsection bgcolor1">
+    <div class="container container_fluid_overwrite">
+      <!-- INTRO -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div class="intro">
+            <h3>Pricing</h3>
+            <h5>Simple pricing plans for different team sizes. Game on! It's time for 🏓🏓🏓</h5>
+          </div>
+        </div>
+      </div>
+      <!-- //INTRO -->
+      <div class="row">
+        <!-- Pricing box -->
+        <div class="col-xs-12 col-sm-8  col-md-4 col-lg-4 disfle">
+          <div class="pricing_box">
+            <div class="iconbox_icon"></div>
+            <h4><strong>FREE</strong></h4>
+            <div class="pricing_box_price">
+              <h3>$0</h3>
+              <h4>/month</h4>
+            </div>
+            <ul class="pricing_box_list">
+              <li>
+                <p class="description">5 team members</p>
+              </li>
+              <li>
+                <p class="description">50 matches / month</p>
+              </li>
+              <li>
+                <p class="description">Team Leaderboard</p>
+              </li>
+              <li>
+                <p class="description">Slack Integration</p>
+              </li>
+            </ul>
+            <div class="btnn">
+              <a href="">
+                <button class="btn">Get Started</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Pricing box -->
+        <div class="col-xs-12 col-sm-8  col-md-4 col-lg-4 disfle">
+          <div class="pricing_box">
+            <div class="iconbox_icon"></div>
+            <h4><strong>PLUS ⭐️</strong></h4>
+            <div class="pricing_box_price">
+              <h3>$15</h3>
+              <h4>/month</h4>
+            </div>
+            <ul class="pricing_box_list">
+              <li>
+                <p class="description"><strong>15</strong> team members</p>
+              </li>
+              <li>
+                <p class="description"><strong>500</strong> matches / month</p>
+              </li>
+              <li>
+                <p class="description">Team Leaderboard</p>
+              </li>
+              <li>
+                <p class="description">Slack Integration</p>
+              </li>
+
+            </ul>
+            <div class="btnn">
+              <a href="">
+                <button class="btn">Get Started</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Pricing box -->
+        <div class="col-xs-12 col-sm-8  col-md-4 col-lg-4 disfle">
+          <div class="pricing_box pricing_box_featured">
+            <div class="iconbox_icon"></div>
+            <h4><strong>COMPANY🌟</strong></h4>
+            <div class="pricing_box_price">
+              <h3>
+                <del style="opacity: .65;
+                text-decoration: #00bcd4 line-through;
+                letter-spacing: -2px;">$55</del>
+                <span><strong style="color:#00bcd4;">$35</strong></span>
+              </h3>
+              <h4>/month</h4>
+            </div>
+            <ul class="pricing_box_list">
+              <li>
+                <p class="description"><strong>Unlimited</strong> team members</p>
+              </li>
+              <li>
+                <p class="description"><strong>Unlimited</strong> matches</p>
+              </li>
+              <li>
+                <p class="description"><strong>Auto team signup</strong></p>
+              </li>
+              <li>
+                <p class="description">Team Leaderboard</p>
+              </li>
+              <li>
+                <p class="description">Slack Integration</p>
+              </li>
+
+            </ul>
+            <div class="btnn">
+              <a href=""><button class="btn">Get Started</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews_logos" class="subsection bgcolor2">
+    <div class="container-fluid">
+      <!-- INTRO -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div class="intro">
+            <h3>Companies using PongUp! ♡</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-lg-2 col-xs-4 reviews_logo">
+          <img src="./images/leadfuze.png" alt="pongup-leadfuze">
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xs-4 reviews_logo">
+          <img src="./images/paypal.png" alt="pongup-paypal">
+        </div>
+        <div class="col-md-2 col-lg-2 col-xs-4 reviews_logo ">
+          <img src="./images/amazon.png" alt="pongup-kaleo">
+        </div>
+        <div class="col-md-2 col-lg-2 col-xs-4 reviews_logo">
+          <img src="./images/neeo.png" alt="pongup-neeo">
+        </div>
+        <div class="col-md-2 col-lg-2 col-xs-4 reviews_log">
+          <img src="./images/epic-ping-pong.png" alt="pongup-epic-ping-pong">
+        </div>
+        <div class="col-md-2 col-lg-2 col-xs-4 reviews_logo">
+          <img src="./images/aei.png" alt="pongup-aei">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta_download" class="subsection bgcolor3">
+    <div class="container">
+      <!-- INTRO -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div class="intro">
+            <h3>Ready to level up your office ping pong?</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div class="intro">
+            <div class="col-xs-12 text-center">
+              <a href="" class="text-center">
+                <button class="text-center btn">
+                  Get PongUp!
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer" class="subsection bgcolor2">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12 mt-4">
+          <!-- //Social Icons -->
+          <p>© 2020 PongUp!, Made with ❤ in Sydney</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+      //https://getpongup.com/
+  </script>
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
