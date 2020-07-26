@@ -189,11 +189,11 @@ ul {
 .work .w-row .col-xs-6 {
   margin-bottom: 15px;
 }
-.work .row img {
+.row img {
   width: 100%;
   transition: all 0.3s;
 }
-.work .row img:hover {
+.row img:hover {
   transform: scale(1.2, 1.2);
 }
 .skills {
