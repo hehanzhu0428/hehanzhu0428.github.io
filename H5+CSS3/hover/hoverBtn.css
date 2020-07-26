@@ -1083,56 +1083,76 @@ a {
   transform: scale(5);
   opacity: 1;
 }
-.w-hoverBtn .progress-button {
+.w-hoverBtn .w-ghostbtn5 {
+  width: 355px;
+  height: 55px;
+  overflow: hidden;
+  margin-top: 10px;
   position: relative;
-  display: inline-block;
-  text-align: center;
-  width: 266px;
-  height: 70px;
-  cursor: pointer;
+  transition: all 0.5s;
 }
-.w-hoverBtn button {
+.w-hoverBtn .w-ghostbtn5::after {
+  content: "";
+  position: absolute;
   display: block;
-  margin: 0 auto;
-  padding: 0;
-  width: 250px;
-  height: 70px;
-  border: 2px solid #1ecd97;
-  border-radius: 40px;
-  background: transparent;
-  color: #1ecd97;
-  letter-spacing: 1px;
-  font-size: 18px;
-  transition: all 0.3s;
+  width: 200px;
+  height: 40px;
+  bottom: -100%;
+  left: -100%;
+  transition: all 0.2s;
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(60deg);
+  animation: btnMove 1s linear infinite alternate;
+  animation-delay: 1s;
+}
+.w-hoverBtn .w-ghostbtn5::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 200px;
+  height: 40px;
+  top: -100%;
+  right: -100%;
+  transition: all 0.2s;
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(60deg);
+  animation: btnMove-1 1s linear infinite alternate;
+  animation-delay: 1s;
+}
+.w-hoverBtn .w-ghostbtn5 .subBtn {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 16px;
   cursor: pointer;
+  background: #ff4131;
+  background: linear-gradient(to right, #ff6131, #ff4131);
+  border: none;
   outline: none;
 }
-.w-hoverBtn button:hover {
-  background-color: #1ecd97;
-  color: #fff;
+@keyframes btnMove {
+  0% {
+    bottom: -100%;
+    left: -100%;
+    transition: all 0.2s;
+  }
+  100% {
+    left: 110%;
+    bottom: 110%;
+    transition: all 0.2s;
+  }
 }
-.w-hoverBtn svg {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  pointer-events: none;
-}
-.w-hoverBtn svg path {
-  opacity: 0;
-  fill: none;
-}
-.w-hoverBtn svg.progress-circle path {
-  stroke: #1ecd97;
-  stroke-width: 5;
-}
-.w-hoverBtn svg.checkmark path,
-.w-hoverBtn svg.cross path {
-  stroke: #fff;
-  stroke-linecap: round;
-  stroke-width: 4;
-  transition: opacity 0.1s;
+@keyframes btnMove-1 {
+  0% {
+    top: -100%;
+    right: -100%;
+    transition: all 0.2s;
+  }
+  100% {
+    right: 110%;
+    top: 110%;
+    transition: all 0.2s;
+  }
 }
 .w-hoverBtn .loading.progress-button button {
   width: 70px;
