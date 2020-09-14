@@ -1,0 +1,304 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/9/4 下午7:30:06 
+使用方法：
+在 pages\mybookingdata\mybookingdata.wxml 引入模板
+
+```
+<import src="mybookingdata.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 pages\mybookingdata\mybookingdata.wxss 中引入样式
+```
+@import "./mybookingdata.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="bot-box2">
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="img-box fl">
+          <image class="auto-img icon sk-image" mode="widthFix" style="height: 40px;">
+          </image>
+        </view>
+        <view class="bt-line clearfix fr sk-pseudo sk-pseudo-circle" style="border: none;">
+          <view class="mid-content fl">
+            <view class="content-top clearfix sk-pseudo sk-pseudo-circle">
+              <view class="name fl sk-transparent sk-text-15-0000-21 sk-text">
+                出行
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-492 sk-text">
+                微信
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-311 sk-text">
+                2020-08-25
+              </view>
+            </view>
+            <view class="content-cont sk-transparent sk-text-14-2857-286 sk-text">
+              去了越秀公园游玩
+            </view>
+          </view>
+          <view class="fr del-icon" data-id="ac5f38825f44f9b1004d6c8c1dc72fd0" data-index="0">
+            <image class="auto-img del-img sk-image" mode="widthFix" style="height: 20px;">
+            </image>
+          </view>
+          <view class="pricr-zhichu fr sk-transparent sk-text-14-2857-691 sk-text">
+            ￥100.00
+          </view>
+        </view>
+      </view>
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="img-box fl">
+          <image class="auto-img icon sk-image" mode="widthFix" style="height: 40px;">
+          </image>
+        </view>
+        <view class="bt-line clearfix fr sk-pseudo sk-pseudo-circle" style="border: none;">
+          <view class="mid-content fl">
+            <view class="content-top clearfix sk-pseudo sk-pseudo-circle">
+              <view class="name fl sk-transparent sk-text-15-0000-441 sk-text">
+                娱乐
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-220 sk-text">
+                微信
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-283 sk-text">
+                2020-08-24
+              </view>
+            </view>
+            <view class="content-cont sk-transparent sk-text-14-2857-462 sk-text">
+              看了天气之子
+            </view>
+          </view>
+          <view class="fr del-icon" data-id="aa133ce55f48b21f006a47ee14a12d15" data-index="1">
+            <image class="auto-img del-img sk-image" mode="widthFix" style="height: 20px;">
+            </image>
+          </view>
+          <view class="pricr-shouru fr sk-transparent sk-text-14-2857-713 sk-text">
+            ￥50.00
+          </view>
+        </view>
+      </view>
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="img-box fl">
+          <image class="auto-img icon sk-image" mode="widthFix" style="height: 40px;">
+          </image>
+        </view>
+        <view class="bt-line clearfix fr sk-pseudo sk-pseudo-circle" style="border: none;">
+          <view class="mid-content fl">
+            <view class="content-top clearfix sk-pseudo sk-pseudo-circle">
+              <view class="name fl sk-transparent sk-text-15-0000-725 sk-text">
+                餐馆
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-771 sk-text">
+                微信
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-379 sk-text">
+                2020-08-28
+              </view>
+            </view>
+            <view class="content-cont sk-transparent sk-text-14-2857-774 sk-text">
+              一天营业额
+            </view>
+          </view>
+          <view class="fr del-icon" data-id="60173c665f48ed33007cef4a00030b1b" data-index="2">
+            <image class="auto-img del-img sk-image" mode="widthFix" style="height: 20px;">
+            </image>
+          </view>
+          <view class="pricr-shouru fr sk-transparent sk-text-14-2857-207 sk-text">
+            ￥100.00
+          </view>
+        </view>
+      </view>
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="img-box fl">
+          <image class="auto-img icon sk-image" mode="widthFix" style="height: 40px;">
+          </image>
+        </view>
+        <view class="bt-line clearfix fr sk-pseudo sk-pseudo-circle" style="border: none;">
+          <view class="mid-content fl">
+            <view class="content-top clearfix sk-pseudo sk-pseudo-circle">
+              <view class="name fl sk-transparent sk-text-15-0000-528 sk-text">
+                娱乐
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-571 sk-text">
+                现金
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-137 sk-text">
+                2020-08-28
+              </view>
+            </view>
+            <view class="content-cont sk-transparent sk-text-14-2857-324 sk-text">
+              电影院今天营业额
+            </view>
+          </view>
+          <view class="fr del-icon" data-id="aa133ce55f48f7b6006d19754e9d6e84" data-index="3">
+            <image class="auto-img del-img sk-image" mode="widthFix" style="height: 20px;">
+            </image>
+          </view>
+          <view class="pricr-shouru fr sk-transparent sk-text-14-2857-152 sk-text">
+            ￥2,000.00
+          </view>
+        </view>
+      </view>
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="img-box fl">
+          <image class="auto-img icon sk-image" mode="widthFix" style="height: 40px;">
+          </image>
+        </view>
+        <view class="bt-line clearfix fr sk-pseudo sk-pseudo-circle" style="border: none;">
+          <view class="mid-content fl">
+            <view class="content-top clearfix sk-pseudo sk-pseudo-circle">
+              <view class="name fl sk-transparent sk-text-15-0000-517 sk-text">
+                学习
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-819 sk-text">
+                微信
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-314 sk-text">
+                2020-08-29
+              </view>
+            </view>
+            <view class="content-cont sk-transparent sk-text-14-2857-220 sk-text">
+              卖了笔记
+            </view>
+          </view>
+          <view class="fr del-icon" data-id="8a6c3bf65f4a16ec007ce205485514b3" data-index="4">
+            <image class="auto-img del-img sk-image" mode="widthFix" style="height: 20px;">
+            </image>
+          </view>
+          <view class="pricr-shouru fr sk-transparent sk-text-14-2857-72 sk-text">
+            ￥100.00
+          </view>
+        </view>
+      </view>
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="img-box fl">
+          <image class="auto-img icon sk-image" mode="widthFix" style="height: 40px;">
+          </image>
+        </view>
+        <view class="bt-line clearfix fr sk-pseudo sk-pseudo-circle" style="border: none;">
+          <view class="mid-content fl">
+            <view class="content-top clearfix sk-pseudo sk-pseudo-circle">
+              <view class="name fl sk-transparent sk-text-15-0000-973 sk-text">
+                出行
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-597 sk-text">
+                现金
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-525 sk-text">
+                2020-08-31
+              </view>
+            </view>
+            <view class="content-cont sk-transparent sk-text-14-2857-922 sk-text">
+              坐了公交车出去玩
+            </view>
+          </view>
+          <view class="fr del-icon" data-id="65825b355f4ce1ed009614d448b79a2e" data-index="5">
+            <image class="auto-img del-img sk-image" mode="widthFix" style="height: 20px;">
+            </image>
+          </view>
+          <view class="pricr-zhichu fr sk-transparent sk-text-14-2857-18 sk-text">
+            ￥200.00
+          </view>
+        </view>
+      </view>
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="img-box fl">
+          <image class="auto-img icon sk-image" mode="widthFix" style="height: 40px;">
+          </image>
+        </view>
+        <view class="bt-line clearfix fr sk-pseudo sk-pseudo-circle" style="border: none;">
+          <view class="mid-content fl">
+            <view class="content-top clearfix sk-pseudo sk-pseudo-circle">
+              <view class="name fl sk-transparent sk-text-15-0000-77 sk-text">
+                住房
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-782 sk-text">
+                现金
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-837 sk-text">
+                2020-08-31
+              </view>
+            </view>
+            <view class="content-cont sk-transparent sk-text-14-2857-53 sk-text">
+              房租
+            </view>
+          </view>
+          <view class="fr del-icon" data-id="aa133ce55f4ce206008c6bdd6b03cee2" data-index="6">
+            <image class="auto-img del-img sk-image" mode="widthFix" style="height: 20px;">
+            </image>
+          </view>
+          <view class="pricr-shouru fr sk-transparent sk-text-14-2857-995 sk-text">
+            ￥1,500.00
+          </view>
+        </view>
+      </view>
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="img-box fl">
+          <image class="auto-img icon sk-image" mode="widthFix" style="height: 40px;">
+          </image>
+        </view>
+        <view class="bt-line clearfix fr sk-pseudo sk-pseudo-circle" style="border: none;">
+          <view class="mid-content fl">
+            <view class="content-top clearfix sk-pseudo sk-pseudo-circle">
+              <view class="name fl sk-transparent sk-text-15-0000-175 sk-text">
+                学习
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-948 sk-text">
+                现金
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-474 sk-text">
+                2020-08-31
+              </view>
+            </view>
+            <view class="content-cont sk-transparent sk-text-14-2857-395 sk-text">
+              买了4级课程
+            </view>
+          </view>
+          <view class="fr del-icon" data-id="ac5f38825f4ce21e00b4b01f42c61229" data-index="7">
+            <image class="auto-img del-img sk-image" mode="widthFix" style="height: 20px;">
+            </image>
+          </view>
+          <view class="pricr-zhichu fr sk-transparent sk-text-14-2857-524 sk-text">
+            ￥200.00
+          </view>
+        </view>
+      </view>
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="img-box fl">
+          <image class="auto-img icon sk-image" mode="widthFix" style="height: 40px;">
+          </image>
+        </view>
+        <view class="bt-line clearfix fr sk-pseudo sk-pseudo-circle" style="border: none;">
+          <view class="mid-content fl">
+            <view class="content-top clearfix sk-pseudo sk-pseudo-circle">
+              <view class="name fl sk-transparent sk-text-15-0000-403 sk-text">
+                其他
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-6 sk-text">
+                现金
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-401 sk-text">
+                2020-08-31
+              </view>
+            </view>
+            <view class="content-cont sk-transparent sk-text-14-2857-281 sk-text">
+              您没有写备注
+            </view>
+          </view>
+          <view class="fr del-icon" data-id="8a6c3bf65f4ce23d0093c7652f921c88" data-index="8">
+            <image class="auto-img del-img sk-image" mode="widthFix" style="height: 20px;">
+            </image>
+          </view>
+          <view class="pricr-shouru fr sk-transparent sk-text-14-2857-437 sk-text">
+            ￥500.00
+          </view>
+        </view>
+      </view>
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+      </view>
+    </view>
+  </view>
+</template>

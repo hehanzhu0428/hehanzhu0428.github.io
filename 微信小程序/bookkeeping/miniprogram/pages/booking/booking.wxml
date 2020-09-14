@@ -1,0 +1,59 @@
+<import src="booking.skeleton.wxml" />
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view class="booking" wx:else>
+	<view class="booking-bg"></view>
+	<view class="booking-box">
+		<view class="type-box">
+			<view class="type-title">
+				<view class="type-title-item {{item.isActive ? 'active' : ''}}" wx:for="{{typeData}}" wx:key="index" bindtap="toggleTag" data-active="{{item.isActive}}" data-index="{{index}}" data-whatdata="typeData">{{item.title}}</view>
+			</view>
+			<view class="type-icon-box clearfix">
+				<view class="type-list fl" wx:for="{{typeListData}}" wx:key="index">
+					<view class="type-icon {{item.isActive ? 'active' : ''}}" bindtap="toggleTag" data-active="{{item.isActive}}" data-index="{{index}}" data-whatdata="typeListData">
+						<image class="auto-img type-img" src="{{item.icon}}" mode="widthFix"></image>
+						<view class="type-icon-title">{{item.title}}</view>
+					</view>
+				</view>
+
+			</view>
+		</view>
+		<view class="account-box">
+			<view class="account-box1">
+				<view class="account-title">账户选择</view>
+				<view class="account-list clearfix">
+					<view class="fl account-list-item {{item.isActive ? 'active' : ''}}" wx:for="{{accountData}}" wx:key="index" bindtap="toggleTag" data-active="{{item.isActive}}" data-index="{{index}}" data-whatdata="accountData">{{item.title}}</view>
+
+				</view>
+			</view>
+
+		</view>
+		<view class="input-box">
+			<view class="input-content">
+				<view class="input-date clearfix">
+					<view class="date-title fl">日期</view>
+					<view class="date-title fl">
+						<picker class="input-price" mode="date" start="{{dateRange.start}}" end="{{dateRange.end}}" bindchange="getInputData" data-name="date">
+							{{date}}
+						</picker>
+					</view>
+				</view>
+				<view class="input-date clearfix">
+					<view class="date-title fl">金额</view>
+					<view class="date-title fl">
+						<input class="input-price" type="digit" placeholder="请输入金额" bindchange="getInputData" data-name="money" />
+					</view>
+				</view>
+				<view class="input-date clearfix">
+					<view class="date-title fl">备注</view>
+					<view class="date-title fl">
+						<input class="input-price" type="text" placeholder="请输入备注" bindchange="getInputData" data-name="content" />
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="btn">
+			<view class="conserve-btn" bindtap="save">保存</view>
+		</view>
+	</view>
+</view>

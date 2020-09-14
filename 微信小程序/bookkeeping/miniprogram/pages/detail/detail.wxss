@@ -1,0 +1,67 @@
+/* miniprogram/pages/detail/detail.wxss */
+@import "./detail.skeleton.wxss";
+.bot-box2{
+  background-color: #fff;
+}
+.img-box {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 20rpx;
+}
+
+.content-box {
+  padding: 20rpx 0;
+
+}
+
+.icon {
+  height: 80rpx;
+}
+
+.bt-line {
+  border-bottom: 1rpx solid #eee;
+  width: calc(100% - 120rpx);
+  position: relative;
+  height: 100%;
+}
+
+.mid-comtent {
+  color: #989898;
+  font-size: 24rpx;
+}
+
+.content-top {
+  height: 40rpx;
+  line-height: 40rpx;
+
+}
+
+.name {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #444;
+}
+
+.pay {
+  margin-left: 40rpx;
+  font-size: 24rpx;
+  color: #989898;
+}
+
+.content-cont {
+  font-size: 24rpx;
+  color: #989898;
+  margin: 10rpx 0;
+}
+
+.pricr-zhichu {
+  color: #FFAC4C;
+  /* color: #00B47A; */
+  margin-right: 20rpx;
+}
+
+.pricr-shouru {
+  /* color: #E94847; */
+  color: #FFE300;
+  margin-right: 20rpx;
+}

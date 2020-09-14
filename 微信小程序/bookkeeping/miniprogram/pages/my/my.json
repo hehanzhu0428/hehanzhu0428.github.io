@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "my-cell": "../../components/cell/mycell"
+  }
+}

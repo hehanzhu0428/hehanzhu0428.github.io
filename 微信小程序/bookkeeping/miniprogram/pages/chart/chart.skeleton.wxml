@@ -1,0 +1,117 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/9/4 下午7:22:03 
+使用方法：
+在 pages\chart\chart.wxml 引入模板
+
+```
+<import src="chart.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 pages\chart\chart.wxss 中引入样式
+```
+@import "./chart.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="chart">
+      <view class="search-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="l-date fl">
+          <view class="input-price sk-transparent sk-text-14-2857-545 sk-text sk-image" data-name="date" end="2020-09-04" mode="date" start="2018-04-28">
+            2020-09
+          </view>
+        </view>
+        <view class="r-btn fr sk-transparent sk-text-14-2857-956 sk-text">
+          按月查询
+        </view>
+      </view>
+      <view class="total-box">
+        <view class="l-box-shouru active" data-active="true" data-index="0">
+          <view class="l-pri-title sk-transparent sk-text-14-2857-354 sk-text" style="background-position-x: 50%;">
+            月收入
+          </view>
+          <view class="l-pri sk-transparent sk-text-14-2857-587 sk-text" style="background-position-x: 50%;">
+            ￥2,528.00
+          </view>
+        </view>
+        <view class="l-box-zhichu" data-active="false" data-index="1">
+          <view class="l-pri-title sk-transparent sk-text-14-2857-639 sk-text" style="background-position-x: 50%;">
+            月支出
+          </view>
+          <view class="l-pri sk-transparent sk-text-14-2857-801 sk-text" style="background-position-x: 50%;">
+            ￥1,700.00
+          </view>
+        </view>
+      </view>
+      <view class="mid-chart-box">
+        <view canvas-id="pieCanvas" class="canvas-box sk-image">
+        </view>
+      </view>
+      <view class="bot-box">
+        <view class="bot-item clearfix sk-pseudo sk-pseudo-circle" data-id="8a6c3bf65f4db4c2009bc8ed2ff86ed1-7498b5fe5f4df23300c32cd737344d1e" data-title="娱乐" style="border: none;">
+          <view class="fl img-icon">
+            <image class="icon-box auto-img sk-image" mode="widthFix" style="height: 40px;">
+            </image>
+          </view>
+          <view class="fl bot-content">
+            <view class="bot-text">
+              <view class="fl t-title sk-transparent sk-text-15-0000-829 sk-text">
+                娱乐
+              </view>
+              <view class="fr t-pri t-pri-shouru sk-transparent sk-text-15-0000-842 sk-text">
+                ￥300.00
+              </view>
+            </view>
+            <view class="bot-progress">
+              <view class="fl progress">
+                <view class="progress-active" style="background-color:rgb(10,209,6);width:11.867088607594937%">
+                </view>
+              </view>
+              <view class="fl num sk-transparent sk-text-20-0000-427 sk-text" style="background-position-x: 100%;">
+                2笔
+              </view>
+            </view>
+          </view>
+          <view class="fl arrow">
+            <image class="arrow-img auto-img sk-image" mode="widthFix" style="height: 16px;">
+            </image>
+          </view>
+        </view>
+        <view class="bot-item clearfix sk-pseudo sk-pseudo-circle" data-id="b5416b755f4de46e00dff51e7a420bad-65825b355f4f2da600b0e53d64fe1a3a" data-title="学习" style="border: none;">
+          <view class="fl img-icon">
+            <image class="icon-box auto-img sk-image" mode="widthFix" style="height: 40px;">
+            </image>
+          </view>
+          <view class="fl bot-content">
+            <view class="bot-text">
+              <view class="fl t-title sk-transparent sk-text-15-0000-937 sk-text">
+                学习
+              </view>
+              <view class="fr t-pri t-pri-shouru sk-transparent sk-text-15-0000-770 sk-text">
+                ￥800.00
+              </view>
+            </view>
+            <view class="bot-progress">
+              <view class="fl progress">
+                <view class="progress-active" style="background-color:rgb(51,96,253);width:31.645569620253166%">
+                </view>
+              </view>
+              <view class="fl num sk-transparent sk-text-20-0000-863 sk-text" style="background-position-x: 100%;">
+                2笔
+              </view>
+            </view>
+          </view>
+          <view class="fl arrow">
+            <image class="arrow-img auto-img sk-image" mode="widthFix" style="height: 16px;">
+            </image>
+          </view>
+        </view>
+        <view class="bot-item clearfix sk-pseudo sk-pseudo-circle" data-id="65825b355f4dfa2e00a3885406120629" data-title="住房" style="border: none;">
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

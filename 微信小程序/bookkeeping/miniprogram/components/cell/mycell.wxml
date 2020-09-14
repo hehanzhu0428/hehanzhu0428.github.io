@@ -1,0 +1,6 @@
+<view class="my-cell">
+	<view class="my-cell-title">{{cellTitle}}</view>
+	<view class="my-cell-arrow">
+		<image class="my-cell-icon" src="../../images/right-arrow.png" mode="widthFix"></image>
+	</view>
+</view>

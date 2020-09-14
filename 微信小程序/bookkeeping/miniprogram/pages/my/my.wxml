@@ -1,0 +1,16 @@
+<import src="my.skeleton.wxml" />
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view class="my-bg" wx:else>
+	<view class="img-box" wx:if='{{isAuthorize}}'>
+		<view class="my-img-box">
+			<image class="auto-img my-img" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+		</view>
+		<view class="nickname">{{userInfo.nickName}}</view>
+	</view>
+	<view class="authorize-btn" data-pageurl="../authorize/authorize" bindtap="goPage" wx:else>授权认证</view>
+</view>
+
+<view class="list">
+	<my-cell wx:for='{{cellData}}' wx:key='index' cell-title='{{item.title}}' bindtap='goPage' data-pageurl='../mybookingdata/mybookingdata'></my-cell>
+</view>

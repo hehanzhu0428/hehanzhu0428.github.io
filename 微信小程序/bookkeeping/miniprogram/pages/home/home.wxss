@@ -1,0 +1,191 @@
+/* miniprogram/pages/home/home.wxss */
+@import "./home.skeleton.wxss";
+.bg-color {
+  height: 400rpx;
+  background-color: #318AF9;
+  position: relative;
+}
+
+.m-top {
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  color: #fff;
+  top: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10rpx rgba(255, 255, 255, 0.5);
+}
+
+.m-title {
+  margin-top: 60rpx;
+  font-size: 24rpx;
+ 
+}
+
+.pri-box {
+  display: inline-block;
+  margin: 10rpx auto;
+}
+
+.pric-l {
+  font-weight: bold;
+}
+
+.pric-r {
+  font-weight: bold;
+  font-size: 24rpx;
+  line-height: 50rpx;
+}
+
+.bot-box {
+  width: 100%;
+  position: absolute;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.left-box {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #444;
+}
+
+.ml-title {
+  margin-right: 20rpx;
+  color: #fff;
+}
+.mr-title{
+  color: #fff;
+}
+.ml-pri{
+  color: #FFE300;
+}
+
+.mr-pri {
+  color: #FFAC4C;
+  
+  margin-left: 20rpx;
+}
+
+.right-box {
+  font-size: 24rpx;
+  color: #444;
+  display: inline-block;
+}
+
+.line {
+  display: inline-block;
+  margin: 0 60rpx;
+  color: #444;
+  line-height: 0.9;
+  overflow: hidden;
+}
+
+.bot-box2 {
+  background-color: #fff;
+}
+
+.mid-box {
+  font-size: 24rpx;
+  color: #989898;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+}
+
+.l-box {
+  display: inline-block;
+}
+
+.l-date,
+.l-shouru,
+.l-zhichu {
+  margin-left: 15rpx;
+}
+
+.r-select {
+  display: inline-block;
+  margin-right: 20rpx;
+  line-height: 60rpx;
+}
+
+.point {
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-right: 5rpx;
+}
+
+.date-title {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.img-box {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 20rpx;
+}
+
+.content-box {
+  padding: 20rpx 0;
+
+}
+
+.icon {
+  height: 80rpx;
+}
+
+.bt-line {
+  border-bottom: 1rpx solid #eee;
+  width: calc(100% - 120rpx);
+  position: relative;
+  height: 100%;
+}
+
+.mid-comtent {
+  color: #989898;
+  font-size: 24rpx;
+}
+
+.content-top {
+  height: 40rpx;
+  line-height: 40rpx;
+
+}
+
+.name {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #444;
+}
+
+.pay {
+  margin-left: 40rpx;
+  font-size: 24rpx;
+  color: #989898;
+}
+
+.content-cont {
+  font-size: 24rpx;
+  color: #989898;
+  margin: 10rpx 0;
+}
+
+.pricr-zhichu {
+  color: #FFAC4C;
+  /* color: #00B47A; */
+  margin-right: 20rpx;
+}
+
+.pricr-shouru {
+  /* color: #E94847; */
+  color: #FFE300;
+  margin-right: 20rpx;
+}

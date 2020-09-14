@@ -1,0 +1,77 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/9/4 下午7:23:59 
+使用方法：
+在 pages\detail\detail.wxml 引入模板
+
+```
+<import src="detail.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 pages\detail\detail.wxss 中引入样式
+```
+@import "./detail.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="bot-box2">
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="img-box fl">
+          <image class="auto-img icon sk-image">
+          </image>
+        </view>
+        <view class="bt-line clearfix fr sk-pseudo sk-pseudo-circle" style="border: none;">
+          <view class="mid-content fl">
+            <view class="content-top clearfix sk-pseudo sk-pseudo-circle">
+              <view class="name fl sk-transparent sk-text-15-0000-550 sk-text">
+                娱乐
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-969 sk-text">
+                现金
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-712 sk-text">
+                2020-09-01
+              </view>
+            </view>
+            <view class="content-cont sk-transparent sk-text-14-2857-904 sk-text">
+              卖唱
+            </view>
+          </view>
+          <view class="pricr-shouru fr sk-transparent sk-text-14-2857-351 sk-text">
+            ￥100.00
+          </view>
+        </view>
+      </view>
+      <view class="content-box clearfix sk-pseudo sk-pseudo-circle">
+        <view class="img-box fl">
+          <image class="auto-img icon sk-image">
+          </image>
+        </view>
+        <view class="bt-line clearfix fr sk-pseudo sk-pseudo-circle" style="border: none;">
+          <view class="mid-content fl">
+            <view class="content-top clearfix sk-pseudo sk-pseudo-circle">
+              <view class="name fl sk-transparent sk-text-15-0000-177 sk-text">
+                娱乐
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-227 sk-text">
+                微信
+              </view>
+              <view class="pay fl sk-transparent sk-text-20-0000-701 sk-text">
+                2020-09-01
+              </view>
+            </view>
+            <view class="content-cont sk-transparent sk-text-14-2857-121 sk-text">
+              看了演唱会
+            </view>
+          </view>
+          <view class="pricr-shouru fr sk-transparent sk-text-14-2857-209 sk-text">
+            ￥200.00
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

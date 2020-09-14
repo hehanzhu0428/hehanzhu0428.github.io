@@ -1,0 +1,26 @@
+/* components/cell/mycell.wxss */
+.my-cell {
+  height: 100rpx;
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+
+.my-cell-title {
+  font-size: 28rpx;
+  float: left;
+  line-height: 100rpx;
+  color: #444;
+}
+
+.my-cell-arrow {
+  float: right;
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 34rpx;
+}
+
+.my-cell-icon {
+  display: block;
+  width: 100%;
+  height: 32rpx;
+}

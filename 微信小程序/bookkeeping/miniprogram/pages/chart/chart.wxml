@@ -1,0 +1,50 @@
+<import src="chart.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view class="chart" wx:else>
+	<view class="search-box clearfix">
+		<view class="l-date fl">
+			<picker class="input-price" mode="date" start="{{dateRange.start}}" end="{{dateRange.end}}" data-name="date" bindchange="selectDate">
+				{{dateText}}
+			</picker>
+		</view>
+		<view class="r-btn fr" bindtap="switchYMD">
+			按{{text}}查询
+		</view>
+		</view>
+		<view class="total-box">
+			<view class="l-box-{{item.type}} {{item.isActive ? 'active' : ''}}" wx:for="{{totalTitle}}" wx:key='index' data-active="{{item.isActive}}" data-index="{{index}}" bindtap="switchSZ">
+				<view class="l-pri-title">{{text}}{{item.title}}</view>
+				<view class="l-pri">￥{{item.total}}</view>
+			</view>
+			<!-- <view class="r-box">
+			<view class="r-pri-title">{{text}}支出</view>
+			<view class="r-pri">11111.00</view>
+		</view> -->
+		</view>
+		<view class="mid-chart-box" hidden='{{bookingData.length==0}}'>
+			<canvas canvas-id="pieCanvas" class="canvas-box"></canvas>
+		</view>
+		<view class="bot-box">
+			<view class="bot-item clearfix" wx:for='{{bookingData}}' wx:key='index' data-title="{{item.title}}" data-id="{{item._ids}}" bindtap="goDetail">
+				<view class="fl img-icon">
+					<image class="icon-box auto-img" src="{{item.icon}}" mode="widthFix"></image>
+				</view>
+				<view class="fl bot-content">
+					<view class="bot-text">
+						<view class="fl t-title">{{item.title}}</view>
+						<view class="fr t-pri t-pri-{{item.type}}">￥{{item.total}}</view>
+					</view>
+					<view class="bot-progress">
+						<view class="fl progress">
+							<view class="progress-active" style="background-color:{{item.color}};width:{{(item.percentage*100)+'%'}}"></view>
+						</view>
+						<view class="fl num">{{item.num}}笔</view>
+					</view>
+				</view>
+				<view class=" fl arrow">
+					<image class="arrow-img auto-img" src="../../images/right-arrow.png" mode="widthFix"></image>
+				</view>
+			</view>
+		</view>
+	</view>

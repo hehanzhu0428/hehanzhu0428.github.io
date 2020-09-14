@@ -1,0 +1,155 @@
+/* miniprogram/pages/chart/chart.wxss */
+@import "./chart.skeleton.wxss";
+.search-box {
+  background-color: #318AF9;
+}
+
+.l-date {
+  background-color: #fff;
+  width: 70%;
+  border-radius: 60rpx;
+  padding: 10rpx 20rpx;
+  margin: 20rpx 0 20rpx 20rpx;
+  font-size: 24rpx;
+  color: #989898;
+}
+
+.r-btn {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  margin: 20rpx 20rpx 20rpx 0;
+  font-size: 24rpx;
+  color: #989898;
+}
+
+.total-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.l-box-shouru {
+  margin: 20rpx 0;
+  padding: 10rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #FFE300;
+}
+
+.active {
+  background-color: rgba(49,138,249,0.8);
+  border-radius: 10rpx;
+}
+
+.l-box-zhichu {
+  margin: 20rpx 0;
+  padding: 10rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #FFAC4C;
+}
+
+.mid-chart-box {
+  height: 600rpx;
+  margin: 20rpx 0;
+  background-color: #fff;
+}
+
+.img-icon {
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #ddd;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bot-item {
+  padding: 20rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #e8e8e8;
+}
+
+.bot-item:last-child {
+  border-bottom: none;
+}
+
+.bot-content {
+  width: calc(100% - 152rpx);
+  height: 80rpx;
+  margin: 0 20rpx;
+}
+
+.bot-text {
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.bot-progress {
+  height: 40rpx;
+}
+
+.t-title {
+  font-size: 28rpx;
+  color: #444;
+}
+
+.t-pri {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.t-pri-shouru {
+  color: #FFE300;
+}
+
+.t-pri-zhichu {
+  color: #FFAC4C;
+}
+
+.num {
+  width: 160rpx;
+  text-align: right;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #989898;
+}
+
+.progress {
+  width: calc(100% - 160rpx);
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+  background-color: #e8e8e8;
+  overflow: hidden;
+}
+
+.progress-active {
+  width: 0;
+  height: 20rpx;
+  transition: width 0.3s linear;
+  
+}
+
+.arrow-img {
+  height: 20rpx;
+}
+
+.icon-box {
+  height: 80rpx;
+}
+
+.arrow {
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 24rpx;
+}
+
+.canvas-box {
+  width: 100%;
+  height: 600rpx;
+ 
+}

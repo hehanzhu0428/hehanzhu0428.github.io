@@ -1,0 +1,13 @@
+/* miniprogram/pages/authorize/authorize.wxss */
+.authorize {
+  margin-top: 100rpx;
+}
+
+button:not([size='mini']) {
+  background-color: #318AF9;
+  font-weight: normal;
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  padding: 0;
+}

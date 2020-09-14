@@ -1,0 +1,25 @@
+<import src="detail.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+	<view class="bot-box2" wx:else>
+		<view class="content-box clearfix" wx:for="{{bookingDateData}}" wx:key="index">
+			<view class="img-box fl">
+				<image class="auto-img icon" src="{{item.bookingTypeListData.icon}}"></image>
+			</view>
+			<view class="bt-line clearfix fr">
+				<view class="mid-content fl">
+					<view class="content-top clearfix">
+						<view class="name fl">{{item.bookingTypeListData.title}}</view>
+						<view class="pay fl">{{item.accountSelData}}</view>
+						<view class="pay fl">{{item.date}}</view>
+					</view>
+					<view class="content-cont">{{item.content=='' ? '您没有写备注': item.content}}</view>
+				</view>
+				<view class="pricr-{{item.bookingTypeData.type}} fr">
+					￥{{item.money}}
+				</view>
+			</view>
+
+		</view>
+
+	</view>

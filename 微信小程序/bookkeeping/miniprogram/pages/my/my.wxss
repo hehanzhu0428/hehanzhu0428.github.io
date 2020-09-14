@@ -1,0 +1,47 @@
+/* miniprogram/pages/my/my.wxss */
+@import "./my.skeleton.wxss";
+.my-bg{
+  padding: 80rpx 0;
+  background-color: #318AF9;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-box{
+  width: 200rpx;
+  margin: 0 auto;
+}
+
+.my-img-box{
+  height: 200rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10rpx rgba(255, 255, 255, .35);
+  overflow: hidden;
+}
+
+.my-img{
+  height: 200rpx;
+}
+
+.nickname{
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #444;
+}
+
+.authorize-btn{
+  width: 320rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #fff;
+  border: 1rpx solid #fff;
+}
+.list{
+  margin-top: 20rpx;
+}
